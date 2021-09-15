@@ -128,19 +128,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 183776, guid: d786dead44590e943860d8527730886b, type: 3}
   m_PrefabInstance: {fileID: 1612334820}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &571558638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571558637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85eda26e6a87b4e4e8b52b843e3e1268, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  regenerateButton: 32
 --- !u!114 &571558639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +154,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 903428115}
+  - component: {fileID: 903428117}
+  - component: {fileID: 903428116}
   m_Layer: 0
   m_Name: DungeonItems
   m_TagString: Untagged
@@ -188,6 +177,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &903428116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903428114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8193100cd61634ce385c6da928725d05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transforms: {fileID: 11400000, guid: 518a02f22c8af483fad4f8cb57a0eafc, type: 2}
+  SaveOnAwake: 0
+--- !u!114 &903428117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903428114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2fba65583bd43858205822c1814336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localContext: 0
+  invokeLocalEvents: 1
+  OnLocalEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 903428116}
+        m_TargetAssemblyTypeName: SaveTransformsToDataList, Assembly-CSharp
+        m_MethodName: UpdateList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1548124736
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,50 +602,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5842872277209955247, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
-      propertyPath: OnLocalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842872277209955247, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
-      propertyPath: OnLocalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1760937446}
-    - target: {fileID: 5842872277209955247, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
-      propertyPath: OnLocalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842872277209955247, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
-      propertyPath: OnLocalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842872277209955247, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
-      propertyPath: OnLocalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842872277209955247, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
-      propertyPath: OnLocalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842872277209955247, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
-      propertyPath: OnLocalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6210233268199751762, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
-      propertyPath: minSize
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6210233268199868162, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
       propertyPath: itemParent
       value: 
       objectReference: {fileID: 903428114}
-    - target: {fileID: 6210233268199875930, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
-      propertyPath: CityWidth
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6210233268199875930, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
-      propertyPath: CityHeight
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6210233268209646094, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
       propertyPath: m_Name
       value: BRCityMapGenerator

@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 6210233268199868162}
   - component: {fileID: 6320897439840322726}
   - component: {fileID: 830763465964599567}
-  - component: {fileID: 6847714357684948451}
   - component: {fileID: 5842872277209955247}
+  - component: {fileID: 5742005902180798342}
   m_Layer: 0
   m_Name: BRCityMapGenerator
   m_TagString: Untagged
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Seed: 123123127
   CellSize: {x: 10, y: 10}
-  minSize: 10
+  minSize: 5
   maxSize: 10
   minBlockSize: 3
   maxBlockSize: 5
@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Config: {fileID: 6210233268199751762}
-  CityWidth: 10
-  CityHeight: 10
+  CityWidth: 5
+  CityHeight: 8
 --- !u!114 &6210233268199868162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,18 +197,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6847714357684948451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6210233268209646094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1393e4540f5ce467985d4ff381def60f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5842872277209955247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,3 +214,16 @@ MonoBehaviour:
   OnLocalEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5742005902180798342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6210233268209646094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6096494c4dc84d6c805afe1465a67b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPostDungeonBuildChannel: {fileID: 0}
