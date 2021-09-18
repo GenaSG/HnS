@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000002, guid: 29c1315303bf4e54ca84beba659136e4, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: cf47337b60efb45efa7699038e28f223, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 477cc4148fad3449482a3bc3178594e2, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -154,8 +154,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 903428115}
-  - component: {fileID: 903428117}
-  - component: {fileID: 903428116}
   m_Layer: 0
   m_Name: DungeonItems
   m_TagString: Untagged
@@ -177,49 +175,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &903428116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903428114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8193100cd61634ce385c6da928725d05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transforms: {fileID: 11400000, guid: 518a02f22c8af483fad4f8cb57a0eafc, type: 2}
-  SaveOnAwake: 0
---- !u!114 &903428117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903428114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a2fba65583bd43858205822c1814336, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  localContext: 0
-  invokeLocalEvents: 1
-  OnLocalEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 903428116}
-        m_TargetAssemblyTypeName: SaveTransformsToDataList, Assembly-CSharp
-        m_MethodName: UpdateList
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1548124736
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,6 +33,8 @@ public class DataList<T> : ScriptableObject, IList<T>
 
     public void RemoveAt(int index) => items.RemoveAt(index);
 
+    public void RemoveAll(System.Predicate<T> match) => items.RemoveAll(match);
+
     IEnumerator IEnumerable.GetEnumerator() => items.GetEnumerator();
 
     bool ICollection<T>.Remove(T item) => items.Remove(item);

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6320897439840322726}
   - component: {fileID: 830763465964599567}
   - component: {fileID: 5842872277209955247}
-  - component: {fileID: 5742005902180798342}
+  - component: {fileID: 1953626751214561020}
   m_Layer: 0
   m_Name: BRCityMapGenerator
   m_TagString: Untagged
@@ -181,22 +181,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localContext: 0
-  invokeLocalEvents: 1
+  invokeLocalEvents: 0
   OnLocalEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6210233268199839242}
-        m_TargetAssemblyTypeName: DungeonArchitect.Dungeon, DungeonArchitect.Core
-        m_MethodName: Build
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &5842872277209955247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +202,7 @@ MonoBehaviour:
   OnLocalEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &5742005902180798342
+--- !u!114 &1953626751214561020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,7 +211,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6210233268209646094}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6096494c4dc84d6c805afe1465a67b4, type: 3}
+  m_Script: {fileID: 11500000, guid: f97528e4ffab446a4bd56c712dafa702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPostDungeonBuildChannel: {fileID: 0}
+  transforms: {fileID: 11400000, guid: 518a02f22c8af483fad4f8cb57a0eafc, type: 2}
