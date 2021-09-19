@@ -300,6 +300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DemoCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 183776, guid: d786dead44590e943860d8527730886b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 419674, guid: d786dead44590e943860d8527730886b, type: 3}
       propertyPath: m_RootOrder
       value: 4
