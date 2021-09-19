@@ -8,9 +8,13 @@ public class MultiplayerPlayerController : NetworkBehaviour
     [SerializeField]
     private Camera camera;
     [SerializeField]
+    private AudioListener listener;
+    [SerializeField]
     private SimpleCharacterController motor;
     [SerializeField]
     private CharacterController character;
+    [SerializeField]
+    private MultiplayerPlayerControllerStrategy propStrategy;
 
 
     // Start is called before the first frame update
@@ -18,6 +22,7 @@ public class MultiplayerPlayerController : NetworkBehaviour
     {
         motor.enabled = false;
         camera.enabled = false;
+        listener.enabled = false;
         character.enabled = false;
     }
 
@@ -26,8 +31,13 @@ public class MultiplayerPlayerController : NetworkBehaviour
         base.OnStartLocalPlayer();
         motor.enabled = true;
         camera.enabled = true;
+        listener.enabled = true;
         character.enabled = true;
     }
 
+    private void Update()
+    {
+        propStrategy.StrategyUpdate();
+    }
 
 }
