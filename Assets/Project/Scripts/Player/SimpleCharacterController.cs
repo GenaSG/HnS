@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class SimpleCharacterMotor : MonoBehaviour
+public class SimpleCharacterController : MonoBehaviour
 {
     private CharacterController character;
     [SerializeField]
@@ -15,6 +15,18 @@ public class SimpleCharacterMotor : MonoBehaviour
     private float jumpSpeed = 10f;
     [SerializeField]
     private float movementAcceleration = 10f;
+    [SerializeField]
+    private Transform head;
+    [SerializeField]
+    private Transform root;
+    [SerializeField]
+    private float sensitivity = 3f;
+
+    private float deltaX;
+    private float deltaY;
+
+    private float startX;
+    private float startY;
     private Vector3 velocity;
     private Vector3 desiredDir;
 
@@ -24,10 +36,16 @@ public class SimpleCharacterMotor : MonoBehaviour
         character = GetComponent<CharacterController>();
     }
 
+    private void Start()
+    {
+        startX = head.localEulerAngles.x;
+        startY = root.localEulerAngles.y;
+    }
 
     // Update is called once per frame
     void Update()
     {
+        MouseLook();
         if (character.isGrounded)
         {
             Grounded();
@@ -36,6 +54,17 @@ public class SimpleCharacterMotor : MonoBehaviour
         {
             Airbourne();
         }
+    }
+
+    void MouseLook()
+    {
+        deltaX -= Input.GetAxis("Mouse Y") * sensitivity;
+        deltaY += Input.GetAxis("Mouse X") * sensitivity;
+
+        float x = Mathf.Clamp(startX + deltaX, -90f, 90f);
+        head.localEulerAngles = new Vector3(x, head.localEulerAngles.y, head.localEulerAngles.z);
+
+        root.localEulerAngles = new Vector3(root.localEulerAngles.z, startY + deltaY, root.localEulerAngles.z);
     }
 
     private void Airbourne()

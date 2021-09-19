@@ -3,24 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-[RequireComponent(typeof(SimpleCharacterMotor)), RequireComponent(typeof(SimpleMouseLook)), RequireComponent(typeof(CharacterController))]
-public class PlayerController : NetworkBehaviour
+public class MultiplayerPlayerController : NetworkBehaviour
 {
     [SerializeField]
     private Camera camera;
-    private SimpleCharacterMotor motor;
-    private SimpleMouseLook mouseLook;
+    [SerializeField]
+    private SimpleCharacterController motor;
+    [SerializeField]
     private CharacterController character;
 
 
     // Start is called before the first frame update
     void Awake()
     {
-        motor = GetComponent<SimpleCharacterMotor>();
-        mouseLook = GetComponent<SimpleMouseLook>();
-        character = GetComponent<CharacterController>();
         motor.enabled = false;
-        mouseLook.enabled = false;
         camera.enabled = false;
         character.enabled = false;
     }
@@ -29,7 +25,6 @@ public class PlayerController : NetworkBehaviour
     {
         base.OnStartLocalPlayer();
         motor.enabled = true;
-        mouseLook.enabled = true;
         camera.enabled = true;
         character.enabled = true;
     }
