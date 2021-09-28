@@ -32,6 +32,7 @@ public class CameraSmoothFollow : MonoBehaviour
         else
         {
             transform.position = targetPosition;
+            lastPosition = transform.position;
         }
     }
 

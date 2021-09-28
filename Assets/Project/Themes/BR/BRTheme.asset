@@ -1748,7 +1748,7 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 1517
+  zIndex: 1536
   inputPins:
   - {fileID: -1031699561201339687}
   outputPins:
@@ -1791,10 +1791,8 @@ MonoBehaviour:
   - {fileID: 1978907248868392, guid: 2c4daa6156d4958468b11564deb735b6, type: 3}
   - {fileID: 1316948766749552, guid: 1f3a7fa169961a144ab0cb18f336c7b8, type: 3}
   - {fileID: 1293849716984982, guid: a34a62e7c9591364f94846960ee3736d, type: 3}
-  - {fileID: 1828845558886990, guid: 78ec1f1c321f8af4188c6c7f3f4274b4, type: 3}
   - {fileID: 1589240936164142, guid: 1722a7e7db835f84e99c793413b77078, type: 3}
   - {fileID: 1051164940061506, guid: 340fbf1d2d9adbc4684f5f9a1e33c5f2, type: 3}
-  - {fileID: 1961958707278906, guid: 39d3f166cb803694ebbcc0a2099c833e, type: 3}
   - {fileID: 1961958707278906, guid: 39d3f166cb803694ebbcc0a2099c833e, type: 3}
   - {fileID: 1398828357334352, guid: c67acd4846ba1774589d2830ac38c5de, type: 3}
   - {fileID: 1053460715930104, guid: 57c43a8966d74654c86c3b11e3d5f850, type: 3}
@@ -2320,8 +2318,8 @@ MonoBehaviour:
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
-  selected: 0
-  zIndex: 1523
+  selected: 1
+  zIndex: 1538
   inputPins:
   - {fileID: -441778358718349062}
   outputPins:
@@ -2839,15 +2837,15 @@ MonoBehaviour:
   caption: MarkerEmitter
   bounds:
     serializedVersion: 2
-    x: 1052.7511
-    y: 0.0052427053
+    x: 1059.0626
+    y: -3.150619
     width: 120
     height: 50
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 1448
+  zIndex: 1526
   inputPins:
   - {fileID: -3998898144380246178}
   outputPins: []
@@ -2895,8 +2893,8 @@ MonoBehaviour:
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
-  selected: 1
-  zIndex: 1525
+  selected: 0
+  zIndex: 1537
   inputPins:
   - {fileID: 3456631354408389220}
   outputPins:
@@ -5916,7 +5914,7 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 1515
+  zIndex: 1535
   inputPins:
   - {fileID: -5293171518351606806}
   outputPins:
@@ -6859,7 +6857,7 @@ MonoBehaviour:
   indexCounter:
     index: 216
   topZIndex:
-    index: 1525
+    index: 1538
   nodes:
   - {fileID: 11414310}
   - {fileID: 11462562}
@@ -11074,7 +11072,7 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 1516
+  zIndex: 1534
   inputPins:
   - {fileID: -6345268975084178491}
   outputPins:
@@ -12183,7 +12181,7 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 1518
+  zIndex: 1532
   inputPins:
   - {fileID: 1720829454084492277}
   outputPins:
@@ -13335,7 +13333,7 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 1041
+  zIndex: 1528
   inputPins: []
   outputPins:
   - {fileID: 2439958516797052049}
