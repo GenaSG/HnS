@@ -4,7 +4,7 @@ using UnityEngine;
 using Mirror;
 using System;
 
-public class PropStrategy : MultiplayerPlayerControllerStrategy
+public class PropState : MultiplayerPlayerControllerState
 {
     [SyncVar(hook=nameof(OnObjectIDUpdated))]
     int objectID;

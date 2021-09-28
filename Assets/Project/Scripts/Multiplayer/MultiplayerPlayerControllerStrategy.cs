@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class MultiplayerPlayerControllerStrategy : NetworkBehaviour
+public class MultiplayerPlayerControllerState : NetworkBehaviour
 {
     public virtual void StrategyUpdate()
     {

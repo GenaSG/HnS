@@ -104,6 +104,6 @@ public class SimpleCharacterController : MonoBehaviour
 
     private Vector3 GetMoveDir()
     {
-        return new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        return new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
     }
 }

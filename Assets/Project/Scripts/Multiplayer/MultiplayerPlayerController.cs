@@ -14,7 +14,7 @@ public class MultiplayerPlayerController : NetworkBehaviour
     [SerializeField]
     private CharacterController character;
     [SerializeField]
-    private MultiplayerPlayerControllerStrategy propStrategy;
+    private MultiplayerPlayerControllerState propStrategy;
 
 
     // Start is called before the first frame update
