@@ -1,14 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using DungeonArchitect;
 using DungeonArchitect.Builders.SimpleCity;
 using UnityEngine;
 
 
-[RequireComponent(typeof(GenerateMapWithSeedChannel)),
-RequireComponent(typeof(OnMapGenerationDoneChannel)),
+[RequireComponent(typeof(MapEventBus)),
 RequireComponent(typeof(SimpleCityDungeonConfig)),
 RequireComponent(typeof(Dungeon))]
 public class MapController : DungeonEventListener
@@ -16,9 +11,10 @@ public class MapController : DungeonEventListener
 
     [SerializeField]
     private DataList<Transform> transforms;
-
-    private GenerateMapWithSeedChannel generateMapChannel;
-    private OnMapGenerationDoneChannel genereationDoneChannel;
+    [SerializeField]
+    private string PropsTags = "Props";
+    private MapEventBus mapEventBus;
+    //private OnMapGenerationDoneChannel genereationDoneChannel;
     private PrefabEventListener prefabEventListener;
 
 
@@ -27,18 +23,18 @@ public class MapController : DungeonEventListener
     public class PrefabEventListener : DungeonItemSpawnListener
     {
         public DataList<Transform> transforms;
-
+        public string PropsTags = "Props";
         public override void SetMetadata(GameObject dungeonItem, DungeonNodeSpawnData spawnData)
         {
             base.SetMetadata(dungeonItem, spawnData);
-            transforms.Add(dungeonItem.transform);
+            if(dungeonItem.CompareTag(PropsTags)) transforms.Add(dungeonItem.transform);
         }
     }
     #region Initialization
     private void Awake()
     {
-        generateMapChannel = GetComponent<GenerateMapWithSeedChannel>();
-        genereationDoneChannel = GetComponent<OnMapGenerationDoneChannel>();
+        mapEventBus = GetComponent<MapEventBus>();
+        //genereationDoneChannel = GetComponent<OnMapGenerationDoneChannel>();
         prefabEventListener = gameObject.AddComponent<PrefabEventListener>();
         prefabEventListener.transforms = transforms;
         dungeon = GetComponent<Dungeon>();
@@ -47,14 +43,16 @@ public class MapController : DungeonEventListener
 
     private void OnEnable()
     {
-        generateMapChannel.OnEvent += GenerateMapChannel_OnEvent;
+        mapEventBus.onGenerateMapWithSeed.AddListener(GenerateMapChannel_OnEvent);
+        //generateMapChannel.OnEvent += GenerateMapChannel_OnEvent;
     }
     #endregion
 
     #region Cleanup
     private void OnDisable()
     {
-        generateMapChannel.OnEvent -= GenerateMapChannel_OnEvent;
+        mapEventBus.onGenerateMapWithSeed.RemoveListener(GenerateMapChannel_OnEvent);
+        //generateMapChannel.OnEvent -= GenerateMapChannel_OnEvent;
     }
 
     private void OnDestroy()
@@ -82,7 +80,8 @@ public class MapController : DungeonEventListener
     public override void OnPostDungeonBuild(Dungeon dungeon, DungeonModel model)
     {
         base.OnPostDungeonBuild(dungeon, model);
-        genereationDoneChannel.Invoke(this, true);
+        mapEventBus.onMapGenerated.Invoke(this);
+        //genereationDoneChannel.Invoke(this, true);
     }
 
     public override void OnDungeonDestroyed(Dungeon dungeon)

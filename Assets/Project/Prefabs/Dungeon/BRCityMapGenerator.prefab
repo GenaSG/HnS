@@ -16,8 +16,6 @@ GameObject:
   - component: {fileID: 6210233268199875930}
   - component: {fileID: 6210233268199868162}
   - component: {fileID: 6320897439840322726}
-  - component: {fileID: 830763465964599567}
-  - component: {fileID: 5842872277209955247}
   - component: {fileID: 1953626751214561020}
   m_Layer: 0
   m_Name: BRCityMapGenerator
@@ -168,40 +166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e22d31ef6ed2e4a9490ec455a9c29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &830763465964599567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6210233268209646094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 998a38ea0bfe84a29ac690e5221d80e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  localContext: 0
-  invokeLocalEvents: 0
-  OnLocalEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &5842872277209955247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6210233268209646094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a2fba65583bd43858205822c1814336, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  localContext: 0
-  invokeLocalEvents: 0
-  OnLocalEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1953626751214561020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,3 +179,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transforms: {fileID: 11400000, guid: 518a02f22c8af483fad4f8cb57a0eafc, type: 2}
+  PropsTags: Props

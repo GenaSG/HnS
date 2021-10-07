@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 075996b901141451baa8b70673b8acef, type: 3}
-  m_Name: LargePropProfile
+  m_Name: VeryLargePropProfile
   m_EditorClassIdentifier: 
   smoothing: 1
   lambda: 10
