@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 33457989530888882}
   - component: {fileID: 23440063137173212}
   - component: {fileID: 64160158435009990}
-  - component: {fileID: 4143909149013388673}
   - component: {fileID: 1162421716569309266}
   m_Layer: 0
   m_Name: SM_Veh_Car_Destroyed_01
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,23 +97,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43711813637374332, guid: 7c034f9ea91841146beb7de7876b37b9, type: 2}
---- !u!114 &4143909149013388673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316948766749552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbe965fb412564bfb993c77cea691d2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  localContext: 1
-  invokeLocalEvents: 0
-  OnLocalEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1162421716569309266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,4 +109,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a7511295ddc4be98044c83abe3559b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: c680f57d856de487d904c05c6dce8ef8, type: 2}
+  profile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}

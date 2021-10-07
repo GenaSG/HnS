@@ -93,11 +93,10 @@ GameObject:
   - component: {fileID: 33478880837364498}
   - component: {fileID: 23512240475489024}
   - component: {fileID: 64475440655322744}
-  - component: {fileID: 6104444893711109596}
   - component: {fileID: -6590489874215184845}
   m_Layer: 0
   m_Name: SM_Veh_Truck_01
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,23 +187,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43138678090282050, guid: 6324b15095c481248ab69662d6af3c93, type: 2}
---- !u!114 &6104444893711109596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248582704293972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbe965fb412564bfb993c77cea691d2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  localContext: 1
-  invokeLocalEvents: 0
-  OnLocalEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &-6590489874215184845
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 33220382924007766}
   - component: {fileID: 23554478071543390}
   - component: {fileID: 64068050932624444}
-  - component: {fileID: -589331024646496553}
   - component: {fileID: -1255612033051547033}
   m_Layer: 0
   m_Name: SM_Prop_Spotlight_01
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,23 +97,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43163496777286566, guid: f504c1a3640f4584a87776f558163859, type: 2}
---- !u!114 &-589331024646496553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1438767388765440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbe965fb412564bfb993c77cea691d2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  localContext: 1
-  invokeLocalEvents: 0
-  OnLocalEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &-1255612033051547033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,4 +109,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a7511295ddc4be98044c83abe3559b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 0}
+  profile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}

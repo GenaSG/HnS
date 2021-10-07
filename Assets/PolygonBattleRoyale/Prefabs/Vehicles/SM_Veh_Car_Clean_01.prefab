@@ -498,11 +498,10 @@ GameObject:
   - component: {fileID: 33691211810138008}
   - component: {fileID: 23650413500396490}
   - component: {fileID: 64682521301277846}
-  - component: {fileID: -6255317278596997625}
   - component: {fileID: 4546019242559318248}
   m_Layer: 0
   m_Name: SM_Veh_Car_Clean_01
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -590,23 +589,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43098230053247566, guid: 13525686b418c7e43bf12d167d63427f, type: 2}
---- !u!114 &-6255317278596997625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978907248868392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbe965fb412564bfb993c77cea691d2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  localContext: 1
-  invokeLocalEvents: 0
-  OnLocalEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &4546019242559318248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,4 +601,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a7511295ddc4be98044c83abe3559b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: c680f57d856de487d904c05c6dce8ef8, type: 2}
+  profile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}

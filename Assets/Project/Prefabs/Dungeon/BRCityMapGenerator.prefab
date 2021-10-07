@@ -179,4 +179,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transforms: {fileID: 11400000, guid: 518a02f22c8af483fad4f8cb57a0eafc, type: 2}
-  PropsTags: Props
+  PropsTags: Prop

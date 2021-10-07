@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(OnCameraProfileChangeChannel)), RequireComponent(typeof(CameraSmoothFollow))]
+[RequireComponent(typeof(PlayerEventBus)), RequireComponent(typeof(CameraSmoothFollow))]
 public class CameraFollowProfileSetter : MonoBehaviour
 {
-    private OnCameraProfileChangeChannel channel;
+    private PlayerEventBus playerEventBus;
     private CameraSmoothFollow follow;
     private void OnEnable()
     {
-        channel = GetComponent<OnCameraProfileChangeChannel>();
+        playerEventBus = GetComponent<PlayerEventBus>();
         follow = GetComponent<CameraSmoothFollow>();
-        channel.OnEvent += Channel_OnEvent;
+        playerEventBus.onCameraFollowProfileChanged.AddListener( Channel_OnEvent);
 
     }
 
@@ -21,6 +21,6 @@ public class CameraFollowProfileSetter : MonoBehaviour
 
     private void OnDisable()
     {
-        channel.OnEvent -= Channel_OnEvent;
+        playerEventBus.onCameraFollowProfileChanged.RemoveListener(Channel_OnEvent);
     }
 }

@@ -34,9 +34,9 @@ public class MapController : DungeonEventListener
     private void Awake()
     {
         mapEventBus = GetComponent<MapEventBus>();
-        //genereationDoneChannel = GetComponent<OnMapGenerationDoneChannel>();
         prefabEventListener = gameObject.AddComponent<PrefabEventListener>();
         prefabEventListener.transforms = transforms;
+        prefabEventListener.PropsTags = PropsTags;
         dungeon = GetComponent<Dungeon>();
 
     }
@@ -44,7 +44,6 @@ public class MapController : DungeonEventListener
     private void OnEnable()
     {
         mapEventBus.onGenerateMapWithSeed.AddListener(GenerateMapChannel_OnEvent);
-        //generateMapChannel.OnEvent += GenerateMapChannel_OnEvent;
     }
     #endregion
 
@@ -52,7 +51,6 @@ public class MapController : DungeonEventListener
     private void OnDisable()
     {
         mapEventBus.onGenerateMapWithSeed.RemoveListener(GenerateMapChannel_OnEvent);
-        //generateMapChannel.OnEvent -= GenerateMapChannel_OnEvent;
     }
 
     private void OnDestroy()

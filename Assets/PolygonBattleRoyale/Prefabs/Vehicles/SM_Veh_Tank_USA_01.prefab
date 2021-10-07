@@ -741,11 +741,10 @@ GameObject:
   - component: {fileID: 33876881293002018}
   - component: {fileID: 23888891817440188}
   - component: {fileID: 64836781836635346}
-  - component: {fileID: -3440796482836869718}
   - component: {fileID: 2923924318127723648}
   m_Layer: 0
   m_Name: SM_Veh_Tank_USA_01
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -848,23 +847,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43063978493796898, guid: 41ab1990d516f004896af0d7b863b3e8, type: 2}
---- !u!114 &-3440796482836869718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398828357334352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbe965fb412564bfb993c77cea691d2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  localContext: 1
-  invokeLocalEvents: 0
-  OnLocalEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &2923924318127723648
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -261,8 +261,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4565254006557636108}
   - component: {fileID: 5333393220235221047}
-  - component: {fileID: 5148444479226527086}
   - component: {fileID: 7589728839528931285}
+  - component: {fileID: 323260635269403626}
   m_Layer: 6
   m_Name: Follower
   m_TagString: Untagged
@@ -299,23 +299,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 7662849114875815419}
   profile: {fileID: 11400000, guid: c684d2e9f229d44d89c689233b64d427, type: 2}
---- !u!114 &5148444479226527086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9020617701672319063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbe965fb412564bfb993c77cea691d2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  localContext: 1
-  invokeLocalEvents: 0
-  OnLocalEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &7589728839528931285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +311,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad6622abe0b6497f8667896abffb2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &323260635269403626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9020617701672319063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236363046424e4601a2dbea00dccde25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8450187771538383195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -338,10 +333,6 @@ PrefabInstance:
     - target: {fileID: 1691217409349015458, guid: 0d2fd4165fd2a4a8c9e3aaf78471bfe3, type: 3}
       propertyPath: m_Name
       value: DefaultPlayerPresentation
-      objectReference: {fileID: 0}
-    - target: {fileID: 1691217409349015458, guid: 0d2fd4165fd2a4a8c9e3aaf78471bfe3, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1691217409349015459, guid: 0d2fd4165fd2a4a8c9e3aaf78471bfe3, type: 3}
       propertyPath: m_RootOrder

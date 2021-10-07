@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(OnCameraProfileChangeChannel))]
+[RequireComponent(typeof(PlayerEventBus)),DisallowMultipleComponent]
 public class CameraFollowProfileContainer : MonoBehaviour
 {
     public CameraFollowProfile profile;
-    private OnCameraProfileChangeChannel channel;
+    private PlayerEventBus playerEventBus;
 
     private void OnEnable()
     {
-        channel = GetComponent<OnCameraProfileChangeChannel>();
-        channel.Invoke(this, profile);
+        playerEventBus = GetComponent<PlayerEventBus>();
+        playerEventBus.onCameraFollowProfileChanged.Invoke(this, profile);
     }
 
 }
