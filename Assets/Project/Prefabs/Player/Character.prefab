@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 5333393220235221047}
   - component: {fileID: 7589728839528931285}
   - component: {fileID: 323260635269403626}
+  - component: {fileID: 3090772604006698102}
   m_Layer: 6
   m_Name: Follower
   m_TagString: Untagged
@@ -323,6 +324,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236363046424e4601a2dbea00dccde25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3090772604006698102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9020617701672319063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb551871724c430ca53afdc56d0c972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  checkDistance: 5
 --- !u!1001 &8450187771538383195
 PrefabInstance:
   m_ObjectHideFlags: 0

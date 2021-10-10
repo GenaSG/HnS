@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6735250491322789676}
   - component: {fileID: 3945982572600628933}
   - component: {fileID: 634683975720000416}
+  - component: {fileID: 2318684219737245612}
   m_Layer: 6
   m_Name: MultiplayerCharacter
   m_TagString: Untagged
@@ -87,6 +88,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  propTag: Prop
   objectSelectorLayers:
     serializedVersion: 2
     m_Bits: 1
@@ -172,6 +174,18 @@ MonoBehaviour:
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
   target: {fileID: 6231624985411642441}
+--- !u!114 &2318684219737245612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7463891443770580423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236363046424e4601a2dbea00dccde25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4336057437090873778
 PrefabInstance:
   m_ObjectHideFlags: 0

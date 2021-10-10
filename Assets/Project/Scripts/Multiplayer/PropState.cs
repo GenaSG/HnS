@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using System;
-
+[RequireComponent(typeof(PlayerEventBus))]
 public class PropState : MultiplayerPlayerControllerState
 {
     [SyncVar(hook=nameof(OnObjectIDUpdated))]
     int objectID;
+    [SerializeField]
+    private string propTag = "Prop";
     [SerializeField]
     private LayerMask objectSelectorLayers;
     [SerializeField]
@@ -21,11 +23,30 @@ public class PropState : MultiplayerPlayerControllerState
     private Vector3 offset = Vector3.zero;
     [SerializeField]
     private DataList<Transform> availablePresentations;
+    private PlayerEventBus playerEventBus;
+    private Transform observed;
 
     // Start is called before the first frame update
     void Awake()
     {
         currentPlayerPresentation = defaultPlayerPresentation;
+        playerEventBus = GetComponent<PlayerEventBus>();
+    }
+
+    private void Start()
+    {
+        if(playerEventBus == null) playerEventBus = GetComponent<PlayerEventBus>();
+        playerEventBus.onPlayerLookingAtChannel.AddListener(OnLookingAt);
+    }
+
+    private void OnDisable()
+    {
+        playerEventBus.onPlayerLookingAtChannel.RemoveListener(OnLookingAt);
+    }
+
+    private void OnLookingAt(object caller, RaycastHit hit)
+    {
+        if (hit.collider.gameObject.CompareTag(propTag)) observed = hit.collider.transform;
     }
 
     void OnObjectIDUpdated(int lastID, int currentID)
@@ -45,16 +66,10 @@ public class PropState : MultiplayerPlayerControllerState
     [Command]
     private void CmdCheckForObject()
     {
-        RaycastHit hit;
-        Vector3 startPos = checkOrigin.position;
-        Vector3 endPosition = startPos + checkOrigin.forward * checkDistance;
-        if(Physics.Linecast(startPos,endPosition,out hit, objectSelectorLayers))
+        if (availablePresentations.Contains(observed))
         {
-            if (availablePresentations.Contains(hit.transform))
-            {
-                objectID = availablePresentations.IndexOf(hit.transform);
-                ReplacePresentation(objectID);
-            }
+            objectID = availablePresentations.IndexOf(observed);
+            ReplacePresentation(objectID);
         }
     }
 
@@ -73,6 +88,9 @@ public class PropState : MultiplayerPlayerControllerState
         }
         Vector3 position = new Vector3(r.position.x, r.position.y,r.position.z) + offset;
         currentPlayerPresentation = Instantiate<Transform>(availablePresentations[presentationId], position, r.rotation, r);
-        currentPlayerPresentation.gameObject.layer = gameObject.layer;
+        foreach(Transform child in currentPlayerPresentation.gameObject.GetComponentsInChildren<Transform>())
+        {
+            child.gameObject.layer = gameObject.layer;
+        }
     }
 }

@@ -41,7 +41,7 @@ public class MapController : DungeonEventListener
 
     }
 
-    private void OnEnable()
+    private void Start()
     {
         mapEventBus.onGenerateMapWithSeed.AddListener(GenerateMapChannel_OnEvent);
     }
