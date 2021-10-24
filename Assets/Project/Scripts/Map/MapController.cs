@@ -1,20 +1,24 @@
+using System;
+using System.Collections.Generic;
 using DungeonArchitect;
 using DungeonArchitect.Builders.SimpleCity;
 using UnityEngine;
 
 
-[RequireComponent(typeof(MapEventBus)),
-RequireComponent(typeof(SimpleCityDungeonConfig)),
+[RequireComponent(typeof(SimpleCityDungeonConfig)),
 RequireComponent(typeof(Dungeon))]
 public class MapController : DungeonEventListener
 {
-
+    public static event Action OnAnyMapGenerated = delegate { };
+    public event Action OnMapGenerated = delegate { };
+    public static readonly List<GameObject> Props = new List<GameObject>();
+    public static readonly List<GameObject> MapObjects = new List<GameObject>();
+    
     [SerializeField]
     private DataList<Transform> transforms;
     [SerializeField]
     private string PropsTags = "Props";
-    private MapEventBus mapEventBus;
-    //private OnMapGenerationDoneChannel genereationDoneChannel;
+    
     private PrefabEventListener prefabEventListener;
 
 
@@ -27,13 +31,22 @@ public class MapController : DungeonEventListener
         public override void SetMetadata(GameObject dungeonItem, DungeonNodeSpawnData spawnData)
         {
             base.SetMetadata(dungeonItem, spawnData);
-            if(dungeonItem.CompareTag(PropsTags)) transforms.Add(dungeonItem.transform);
+            
+            if (dungeonItem.CompareTag(PropsTags))
+            {
+                Props.Add(dungeonItem);
+            }
+            else
+            {
+                MapObjects.Add(dungeonItem);
+            }
+
         }
     }
     #region Initialization
     private void Awake()
     {
-        mapEventBus = GetComponent<MapEventBus>();
+       
         prefabEventListener = gameObject.AddComponent<PrefabEventListener>();
         prefabEventListener.transforms = transforms;
         prefabEventListener.PropsTags = PropsTags;
@@ -41,28 +54,30 @@ public class MapController : DungeonEventListener
 
     }
 
-    private void Start()
-    {
-        mapEventBus.onGenerateMapWithSeed.AddListener(GenerateMapChannel_OnEvent);
-    }
     #endregion
 
     #region Cleanup
     private void OnDisable()
     {
-        mapEventBus.onGenerateMapWithSeed.RemoveListener(GenerateMapChannel_OnEvent);
+        
     }
 
     private void OnDestroy()
     {
-        transforms.Clear();
+        Props.Clear();
+        MapObjects.Clear();
     }
     #endregion
 
-    private void GenerateMapChannel_OnEvent(object caller, uint seed)
+
+    public void BuildMap(uint seed)
     {
         dungeon.Config.Seed = seed;
+        dungeon.Build();
+    }
 
+    public void BuildMap()
+    {
         dungeon.Build();
     }
 
@@ -71,21 +86,24 @@ public class MapController : DungeonEventListener
     {
         base.OnPreDungeonBuild(dungeon, model);
 
-        transforms.Clear();
+        
+        Props.Clear();
+        MapObjects.Clear();
 
     }
 
     public override void OnPostDungeonBuild(Dungeon dungeon, DungeonModel model)
     {
         base.OnPostDungeonBuild(dungeon, model);
-        mapEventBus.onMapGenerated.Invoke(this);
-        //genereationDoneChannel.Invoke(this, true);
+        OnAnyMapGenerated();
+        OnMapGenerated();
     }
 
     public override void OnDungeonDestroyed(Dungeon dungeon)
     {
         base.OnDungeonDestroyed(dungeon);
-        transforms.Clear();
+        Props.Clear();
+        MapObjects.Clear();
     }
 
     public override void OnDungeonMarkersEmitted(Dungeon dungeon, DungeonModel model, LevelMarkerList markers)
