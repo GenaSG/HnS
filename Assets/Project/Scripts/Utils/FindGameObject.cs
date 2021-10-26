@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class FindGameObject
 {
-    internal enum SearchType { ByName, ByTag };
+    internal enum SearchType { ByName, ByTag, ByHierarchyPath};
     [SerializeField]
     SearchType searchType;
     [SerializeField]

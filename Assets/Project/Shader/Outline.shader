@@ -29,7 +29,7 @@
                 Cull Front
                 Blend One Zero
                 ZTest LEqual
-                ZWrite On
+                ZWrite Off
     
                 // Debug
                 // <None>
@@ -294,7 +294,7 @@
                 Cull Front
                 Blend One Zero
                 ZTest LEqual
-                ZWrite On
+                ZWrite Off
                 ColorMask 0
     
                 // Debug
@@ -554,7 +554,7 @@
                 Cull Front
                 Blend One Zero
                 ZTest LEqual
-                ZWrite On
+                ZWrite Off
                 ColorMask 0
     
                 // Debug
@@ -824,7 +824,7 @@
                 Cull Front
                 Blend One Zero
                 ZTest LEqual
-                ZWrite On
+                ZWrite Off
     
                 // Debug
                 // <None>
@@ -1090,7 +1090,7 @@
                 Cull Front
                 Blend One Zero
                 ZTest LEqual
-                ZWrite On
+                ZWrite Off
                 ColorMask 0
     
                 // Debug
@@ -1351,7 +1351,7 @@
                 Cull Front
                 Blend One Zero
                 ZTest LEqual
-                ZWrite On
+                ZWrite Off
                 ColorMask 0
     
                 // Debug
