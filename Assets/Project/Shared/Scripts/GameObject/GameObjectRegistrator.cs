@@ -11,11 +11,11 @@ public class GameObjectRegistrator : MonoBehaviour
     private void OnEnable()
     {
         if (target == null) target = gameObject;
-        registry.Add(target);
+        if (!registry.IsReadOnly) registry.Add(target);
     }
 
     private void OnDisable()
     {
-        registry.Remove(target);
+        if (!registry.IsReadOnly) registry.Remove(target);
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Game/Team")]
+[CreateAssetMenu(menuName = "Team/Team")]
 public class Team : ScriptableObject
 {
 }

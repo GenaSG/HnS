@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203622d3a16c343728b390334aefa940, type: 3}
+  m_Name: TeamManager
+  m_EditorClassIdentifier: 
+  game: {fileID: 11400000, guid: b5311a7784c1a4f6a8223af0739baf8b, type: 2}
+  selectTeamsState: {fileID: 11400000, guid: ebfa51571ce7342888d9a0c16fcb5ddf, type: 2}
+  clearTeamsState: {fileID: 11400000, guid: b61c898e7c1224598a3059999bb86bc3, type: 2}
+  startSeekers: 1
+  players: {fileID: 11400000, guid: 6e6e73904b9c94d43bf2bb9e3f12e815, type: 2}
+  hiders: {fileID: 11400000, guid: e2c07ea412a6e4b1fa34b10daf88a04b, type: 2}
+  seekers: {fileID: 11400000, guid: 0d98b5b98c4344b1ba4690b1564532a0, type: 2}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PostGame
   m_EditorClassIdentifier: 
   stateTimeOutInSeconds: 10
-  nextState: {fileID: 11400000, guid: b61c898e7c1224598a3059999bb86bc3, type: 2}
+  nextState: {fileID: 11400000, guid: 9aa5d72056c3b474fa90a8ecdb9ea4d4, type: 2}

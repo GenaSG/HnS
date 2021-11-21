@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1229be2b266ea4a788475bb24b1425fa, type: 3}
   m_Name: Game
   m_EditorClassIdentifier: 
-  currentState: {fileID: 11400000, guid: 12a2d6acfa1d143b28714f9e9afe3b20, type: 2}
+  currentState: {fileID: 11400000, guid: 89ec5a155498b4140a7ef394b8e4cb82, type: 2}
   availableStates:
   - {fileID: 11400000, guid: 12a2d6acfa1d143b28714f9e9afe3b20, type: 2}
+  - {fileID: 11400000, guid: a3c85d50e26ba44fdb8f9111c575451d, type: 2}
   - {fileID: 11400000, guid: ebfa51571ce7342888d9a0c16fcb5ddf, type: 2}
   - {fileID: 11400000, guid: 89ec5a155498b4140a7ef394b8e4cb82, type: 2}
   - {fileID: 11400000, guid: d69e4518820d244a9abd2bc13a5ae32b, type: 2}
+  - {fileID: 11400000, guid: 9aa5d72056c3b474fa90a8ecdb9ea4d4, type: 2}
   - {fileID: 11400000, guid: b61c898e7c1224598a3059999bb86bc3, type: 2}
   - {fileID: 11400000, guid: 1b45ad4e6dd45486ab91f493976c6039, type: 2}
-  StateEnterTime: 73.00413999999999
+  StateEnterTime: 77.8418754
   StateElapsedTime: 30
   StateTimeLeft: 0

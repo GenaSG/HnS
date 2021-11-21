@@ -9,6 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fd0a5c2544634eceb645cd328ee4950, type: 3}
-  m_Name: SeekersTeam
+  m_Script: {fileID: 11500000, guid: bd6b80306b2d54cfeabe39a81107c42f, type: 3}
+  m_Name: ClearTeams
   m_EditorClassIdentifier: 
+  teamManager: {fileID: 11400000, guid: c72eb158fb7784c0988651855bd13534, type: 2}
+  nextState: {fileID: 11400000, guid: b61c898e7c1224598a3059999bb86bc3, type: 2}
+  teamsAction: 1
