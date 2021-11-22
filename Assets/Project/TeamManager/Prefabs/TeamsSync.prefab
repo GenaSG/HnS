@@ -47,7 +47,7 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   visible: 0
-  m_AssetId: 
+  m_AssetId: b81d9efa32118493e96bc1412d2a1ba8
   hasSpawned: 0
 --- !u!114 &3257569596192557782
 MonoBehaviour:
@@ -63,6 +63,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  players: {fileID: 11400000, guid: 6e6e73904b9c94d43bf2bb9e3f12e815, type: 2}
-  hiders: {fileID: 11400000, guid: e2c07ea412a6e4b1fa34b10daf88a04b, type: 2}
-  seekers: {fileID: 11400000, guid: 0d98b5b98c4344b1ba4690b1564532a0, type: 2}
+  playerIDs: {fileID: 11400000, guid: 608b20118916145fdb60eb1972049949, type: 2}
+  hiderIDs: {fileID: 11400000, guid: 21463cc2542ab4ce48e0c5647d5aa698, type: 2}
+  seekerIDs: {fileID: 11400000, guid: bc352e8d1a4424230b24d5193ce955e9, type: 2}

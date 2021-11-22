@@ -49,19 +49,19 @@ public class DataList<T> : ScriptableObject, IList<T>
 
 # if UNITY_EDITOR
 
-[CustomEditor(typeof(GameObjectsDataList))]
+[CustomEditor(typeof(UIntDataList))]
 class DecalMeshHelperEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         if (GUILayout.Button("Debug"))
         {
-            if (target is GameObjectsDataList)
+            if (target is UIntDataList)
             {
-                Debug.Log("Items count = " + ((GameObjectsDataList)target).Count);
-                for (int i = 0; i < ((GameObjectsDataList)target).Count; i++)
+                Debug.Log("Items count = " + ((UIntDataList)target).Count);
+                for (int i = 0; i < ((UIntDataList)target).Count; i++)
                 {
-                    Debug.Log(((GameObjectsDataList)target)[i]);
+                    Debug.Log(((UIntDataList)target)[i]);
                 }
             }
         }

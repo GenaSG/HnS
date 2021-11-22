@@ -261,8 +261,7 @@ GameObject:
   - component: {fileID: 897020910535995615}
   - component: {fileID: 1277832593641288738}
   - component: {fileID: 3408739370476570176}
-  - component: {fileID: 7311601362413369876}
-  - component: {fileID: 2491605492844622377}
+  - component: {fileID: 7035992619250146713}
   m_Layer: 0
   m_Name: FSMMultiplayerCharacter
   m_TagString: Untagged
@@ -455,7 +454,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7311601362413369876
+--- !u!114 &7035992619250146713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -464,26 +463,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7654808288578894652}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 712ed71af7aae489fadf4b68a88531a7, type: 3}
+  m_Script: {fileID: 11500000, guid: e10b0ec2b40dc46fe84c1aea14a5864a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  target: {fileID: 2491605492844622377}
---- !u!114 &2491605492844622377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7654808288578894652}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c74c9538cef64c3b8f4fe58749a50a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  registry: {fileID: 11400000, guid: 6e6e73904b9c94d43bf2bb9e3f12e815, type: 2}
-  target: {fileID: 7654808288578894652}
+  ids: {fileID: 11400000, guid: 608b20118916145fdb60eb1972049949, type: 2}
 --- !u!1 &7728923072944595470
 GameObject:
   m_ObjectHideFlags: 0
