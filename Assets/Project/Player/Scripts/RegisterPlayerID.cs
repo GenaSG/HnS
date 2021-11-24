@@ -16,7 +16,7 @@ public class RegisterPlayerID : NetworkBehaviour
 
     private void OnDisable()
     {
-        if (ids.Contains(netId)) ids.Remove(netId);
+        if (ids.Contains(netId) && !ids.IsReadOnly) ids.Remove(netId);
     }
 
     public override void OnStopServer()
