@@ -1,11 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
 public class SimpleCharacterController : MonoBehaviour
 {
+    [SerializeField]
     private CharacterController character;
     [SerializeField]
     private LayerMask groundLayers;
@@ -30,11 +27,6 @@ public class SimpleCharacterController : MonoBehaviour
     private Vector3 velocity;
     private Vector3 desiredDir;
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-        character = GetComponent<CharacterController>();
-    }
 
     private void Start()
     {
