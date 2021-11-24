@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &74255046443446972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7473207822024736133}
+  m_Layer: 0
+  m_Name: Spectator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7473207822024736133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74255046443446972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6334096803507090999}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &78271837097715470
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,6 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2870383006237727379}
+  - component: {fileID: 2487965296474775233}
   m_Layer: 0
   m_Name: Hider
   m_TagString: Untagged
@@ -31,6 +62,20 @@ Transform:
   m_Father: {fileID: 8671655718848574045}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2487965296474775233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78271837097715470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ce5be746ebb480fb05414742305cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableGameObject: {fileID: 0}
+  disableGameObject: {fileID: 8982377612453463913}
 --- !u!1 &567581325921822285
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,6 +264,7 @@ Transform:
   m_Children:
   - {fileID: 5111845039238411607}
   - {fileID: 8042002023908159954}
+  - {fileID: 7473207822024736133}
   m_Father: {fileID: 3409935950934120580}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -357,6 +403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8042002023908159954}
+  - component: {fileID: 1050871019405599402}
   m_Layer: 0
   m_Name: Hider
   m_TagString: Untagged
@@ -379,6 +426,20 @@ Transform:
   m_Father: {fileID: 6334096803507090999}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1050871019405599402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5313296554385502004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ce5be746ebb480fb05414742305cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableGameObject: {fileID: 0}
+  disableGameObject: {fileID: 74255046443446972}
 --- !u!1 &6011712991910505867
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7403631138015501423}
+  - component: {fileID: 7185594119823067742}
   m_Layer: 0
   m_Name: Seeker
   m_TagString: Untagged
@@ -410,6 +472,20 @@ Transform:
   m_Father: {fileID: 8671655718848574045}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7185594119823067742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6011712991910505867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ce5be746ebb480fb05414742305cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableGameObject: {fileID: 0}
+  disableGameObject: {fileID: 8982377612453463913}
 --- !u!1 &6219151621583860106
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5111845039238411607}
+  - component: {fileID: 2386632581502976684}
   m_Layer: 0
   m_Name: Seeker
   m_TagString: Untagged
@@ -471,6 +548,20 @@ Transform:
   m_Father: {fileID: 6334096803507090999}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2386632581502976684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7490070573043543637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ce5be746ebb480fb05414742305cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableGameObject: {fileID: 0}
+  disableGameObject: {fileID: 74255046443446972}
 --- !u!1 &7654808288578894652
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,6 +969,36 @@ Transform:
   m_Father: {fileID: 2074967697365895980}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8982377612453463913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1626490722446190196}
+  m_Layer: 0
+  m_Name: Spectator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1626490722446190196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8982377612453463913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8671655718848574045}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9197970870499620262
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +1030,7 @@ Transform:
   m_Children:
   - {fileID: 7403631138015501423}
   - {fileID: 2870383006237727379}
+  - {fileID: 1626490722446190196}
   m_Father: {fileID: 3409935950934120580}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
