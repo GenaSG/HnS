@@ -54,6 +54,7 @@ public class SimpleCharacterController : MonoBehaviour
         deltaY += Input.GetAxis("Mouse X") * sensitivity;
 
         float x = Mathf.Clamp(startX + deltaX, -90f, 90f);
+        //float x = startX + deltaX;
         head.localEulerAngles = new Vector3(x, head.localEulerAngles.y, head.localEulerAngles.z);
 
         root.localEulerAngles = new Vector3(root.localEulerAngles.z, startY + deltaY, root.localEulerAngles.z);
