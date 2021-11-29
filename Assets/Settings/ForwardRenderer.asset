@@ -52,9 +52,8 @@ MonoBehaviour:
   m_Name: ForwardRenderer
   m_EditorClassIdentifier: 
   m_RendererFeatures:
-  - {fileID: 3311552712104433194}
-  - {fileID: -279115012653964368}
-  m_RendererFeatureMap: 2a56f773a5fff42db02348f35f6220fc
+  - {fileID: 8581645033581069110}
+  m_RendererFeatureMap: 364318c7b0201877
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -105,3 +104,17 @@ MonoBehaviour:
     DirectLightingStrength: 0.25
     Radius: 1
     SampleCount: 6
+--- !u!114 &8581645033581069110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473a86c9e274347dfbdde619584cebe9, type: 3}
+  m_Name: NewHighlightPlusRenderPassFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  renderPassEvent: 500
