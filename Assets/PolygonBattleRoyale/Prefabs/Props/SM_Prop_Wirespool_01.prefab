@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64734485457052184}
   - component: {fileID: 8375118623716353795}
   - component: {fileID: 3858279368611634304}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Wirespool_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

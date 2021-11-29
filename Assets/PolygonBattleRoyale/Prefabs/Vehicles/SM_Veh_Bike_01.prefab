@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4515214056746180}
   - component: {fileID: 33978972795902086}
   - component: {fileID: 23224396252803516}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Bike_HandleBars_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,8 @@ GameObject:
   - component: {fileID: 64206081448529086}
   - component: {fileID: -3747904917918077463}
   - component: {fileID: -7226266758890439317}
-  m_Layer: 0
+  - component: {fileID: 492681594560271179}
+  m_Layer: 7
   m_Name: SM_Veh_Bike_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
@@ -207,6 +208,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+--- !u!114 &492681594560271179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148358842170010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}
 --- !u!1 &1233304220568792
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +232,7 @@ GameObject:
   - component: {fileID: 4014824108851736}
   - component: {fileID: 33755920678361064}
   - component: {fileID: 23407486194607418}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Bike_Front_Shock_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +314,7 @@ GameObject:
   - component: {fileID: 4305097353401572}
   - component: {fileID: 33915013633145866}
   - component: {fileID: 23564995552240030}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Bike_Rear_Shock_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +396,7 @@ GameObject:
   - component: {fileID: 4065044340484128}
   - component: {fileID: 33949732406716568}
   - component: {fileID: 23874411945052750}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Bike_Rear_Wheel_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +477,7 @@ GameObject:
   - component: {fileID: 4918550130151286}
   - component: {fileID: 33845264325007804}
   - component: {fileID: 23101330921605226}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Bike_Front_Wheel_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

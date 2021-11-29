@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 64094039045000862}
   - component: {fileID: 4254320419916740315}
   - component: {fileID: -8357471495782764770}
-  m_Layer: 0
+  - component: {fileID: -8403475137258514397}
+  m_Layer: 7
   m_Name: SM_Veh_Bike_Destroyed_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
@@ -123,3 +124,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+--- !u!114 &-8403475137258514397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466883102972848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}

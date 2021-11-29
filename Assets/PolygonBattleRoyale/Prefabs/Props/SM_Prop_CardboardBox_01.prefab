@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3264427692453802270}
   - component: {fileID: -2213344392950449144}
   - component: {fileID: -7688684687139645207}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_CardboardBox_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

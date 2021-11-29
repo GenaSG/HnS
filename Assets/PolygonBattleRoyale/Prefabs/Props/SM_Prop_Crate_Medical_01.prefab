@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64054110420760608}
   - component: {fileID: 6110303845606428430}
   - component: {fileID: 5718063556926147401}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Crate_Medical_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

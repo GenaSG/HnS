@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 64036010701913930}
   - component: {fileID: 64486351379032606}
   - component: {fileID: 9135826226102492388}
-  m_Layer: 0
+  - component: {fileID: 3808269918696889012}
+  m_Layer: 7
   m_Name: SM_Veh_Truck_Destroyed_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
@@ -140,3 +141,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0da963e99c18544a985ba167b89b402e, type: 2}
+--- !u!114 &3808269918696889012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343484773080560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}

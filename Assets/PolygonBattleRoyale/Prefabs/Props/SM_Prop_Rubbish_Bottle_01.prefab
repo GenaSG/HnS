@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23071176879660748}
   - component: {fileID: 3771300650485172815}
   - component: {fileID: 8774030634561897617}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Rubbish_Bottle_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

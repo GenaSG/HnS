@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64963352751766746}
   - component: {fileID: 7823476807708435724}
   - component: {fileID: -5535243453657282778}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Portaloo_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4808352411818786}
   - component: {fileID: 33202050441495188}
   - component: {fileID: 23323031373625554}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Portaloo_01_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}

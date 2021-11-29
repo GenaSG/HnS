@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 64288957023732574}
   - component: {fileID: 64830528800331556}
   - component: {fileID: 3797994516870886278}
-  m_Layer: 0
+  - component: {fileID: -6208322377772281461}
+  m_Layer: 7
   m_Name: SM_Veh_Tank_USA_Destroyed_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
@@ -141,6 +142,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0da963e99c18544a985ba167b89b402e, type: 2}
+--- !u!114 &-6208322377772281461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053460715930104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}
 --- !u!1 &1514905908761052
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +166,7 @@ GameObject:
   - component: {fileID: 4773319171963102}
   - component: {fileID: 33221381216719946}
   - component: {fileID: 23262127046104122}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_USA_Destroyed_Tracks_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

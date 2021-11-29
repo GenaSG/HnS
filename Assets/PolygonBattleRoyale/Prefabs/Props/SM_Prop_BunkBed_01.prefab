@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64290388754737756}
   - component: {fileID: 3724417609558211913}
   - component: {fileID: -6373287132233059091}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_BunkBed_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

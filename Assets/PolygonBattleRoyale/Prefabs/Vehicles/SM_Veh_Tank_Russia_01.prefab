@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4378729179080434}
   - component: {fileID: 33028684279693482}
   - component: {fileID: 23516619560297496}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_R_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,8 @@ GameObject:
   - component: {fileID: 23300089157137880}
   - component: {fileID: 64654267376515388}
   - component: {fileID: 8796749805247698774}
-  m_Layer: 0
+  - component: {fileID: 6238093206960558823}
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
@@ -208,6 +209,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0da963e99c18544a985ba167b89b402e, type: 2}
+--- !u!114 &6238093206960558823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051164940061506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}
 --- !u!1 &1077756482814580
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +233,7 @@ GameObject:
   - component: {fileID: 4271284789227862}
   - component: {fileID: 33053915173084002}
   - component: {fileID: 23585025200520008}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_R_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +314,7 @@ GameObject:
   - component: {fileID: 4812616864958408}
   - component: {fileID: 33902209454713130}
   - component: {fileID: 23795790155550840}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_R_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +395,7 @@ GameObject:
   - component: {fileID: 4720866288059082}
   - component: {fileID: 33767074582076278}
   - component: {fileID: 23512411887573194}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_L_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +476,7 @@ GameObject:
   - component: {fileID: 4546173391299050}
   - component: {fileID: 33021498316324388}
   - component: {fileID: 23279804564411780}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +557,7 @@ GameObject:
   - component: {fileID: 4217104090317204}
   - component: {fileID: 33741762035491534}
   - component: {fileID: 23938380390135166}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_L_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +639,7 @@ GameObject:
   - component: {fileID: 33453761465108684}
   - component: {fileID: 23437244568914754}
   - component: {fileID: 64311489455761746}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Turret_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +735,7 @@ GameObject:
   - component: {fileID: 4546115739481670}
   - component: {fileID: 33754902476976922}
   - component: {fileID: 23446812879033240}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_R_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,7 +816,7 @@ GameObject:
   - component: {fileID: 4517797833417004}
   - component: {fileID: 33684169603181652}
   - component: {fileID: 23173950735890324}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +897,7 @@ GameObject:
   - component: {fileID: 4336179578339744}
   - component: {fileID: 33210105216807306}
   - component: {fileID: 23518707340230034}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_R_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -965,7 +979,7 @@ GameObject:
   - component: {fileID: 33813927087899170}
   - component: {fileID: 23896930743746958}
   - component: {fileID: 64979756871410534}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Turret_Barrel_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1060,7 +1074,7 @@ GameObject:
   - component: {fileID: 4934738342446348}
   - component: {fileID: 33461844565808790}
   - component: {fileID: 23585296847976512}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_L_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1141,7 +1155,7 @@ GameObject:
   - component: {fileID: 4281225944372140}
   - component: {fileID: 33035397654437552}
   - component: {fileID: 23870583420521444}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_R_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1222,7 +1236,7 @@ GameObject:
   - component: {fileID: 4829426845173368}
   - component: {fileID: 33551277556948216}
   - component: {fileID: 23251767170923810}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_R_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1303,7 +1317,7 @@ GameObject:
   - component: {fileID: 4874219120791088}
   - component: {fileID: 33777314991144916}
   - component: {fileID: 23492702571981130}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_L_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1384,7 +1398,7 @@ GameObject:
   - component: {fileID: 4785625188756442}
   - component: {fileID: 33652334068776772}
   - component: {fileID: 23787068656672526}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_L_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1465,7 +1479,7 @@ GameObject:
   - component: {fileID: 4887983751724258}
   - component: {fileID: 33977921356896740}
   - component: {fileID: 23900160337227766}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_L_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1546,7 +1560,7 @@ GameObject:
   - component: {fileID: 4198979152496508}
   - component: {fileID: 33345251083057784}
   - component: {fileID: 23306308660107374}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Track_Wheel_L_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

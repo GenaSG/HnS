@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64693093259423564}
   - component: {fileID: -4632202661575564030}
   - component: {fileID: -3664595206219457462}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Gauze_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64519740100172708}
   - component: {fileID: 7884796833094240290}
   - component: {fileID: -7833970463658032631}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_TireStack_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

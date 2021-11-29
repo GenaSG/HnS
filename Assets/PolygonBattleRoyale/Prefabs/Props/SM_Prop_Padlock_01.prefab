@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64311941342678366}
   - component: {fileID: -8955200686888811082}
   - component: {fileID: -7698901952148356422}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Padlock_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4826418333628748}
   - component: {fileID: 33587460664738178}
   - component: {fileID: 23262702462264898}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Padlock_01_Shackle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

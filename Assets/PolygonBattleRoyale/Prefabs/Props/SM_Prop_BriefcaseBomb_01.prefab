@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64182804407150588}
   - component: {fileID: 8951750665961843015}
   - component: {fileID: 3696944062701226809}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_BriefcaseBomb_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4554909865845478}
   - component: {fileID: 33520563049277020}
   - component: {fileID: 23776412268330566}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_BriefcaseBomb_01_Lid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

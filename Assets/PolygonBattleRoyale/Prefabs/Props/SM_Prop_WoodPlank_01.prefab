@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64695208691215742}
   - component: {fileID: 6225334321796096579}
   - component: {fileID: 7705760395529184357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_WoodPlank_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

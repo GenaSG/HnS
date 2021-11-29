@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64133332473343392}
   - component: {fileID: 6197020918326921846}
   - component: {fileID: -8342108323353605583}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Pallet_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 64034956524774926}
   - component: {fileID: -8781669152107569307}
   - component: {fileID: -812891725748441325}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Range_Wall_Door_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

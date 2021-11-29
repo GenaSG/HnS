@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23662476069700834}
   - component: {fileID: 7554466753009168615}
   - component: {fileID: -8057094149489153941}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Rubbish_Paper_03
   m_TagString: Prop
   m_Icon: {fileID: 0}

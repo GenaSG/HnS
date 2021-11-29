@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64044303418709196}
   - component: {fileID: -300307495591351064}
   - component: {fileID: 4790428102590778519}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Cinderblock_Wall_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

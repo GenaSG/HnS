@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4838497260068756}
   - component: {fileID: 33786711089575664}
   - component: {fileID: 23164862765675878}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_EmergencyDrop_01_Parachute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4717582983034390}
   - component: {fileID: 33822508370182746}
   - component: {fileID: 23947125012479012}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_EmergencyDrop_01_Harness
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 64204371903196274}
   - component: {fileID: 2690505232272377277}
   - component: {fileID: 2216925077147397494}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_EmergencyDrop_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 4451785477186416}
   - component: {fileID: 33931713190615942}
   - component: {fileID: 23109364604575560}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_EmergencyDrop_01_Lid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 4876664135422898}
   - component: {fileID: 33379977649496736}
   - component: {fileID: 23476013445943392}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_EmergencyDrop_01_Contents
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64201938623352536}
   - component: {fileID: -5924508450539872796}
   - component: {fileID: 2137728980583469571}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_AmmoBox_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4026361717859588}
   - component: {fileID: 33804576479437324}
   - component: {fileID: 23606047110916510}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_AmmoBox_01_Lid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

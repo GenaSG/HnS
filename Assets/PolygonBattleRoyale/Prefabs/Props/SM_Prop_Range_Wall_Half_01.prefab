@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 64711111531228688}
   - component: {fileID: -21401409396920577}
   - component: {fileID: -2243097817308644459}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Range_Wall_Half_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

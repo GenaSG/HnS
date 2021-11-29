@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64300118897015052}
   - component: {fileID: -8422896657892882297}
   - component: {fileID: 8529401541357565615}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Needle_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

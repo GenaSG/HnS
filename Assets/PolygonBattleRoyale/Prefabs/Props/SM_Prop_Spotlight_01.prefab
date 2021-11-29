@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23554478071543390}
   - component: {fileID: 64068050932624444}
   - component: {fileID: -1255612033051547033}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Spotlight_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

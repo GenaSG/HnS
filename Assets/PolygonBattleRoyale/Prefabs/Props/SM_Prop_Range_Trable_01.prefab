@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 64066419935363794}
   - component: {fileID: 5384912262688464879}
   - component: {fileID: 208304624005276826}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Range_Trable_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

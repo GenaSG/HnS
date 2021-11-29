@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23929266189330262}
   - component: {fileID: -3178021815477524483}
   - component: {fileID: 8533449103352959845}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Rubbish_Can_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

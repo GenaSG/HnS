@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 23882619702126232}
   - component: {fileID: 64902300731522586}
   - component: {fileID: -8346021492642841373}
-  m_Layer: 0
+  - component: {fileID: 8639445090727355156}
+  m_Layer: 7
   m_Name: SM_Veh_Light_Armored_Car_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
@@ -116,6 +117,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0da963e99c18544a985ba167b89b402e, type: 2}
+--- !u!114 &8639445090727355156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293849716984982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}
 --- !u!1 &1437563887357140
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +141,7 @@ GameObject:
   - component: {fileID: 4913772914049256}
   - component: {fileID: 33323280352578062}
   - component: {fileID: 23209803784664350}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Light_Armored_Car_SteeringW_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +222,7 @@ GameObject:
   - component: {fileID: 4212054994305930}
   - component: {fileID: 33861139760576394}
   - component: {fileID: 23022935086285628}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Light_Armored_Car_Wheel_fl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +303,7 @@ GameObject:
   - component: {fileID: 4852628124553692}
   - component: {fileID: 33225153231122696}
   - component: {fileID: 23759623460227764}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Light_Armored_Car_Wheel_rl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +384,7 @@ GameObject:
   - component: {fileID: 4832487386174726}
   - component: {fileID: 33685227088993186}
   - component: {fileID: 23190774155351088}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Light_Armored_Car_Wheel_fr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +465,7 @@ GameObject:
   - component: {fileID: 4234198289182278}
   - component: {fileID: 33748798455093700}
   - component: {fileID: 23410737836644304}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Light_Armored_Car_Glass_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +546,7 @@ GameObject:
   - component: {fileID: 4294806768332580}
   - component: {fileID: 33465895702324210}
   - component: {fileID: 23361583361609864}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Light_Armored_Car_Wheel_rr
   m_TagString: Untagged
   m_Icon: {fileID: 0}

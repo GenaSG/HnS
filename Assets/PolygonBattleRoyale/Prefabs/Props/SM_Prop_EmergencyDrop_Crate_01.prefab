@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64554883476177600}
   - component: {fileID: 5676795074994362163}
   - component: {fileID: -6532046006883457410}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_EmergencyDrop_Crate_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

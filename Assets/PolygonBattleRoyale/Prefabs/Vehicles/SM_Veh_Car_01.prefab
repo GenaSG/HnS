@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4546980212513648}
   - component: {fileID: 33415639774112408}
   - component: {fileID: 23796944045010874}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Car_01_Wheel_rr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4624509857946648}
   - component: {fileID: 33052935182277352}
   - component: {fileID: 23502501558453966}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Car_01_Wheel_fr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 4405139340583768}
   - component: {fileID: 33791982029648640}
   - component: {fileID: 23780316502892104}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Car_01_SteeringW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 4599643899668986}
   - component: {fileID: 33113683261969142}
   - component: {fileID: 23167000087053424}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Car_01_Wheel_fl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 4335853142536164}
   - component: {fileID: 33535971377945958}
   - component: {fileID: 23816531068468528}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Car_01_Wheel_rl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,8 @@ GameObject:
   - component: {fileID: 23065182090748536}
   - component: {fileID: 64543562869724498}
   - component: {fileID: 738560858550450457}
-  m_Layer: 0
+  - component: {fileID: 8611417305373819591}
+  m_Layer: 7
   m_Name: SM_Veh_Car_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
@@ -521,6 +522,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0da963e99c18544a985ba167b89b402e, type: 2}
+--- !u!114 &8611417305373819591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828845558886990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}
 --- !u!1 &1977614770275194
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +546,7 @@ GameObject:
   - component: {fileID: 4179484155986114}
   - component: {fileID: 33248493859167660}
   - component: {fileID: 23739588823333374}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Car_01_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}

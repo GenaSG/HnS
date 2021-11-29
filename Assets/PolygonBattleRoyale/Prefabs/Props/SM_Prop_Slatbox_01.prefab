@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64389622144170834}
   - component: {fileID: 554620985066263613}
   - component: {fileID: 7859531434160912313}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Slatbox_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

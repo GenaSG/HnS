@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64684915154422018}
   - component: {fileID: -7775591990610441295}
   - component: {fileID: -1676628844700629751}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Barrel_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4119051334949844}
   - component: {fileID: 33660122653447666}
   - component: {fileID: 23625662168473184}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Car_Clean_01_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4929502247516806}
   - component: {fileID: 33856787540494466}
   - component: {fileID: 23058710217465472}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Car_Clean_01_Wheel_rr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 4106319146412758}
   - component: {fileID: 33237382179590434}
   - component: {fileID: 23795443161408722}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Car_Clean_01_Wheel_rl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 4066526677286986}
   - component: {fileID: 33500916790239636}
   - component: {fileID: 23925980604244966}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Car_Clean_01_SteeringW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 4410030510422264}
   - component: {fileID: 33962162938383036}
   - component: {fileID: 23272934291797892}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Car_Clean_01_Wheel_fr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 4939658648707620}
   - component: {fileID: 33653832284491848}
   - component: {fileID: 23741417224434168}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Veh_Car_Clean_01_Wheel_fl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,8 @@ GameObject:
   - component: {fileID: 23650413500396490}
   - component: {fileID: 64682521301277846}
   - component: {fileID: 4546019242559318248}
-  m_Layer: 0
+  - component: {fileID: 33317625416361878}
+  m_Layer: 7
   m_Name: SM_Veh_Car_Clean_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
@@ -602,3 +603,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0da963e99c18544a985ba167b89b402e, type: 2}
+--- !u!114 &33317625416361878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978907248868392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}

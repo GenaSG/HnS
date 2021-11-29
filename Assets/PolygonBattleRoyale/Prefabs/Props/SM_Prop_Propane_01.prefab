@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64712058148839506}
   - component: {fileID: 5485923714828275548}
   - component: {fileID: 3606332952147343970}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Propane_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

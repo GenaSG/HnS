@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64397048526993332}
   - component: {fileID: -2603317914276218676}
   - component: {fileID: 6948075010769312098}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_RadioTower_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64353920157974210}
   - component: {fileID: -3924288630783181996}
   - component: {fileID: -1065288310966001643}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Bandage_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

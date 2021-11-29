@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64875929240884622}
   - component: {fileID: -3859183483650371529}
   - component: {fileID: -2916335027870942964}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_GuardTower_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64986660292041380}
   - component: {fileID: 383975992896114560}
   - component: {fileID: 885041907058273905}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_BaseWall_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

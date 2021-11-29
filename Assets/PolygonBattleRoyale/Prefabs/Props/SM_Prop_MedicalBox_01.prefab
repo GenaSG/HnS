@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64437538696126918}
   - component: {fileID: -1828391748622827093}
   - component: {fileID: 2192612398006891559}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_MedicalBox_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

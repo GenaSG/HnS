@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4507583288822502}
   - component: {fileID: 33406085877939830}
   - component: {fileID: 23696987250667748}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_WireFence_01_Wires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 64411736897015278}
   - component: {fileID: -8703201081550508917}
   - component: {fileID: 7395531665261337324}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_WireFence_01
   m_TagString: Prop
   m_Icon: {fileID: 0}

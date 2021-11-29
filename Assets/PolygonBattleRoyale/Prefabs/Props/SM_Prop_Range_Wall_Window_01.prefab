@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64065737889655334}
   - component: {fileID: -2343711445166602490}
   - component: {fileID: -7703405918408092421}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Range_Wall_Window_01
   m_TagString: Prop
   m_Icon: {fileID: 0}
