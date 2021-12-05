@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922675cac6b794d45a25e779704575e7, type: 3}
   m_Name: Hide
   m_EditorClassIdentifier: 
-  stateTimeOutInSeconds: 300
+  stateTimeOutInSeconds: 30
   nextState: {fileID: 11400000, guid: 89ec5a155498b4140a7ef394b8e4cb82, type: 2}

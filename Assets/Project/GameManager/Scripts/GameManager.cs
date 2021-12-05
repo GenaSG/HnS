@@ -12,6 +12,8 @@ public class GameManager : NetworkBehaviour
     [SyncVar(hook = nameof(OnStateIDSynced))]
     private int syncedStateID;
 
+    //private float lastSyncTime;
+
     public override void OnStartServer()
     {
         base.OnStartServer();
@@ -32,11 +34,22 @@ public class GameManager : NetworkBehaviour
     private void Start()
     {
         game.Start();
+        //lastSyncTime = Time.time;
     }
 
     private void Update()
     {
         game.Update();
+        if (isServer)
+        {
+            syncedStateStartTime = game.StateEnterTime;
+            syncedStateID = game.GetCurrentStateID();
+        }
+        else if(isClient)
+        {
+            game.StateEnterTime = syncedStateStartTime;
+        }
+
     }
 
     private void OnDestroy()
@@ -48,11 +61,14 @@ public class GameManager : NetworkBehaviour
     private void OnStateStartTimeSynced(double last, double current)
     {
         game.StateEnterTime = current;
+        syncedStateStartTime = current;
     }
 
     [ClientCallback]
     private void OnStateIDSynced(int last,int current)
     {
         game.SwitchState(current);
+        
+        syncedStateID = current;
     }
 }
