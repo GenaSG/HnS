@@ -18,14 +18,13 @@ public class LookAt : MonoBehaviour
     public event Action OnObjectChanged = delegate {};
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         RaycastHit hitInfo;
         if (Physics.Linecast(startPoint.position, startPoint.position + startPoint.forward * checkDistance,out hitInfo, layerMask))
         {
             if (hitPointTransform != null)
             {
-                hitPointTransform.gameObject.SetActive(true);
                 hitPointTransform.position = hitInfo.point;
             }
             if(hitInfo.collider.gameObject != lookingAt)
@@ -36,7 +35,11 @@ public class LookAt : MonoBehaviour
         }
         else
         {
-            if (hitPointTransform != null) hitPointTransform.gameObject.SetActive(false);
+
+            if (hitPointTransform != null)
+            {
+                hitPointTransform.localPosition = Vector3.zero;
+            }
         }
     }
 }

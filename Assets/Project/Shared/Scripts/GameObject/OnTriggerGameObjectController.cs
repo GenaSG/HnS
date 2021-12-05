@@ -15,13 +15,13 @@ public class OnTriggerGameObjectController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        ActivateOnEnter.SetActive(true);
-        DeactivateOnEnter.SetActive(false);
+        if(ActivateOnEnter) ActivateOnEnter.SetActive(true);
+        if(DeactivateOnEnter) DeactivateOnEnter.SetActive(false);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        ActivateOnExit.SetActive(true);
-        DeactivateOnExit.SetActive(false);
+        if(ActivateOnExit) ActivateOnExit.SetActive(true);
+        if(DeactivateOnExit) DeactivateOnExit.SetActive(false);
     }
 }
