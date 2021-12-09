@@ -15,6 +15,7 @@ public class LookAt : MonoBehaviour
     private Transform hitPointTransform;
     [SerializeField]
     private GameObject lookingAt;
+    public GameObject LookingAt { get { return lookingAt; } }
     public event Action OnObjectChanged = delegate {};
 
     // Update is called once per frame
