@@ -23,7 +23,8 @@ public class PropsSync : NetworkBehaviour
 
     private void OnEnable()
     {
-        lookAt.OnObjectChanged += LookAt_OnObjectChanged;    
+        lookAt.OnObjectChanged += LookAt_OnObjectChanged;
+        currentPlayerPresentation = defaultPlayerPresentation;
     }
 
     private void LookAt_OnObjectChanged()
@@ -60,21 +61,34 @@ public class PropsSync : NetworkBehaviour
         Transform r = defaultPlayerPresentation.transform.parent;
 
 
-        if (currentPlayerPresentation != null && currentPlayerPresentation != defaultPlayerPresentation)
+        //if (currentPlayerPresentation != null && currentPlayerPresentation != defaultPlayerPresentation)
+        //{
+        //    Destroy(currentPlayerPresentation.gameObject);
+        //}
+        //else if(currentPlayerPresentation != null)
+        //{
+        //    currentPlayerPresentation.gameObject.SetActive(false);
+        //}
+        if(currentPlayerPresentation != null)
         {
-            Destroy(currentPlayerPresentation.gameObject);
+            if(currentPlayerPresentation == defaultPlayerPresentation)
+            {
+                currentPlayerPresentation.gameObject.SetActive(false);
+            }
+            else
+            {
+                Destroy(currentPlayerPresentation);
+            }
         }
-        else if(currentPlayerPresentation != null)
-        {
-            currentPlayerPresentation.gameObject.SetActive(false);
-        }
+
+
         Vector3 position = new Vector3(r.position.x, r.position.y, r.position.z) + offset;
         currentPlayerPresentation = Instantiate<GameObject>(props[presentationId], position, r.rotation, r);
         currentPlayerPresentation.layer = r.gameObject.layer;
-        //foreach (Transform child in currentPlayerPresentation.gameObject.GetComponentsInChildren<Transform>())
-        //{
-        //    child.gameObject.layer = gameObject.layer;
-        //}
+        foreach (Transform child in currentPlayerPresentation.gameObject.GetComponentsInChildren<Transform>())
+        {
+            child.gameObject.layer = gameObject.layer;
+        }
     }
 
     //[ClientCallback]
@@ -84,44 +98,5 @@ public class PropsSync : NetworkBehaviour
         ReplacePresentation(syncedPropId);
     }
 
-    //[SerializeField]
-    //private DataComponet<GameObject> lookAtGameObject;
-    //[SerializeField]
-    //private EventComponent OnLookAtGameObjectChanged;
-    //private GameObject lookingAtObject;
-    //[SerializeField]
-    //private DataList<GameObject> props;
-    //[SyncVar]
-    //private int selectedPropIndex = -1;
-    //private int lastSelectedIndex = -1;
-
-    //private void Start()
-    //{
-    //    OnLookAtGameObjectChanged.OnEvent += LookAt_OnObjectChanged;
-    //}
-
-    //private void LookAt_OnObjectChanged()
-    //{
-    //    lookingAtObject = lookAtGameObject.Value;
-    //}
-
-    //private void OnDisable()
-    //{
-    //    OnLookAtGameObjectChanged.OnEvent -= LookAt_OnObjectChanged;
-    //}
-
-    //private void Update()
-    //{
-    //    if (isLocalPlayer && Input.GetButtonDown("Fire1")) CmdSelectCurrentProp();
-    //    if(selectedPropIndex != lastSelectedIndex)
-    //    {
-
-    //    }
-    //}
-
-    //[Command]
-    //private void CmdSelectCurrentProp()
-    //{
-    //    if (lookingAtObject != null && props.Contains(lookingAtObject)) selectedPropIndex = props.IndexOf(lookingAtObject);
-    //}
+   
 }
