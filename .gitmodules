@@ -1,0 +1,3 @@
+[submodule "Assets/Libs/EventBus"]
+	path = Assets/Libs/EventBus
+	url = git@github.com:GenaSG/Unity3dSimpleEventBus.git
