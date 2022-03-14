@@ -42,8 +42,10 @@
 		}
 		
 		public static void Raise(object caller, T payload){
-			channels[global](caller,payload);
-		} 
+            if (!channels.ContainsKey(global)) return;
+            channels[global](caller,payload);
+		}
+
 	}
 
 }

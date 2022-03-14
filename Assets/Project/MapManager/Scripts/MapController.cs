@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using DungeonArchitect;
 using DungeonArchitect.Builders.SimpleCity;
 using UnityEngine;
+using SimpleEventBus;
 
 
 [RequireComponent(typeof(SimpleCityDungeonConfig)),
 RequireComponent(typeof(Dungeon))]
 public class MapController : DungeonEventListener
 {
-    public static event Action OnAnyMapGenerated = delegate { };
-    public event Action OnMapGenerated = delegate { };
+    //public static event Action OnAnyMapGenerated = delegate { };
+    //public event Action OnMapGenerated = delegate { };
     [SerializeField]
-    private DataList<GameObject> Props;
+    private List<GameObject> Props = new List<GameObject>();
     [SerializeField]
-    private DataList<GameObject> MapObjects;
+    private List<GameObject> MapObjects = new List<GameObject>();
     
     [SerializeField]
     private string PropsTags = "Props";
@@ -26,8 +27,8 @@ public class MapController : DungeonEventListener
 
     public class PrefabEventListener : DungeonItemSpawnListener
     {
-        public DataList<GameObject> Props;
-        public DataList<GameObject> MapObjects;
+        public List<GameObject> Props;
+        public List<GameObject> MapObjects;
         public string PropsTags = "Props";
         public override void SetMetadata(GameObject dungeonItem, DungeonNodeSpawnData spawnData)
         {
@@ -53,7 +54,11 @@ public class MapController : DungeonEventListener
         prefabEventListener.MapObjects = MapObjects;
         prefabEventListener.PropsTags = PropsTags;
         dungeon = GetComponent<Dungeon>();
+    }
 
+    private void OnEnable()
+    {
+        EventBus<OnMapSeedGenerated>.Subscribe(OnBuildMap);
     }
 
     #endregion
@@ -61,7 +66,7 @@ public class MapController : DungeonEventListener
     #region Cleanup
     private void OnDisable()
     {
-        
+        EventBus<OnMapSeedGenerated>.Unsubscribe(OnBuildMap);
     }
 
     private void OnDestroy()
@@ -71,6 +76,11 @@ public class MapController : DungeonEventListener
     }
     #endregion
 
+    private void OnBuildMap(object caller, OnMapSeedGenerated seed)
+    {
+        Debug.Log("On build map");
+        BuildMap(seed.seed);
+    }
 
     public void BuildMap(uint seed)
     {
@@ -97,8 +107,10 @@ public class MapController : DungeonEventListener
     public override void OnPostDungeonBuild(Dungeon dungeon, DungeonModel model)
     {
         base.OnPostDungeonBuild(dungeon, model);
-        OnAnyMapGenerated();
-        OnMapGenerated();
+        EventBus<OnMapGenerated>.Raise(this,
+            new OnMapGenerated { props = Props.ToArray(), levelGeometry = MapObjects.ToArray() });
+        //OnAnyMapGenerated();
+        //OnMapGenerated();
     }
 
     public override void OnDungeonDestroyed(Dungeon dungeon)
@@ -106,6 +118,7 @@ public class MapController : DungeonEventListener
         base.OnDungeonDestroyed(dungeon);
         Props.Clear();
         MapObjects.Clear();
+        EventBus<OnMapCleared>.Raise(this, new OnMapCleared());
     }
 
     public override void OnDungeonMarkersEmitted(Dungeon dungeon, DungeonModel model, LevelMarkerList markers)
