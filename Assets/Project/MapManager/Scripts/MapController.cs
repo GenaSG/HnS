@@ -10,8 +10,6 @@ using SimpleEventBus;
 RequireComponent(typeof(Dungeon))]
 public class MapController : DungeonEventListener
 {
-    //public static event Action OnAnyMapGenerated = delegate { };
-    //public event Action OnMapGenerated = delegate { };
     [SerializeField]
     private List<GameObject> Props = new List<GameObject>();
     [SerializeField]
@@ -109,8 +107,6 @@ public class MapController : DungeonEventListener
         base.OnPostDungeonBuild(dungeon, model);
         EventBus<OnMapGenerated>.Raise(this,
             new OnMapGenerated { props = Props.ToArray(), levelGeometry = MapObjects.ToArray() });
-        //OnAnyMapGenerated();
-        //OnMapGenerated();
     }
 
     public override void OnDungeonDestroyed(Dungeon dungeon)
