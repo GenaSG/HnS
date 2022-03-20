@@ -35,7 +35,7 @@ namespace GameFlow
                 return;
             }
          
-            stateTime += NetworkTime.time - stateEnterTime;
+            stateTime += Time.deltaTime;
             EventBus<OnGameStateTimerUpdated>.Raise(this,
                 new OnGameStateTimerUpdated
                 {

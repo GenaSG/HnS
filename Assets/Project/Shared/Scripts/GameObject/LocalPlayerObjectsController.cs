@@ -6,15 +6,22 @@ using Mirror;
 public class LocalPlayerObjectsController : NetworkBehaviour
 {
     [SerializeField]
-    private GameObject controlledObject;
+    private GameObject[] controlledObjects;
     public override void OnStartLocalPlayer()
     {
         base.OnStartLocalPlayer();
-        controlledObject.SetActive(true);
+        foreach(GameObject go in controlledObjects)
+        {
+            go.SetActive(true);
+        }
+        
     }
 
     private void OnDisable()
     {
-        controlledObject.SetActive(false);
+        foreach (GameObject go in controlledObjects)
+        {
+            go.SetActive(false);
+        }
     }
 }

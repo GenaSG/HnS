@@ -19,7 +19,7 @@ public class StatesLogger : MonoBehaviour
 
     private void GameStateTimeUpdated(object caller, OnGameStateTimerUpdated timerUpdated)
     {
-        Debug.Log($"Game state time updated. State enter time is {timerUpdated.stateEnterTime}. Current state time is {timerUpdated.stateTime}. Expected state duration is {timerUpdated.stateDuration}. Event source is {caller}.");
+        //Debug.Log($"Game state time updated. State enter time is {timerUpdated.stateEnterTime}. Current state time is {timerUpdated.stateTime}. Expected state duration is {timerUpdated.stateDuration}. Event source is {caller}.");
     }
 
     private void OnDisable()
