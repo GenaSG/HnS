@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  mapController: {fileID: 7122521884597844232}
+  markerState: {fileID: 11400000, guid: 75385c6cd20af4745b50d9e955f18af0, type: 2}
 --- !u!1001 &8774396115077193716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -170,14 +170,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6210233268209826158, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
   m_PrefabInstance: {fileID: 8774396115077193716}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7122521884597844232 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1953626751214561020, guid: d36372c0c444e4e0bbb77d74837f05a6, type: 3}
-  m_PrefabInstance: {fileID: 8774396115077193716}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f97528e4ffab446a4bd56c712dafa702, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

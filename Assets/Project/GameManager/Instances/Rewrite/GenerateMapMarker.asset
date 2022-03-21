@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6966d990df86e481ebe12640887cacbe, type: 3}
-  m_Name: WaitForNetworkTimeState
+  m_Script: {fileID: 11500000, guid: 5442c0fc69ba7479f852479515fd0ee1, type: 3}
+  m_Name: GenerateMapMarker
   m_EditorClassIdentifier: 
-  nextState: {fileID: 11400000, guid: 75385c6cd20af4745b50d9e955f18af0, type: 2}
-  delay: 5
+  nextState: {fileID: 11400000, guid: 44da456aa9a2344f8a204798ea7479c1, type: 2}

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5442c0fc69ba7479f852479515fd0ee1, type: 3}
   m_Name: CreateTeamsMarkerState
   m_EditorClassIdentifier: 
-  nextState: {fileID: 0}
+  nextState: {fileID: 11400000, guid: f150f40f027f84b6f822994c39c13177, type: 2}

@@ -123,6 +123,7 @@ public class TeamManagerComponent : NetworkBehaviour
             syncHiderIDs = CopyToUintArray(hiders);
             NotifyHiders();
         }
+        //TODO: Need to handle case when the only seeker disconnected
         if (seekers.Contains(objectDestroyed.netID))
         {
             seekers.Remove(objectDestroyed.netID);
