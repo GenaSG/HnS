@@ -37,6 +37,8 @@ public class TeamManagerComponent : NetworkBehaviour
     public HashSet<uint> hiders = new HashSet<uint>();
     [SerializeField]
     public HashSet<uint> seekers = new HashSet<uint>();
+    [SerializeField]
+    public HashSet<uint> allPlayers = new HashSet<uint>();
 
     private void OnEnable()
     {
@@ -97,7 +99,8 @@ public class TeamManagerComponent : NetworkBehaviour
     private void PlayerObjectSpawned(object caller, OnPlayerObjectSpawned objectSpawned)
     {
         if (!isServer) return;
-        if (spectators.Contains(objectSpawned.netID)) return;
+        if (allPlayers.Contains(objectSpawned.netID)) return;
+        allPlayers.Add(objectSpawned.netID);
         spectators.Add(objectSpawned.netID);
         syncSpectatorIDs = CopyToUintArray(spectators);
         NotifySpectators();
@@ -128,8 +131,15 @@ public class TeamManagerComponent : NetworkBehaviour
         {
             seekers.Remove(objectDestroyed.netID);
             syncSeekerIDs = CopyToUintArray(seekers);
-            NotifySeekers();
+            if (seekers.Count == 0)
+            {
+                RebalanceTeams();
+            }
+            else {
+                NotifySeekers();
+            }  
         }
+        allPlayers.Remove(objectDestroyed.netID);
     }
     /// <summary>
     /// Reacts on game state change. Called on server.
@@ -140,7 +150,7 @@ public class TeamManagerComponent : NetworkBehaviour
     {
         if (!isServer) return;
         //Debug.Log($"{this} calling GameStateChanged");
-        if (createTeamsGameState != null && stateChanged.newState == createTeamsGameState) CreateTeams();
+        if (createTeamsGameState != null && stateChanged.newState == createTeamsGameState) RebalanceTeams();
         if (destroyTeamsGameState != null && stateChanged.newState == destroyTeamsGameState) ClearTeams();
     }
     /// <summary>
@@ -161,15 +171,13 @@ public class TeamManagerComponent : NetworkBehaviour
     private void CreateTeams()
     {
         if (spectators.Count < defaultSeekersCount) return;
+
         seekers = new HashSet<uint>();
         hiders = new HashSet<uint>();
 
-        for(int i = 0; i < defaultSeekersCount; i++)
+        for (int i = 0; i < defaultSeekersCount; i++)
         {
-            uint seekerID = spectators.First();
-            spectators.Remove(seekerID);
-            seekers.Add(seekerID);
-            //Debug.Log($"Selecting seeker. Seeker id is {seekerID}");
+            seekers.Add(PopHashSet(spectators));
         }
         var tmp = new uint[spectators.Count];
         spectators.CopyTo(tmp);
@@ -180,6 +188,39 @@ public class TeamManagerComponent : NetworkBehaviour
         //Debug.Log($"{this} Spectators count is {spectators.Count}");
         //Debug.Log($"{this} Hiders count is {hiders.Count}");
         //Debug.Log($"{this} Seekers count is {seekers.Count}");
+    }
+
+    private void RebalanceTeams()
+    {
+        if (allPlayers.Count < defaultSeekersCount) return;
+        if ((spectators.Count + hiders.Count) < (defaultSeekersCount - seekers.Count)) return;
+        
+        while (seekers.Count < defaultSeekersCount)
+        {
+            if (spectators.Count != 0)
+            {
+                seekers.Add(PopHashSet(spectators));
+            }
+            else if (spectators.Count == 0 && hiders.Count != 0)
+            {
+                seekers.Add(PopHashSet(hiders));
+            }
+        }
+
+        while(spectators.Count != 0)
+        {
+            hiders.Add(PopHashSet(spectators));
+        }
+        
+        SyncTeams();
+        NotifyAll();
+    }
+
+    private uint PopHashSet(HashSet<uint> collection)
+    {
+        uint seekerID = collection.ToArray()[UnityEngine.Random.Range(0, collection.Count)];
+        collection.Remove(seekerID);
+        return seekerID;
     }
 
     /// <summary>
