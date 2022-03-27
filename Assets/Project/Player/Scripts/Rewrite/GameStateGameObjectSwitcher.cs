@@ -4,7 +4,7 @@ using UnityEngine;
 using SimpleEventBus;
 
 
-public class PlayerStatesController : MonoBehaviour
+public class GameStateGameObjectSwitcher : MonoBehaviour
 {
     [System.Serializable]
     internal class KeyValue<TKey,TValue>

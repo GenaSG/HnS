@@ -54,7 +54,16 @@ public struct OnPlayerObjectDestroyed
     public bool isClient;
     public bool isServer;
 }
-
+public struct OnPlayerDied
+{
+    public uint netID;
+    public GameObject playerObject;
+    public bool isLocalPlayer;
+    public bool isClient;
+    public bool isServer;
+}
+//
+//Teams
 public struct OnSpectatorsUpdated
 {
     public HashSet<uint> spectators;
@@ -69,3 +78,4 @@ public struct OnSeekersUpdated
 {
     public HashSet<uint> seekers;
 }
+//

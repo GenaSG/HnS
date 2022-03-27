@@ -7,7 +7,7 @@ using GameFlow;
 using System;
 using System.Linq;
 
-public class TeamManagerComponent : NetworkBehaviour
+public class Teams : NetworkBehaviour
 {
     public struct UintArrayContainer
     {
@@ -44,7 +44,7 @@ public class TeamManagerComponent : NetworkBehaviour
     {
         EventBus<OnPlayerObjectSpawned>.Subscribe(PlayerObjectSpawned);
         EventBus<OnPlayerObjectDestroyed>.Subscribe(PlayerObjectDestroyed);
-        EventBus<OnGameStateChanged>.Subscribe(GameStateChanged);
+        //EventBus<OnGameStateChanged>.Subscribe(GameStateChanged);
     }
     /// <summary>
     /// Reacts on recieved network update for spectators hashset. Called on client.
@@ -88,7 +88,7 @@ public class TeamManagerComponent : NetworkBehaviour
     {
         EventBus<OnPlayerObjectSpawned>.Unsubscribe(PlayerObjectSpawned);
         EventBus<OnPlayerObjectDestroyed>.Unsubscribe(PlayerObjectDestroyed);
-        EventBus<OnGameStateChanged>.Unsubscribe(GameStateChanged);
+        //EventBus<OnGameStateChanged>.Unsubscribe(GameStateChanged);
 
     }
     /// <summary>
@@ -131,13 +131,15 @@ public class TeamManagerComponent : NetworkBehaviour
         {
             seekers.Remove(objectDestroyed.netID);
             syncSeekerIDs = CopyToUintArray(seekers);
-            if (seekers.Count == 0)
-            {
-                RebalanceTeams();
-            }
-            else {
-                NotifySeekers();
-            }  
+            NotifySeekers();
+
+            //if (seekers.Count == 0)
+            //{
+            //RebalanceTeams();
+            //}
+            //else {
+            //NotifySeekers();
+            //}  
         }
         allPlayers.Remove(objectDestroyed.netID);
     }
@@ -146,82 +148,82 @@ public class TeamManagerComponent : NetworkBehaviour
     /// </summary>
     /// <param name="caller"></param>
     /// <param name="stateChanged"></param>
-    private void GameStateChanged(object caller, OnGameStateChanged stateChanged)
-    {
-        if (!isServer) return;
-        //Debug.Log($"{this} calling GameStateChanged");
-        if (createTeamsGameState != null && stateChanged.newState == createTeamsGameState) RebalanceTeams();
-        if (destroyTeamsGameState != null && stateChanged.newState == destroyTeamsGameState) ClearTeams();
-    }
+    //private void GameStateChanged(object caller, OnGameStateChanged stateChanged)
+    //{
+    //    if (!isServer) return;
+    //    //Debug.Log($"{this} calling GameStateChanged");
+    //    if (createTeamsGameState != null && stateChanged.newState == createTeamsGameState) RebalanceTeams();
+    //    if (destroyTeamsGameState != null && stateChanged.newState == destroyTeamsGameState) ClearTeams();
+    //}
     /// <summary>
     /// Clears teams. Called on server.
     /// </summary>
-    private void ClearTeams()
-    {
-        spectators.UnionWith(seekers);
-        spectators.UnionWith(hiders);
-        seekers = new HashSet<uint>();
-        hiders = new HashSet<uint>();
-        SyncTeams();
-        NotifyAll();
-    }
+    //private void ClearTeams()
+    //{
+    //    spectators.UnionWith(seekers);
+    //    spectators.UnionWith(hiders);
+    //    seekers = new HashSet<uint>();
+    //    hiders = new HashSet<uint>();
+    //    SyncTeams();
+    //    NotifyAll();
+    //}
     /// <summary>
     /// Creates teams. Selects rundom ID from spectators and updates hashsets. Called on server.
     /// </summary>
-    private void CreateTeams()
-    {
-        if (spectators.Count < defaultSeekersCount) return;
+    //private void CreateTeams()
+    //{
+    //    if (spectators.Count < defaultSeekersCount) return;
 
-        seekers = new HashSet<uint>();
-        hiders = new HashSet<uint>();
+    //    seekers = new HashSet<uint>();
+    //    hiders = new HashSet<uint>();
 
-        for (int i = 0; i < defaultSeekersCount; i++)
-        {
-            seekers.Add(PopHashSet(spectators));
-        }
-        var tmp = new uint[spectators.Count];
-        spectators.CopyTo(tmp);
-        hiders = new HashSet<uint>(tmp);
-        spectators = new HashSet<uint>();
-        SyncTeams();
-        NotifyAll();
-        //Debug.Log($"{this} Spectators count is {spectators.Count}");
-        //Debug.Log($"{this} Hiders count is {hiders.Count}");
-        //Debug.Log($"{this} Seekers count is {seekers.Count}");
-    }
+    //    for (int i = 0; i < defaultSeekersCount; i++)
+    //    {
+    //        seekers.Add(PopHashSet(spectators));
+    //    }
+    //    var tmp = new uint[spectators.Count];
+    //    spectators.CopyTo(tmp);
+    //    hiders = new HashSet<uint>(tmp);
+    //    spectators = new HashSet<uint>();
+    //    SyncTeams();
+    //    NotifyAll();
+    //    //Debug.Log($"{this} Spectators count is {spectators.Count}");
+    //    //Debug.Log($"{this} Hiders count is {hiders.Count}");
+    //    //Debug.Log($"{this} Seekers count is {seekers.Count}");
+    //}
 
-    private void RebalanceTeams()
-    {
-        if (allPlayers.Count < defaultSeekersCount) return;
-        if ((spectators.Count + hiders.Count) < (defaultSeekersCount - seekers.Count)) return;
+    //private void RebalanceTeams()
+    //{
+    //    if (allPlayers.Count < defaultSeekersCount) return;
+    //    if ((spectators.Count + hiders.Count) < (defaultSeekersCount - seekers.Count)) return;
         
-        while (seekers.Count < defaultSeekersCount)
-        {
-            if (spectators.Count != 0)
-            {
-                seekers.Add(PopHashSet(spectators));
-            }
-            else if (spectators.Count == 0 && hiders.Count != 0)
-            {
-                seekers.Add(PopHashSet(hiders));
-            }
-        }
+    //    while (seekers.Count < defaultSeekersCount)
+    //    {
+    //        if (spectators.Count != 0)
+    //        {
+    //            seekers.Add(PopHashSet(spectators));
+    //        }
+    //        else if (spectators.Count == 0 && hiders.Count != 0)
+    //        {
+    //            seekers.Add(PopHashSet(hiders));
+    //        }
+    //    }
 
-        while(spectators.Count != 0)
-        {
-            hiders.Add(PopHashSet(spectators));
-        }
+    //    while(spectators.Count != 0)
+    //    {
+    //        hiders.Add(PopHashSet(spectators));
+    //    }
         
-        SyncTeams();
-        NotifyAll();
-    }
+    //    SyncTeams();
+    //    NotifyAll();
+    //}
 
-    private uint PopHashSet(HashSet<uint> collection)
-    {
-        uint seekerID = collection.ToArray()[UnityEngine.Random.Range(0, collection.Count)];
-        collection.Remove(seekerID);
-        return seekerID;
-    }
+    //private uint PopHashSet(HashSet<uint> collection)
+    //{
+    //    uint seekerID = collection.ToArray()[UnityEngine.Random.Range(0, collection.Count)];
+    //    collection.Remove(seekerID);
+    //    return seekerID;
+    //}
 
     /// <summary>
     /// Sets new values to sync vars. Called on server.
