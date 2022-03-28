@@ -19,21 +19,17 @@ public class GameStateGameObjectSwitcher : MonoBehaviour
 
     private void OnEnable()
     {
+        inventory.Clear();
+        foreach (KeyValue<Object, GameObject> kv in stateToGameObject)
+        {
+            inventory.Add(kv.key, kv.value);
+        }
         EventBus<OnGameStateChanged>.Subscribe(GameStateChanged);
     }
 
     private void OnDisable()
     {
         EventBus<OnGameStateChanged>.Unsubscribe(GameStateChanged);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        foreach(KeyValue<Object, GameObject> kv in stateToGameObject)
-        {
-            inventory.Add(kv.key, kv.value);
-        }
     }
 
     void GameStateChanged(object caller, OnGameStateChanged stateChanged)

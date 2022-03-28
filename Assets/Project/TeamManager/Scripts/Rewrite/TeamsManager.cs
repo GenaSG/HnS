@@ -4,6 +4,7 @@ using UnityEngine;
 using Mirror;
 using SimpleEventBus;
 using System;
+using System.Linq;
 
 public class TeamsManager : NetworkBehaviour
 {
@@ -14,16 +15,21 @@ public class TeamsManager : NetworkBehaviour
         {
             value = new uint[size];
         }
+
+        public UintArrayContainer(uint[] value)
+        {
+            this.value = value;
+        }
     }
 
-    public class NullTeamsState : TeamsManagerState
-    {
-        public override void OnEnter(HashSet<uint> spectators, HashSet<uint> hiders, HashSet<uint> seekers){}
-        public override void OnExit(HashSet<uint> spectators, HashSet<uint> hiders, HashSet<uint> seekers){}
-        public override void OnPlayerConnected(HashSet<uint> spectators, HashSet<uint> hiders, HashSet<uint> seekers, uint playerID){}
-        public override void OnPlayerDied(HashSet<uint> spectators, HashSet<uint> hiders, HashSet<uint> seekers, uint playerID){}
-        public override void OnPlayerDisconnected(HashSet<uint> spectators, HashSet<uint> hiders, HashSet<uint> seekers, uint playerID){}
-    }
+    //public class NullTeamsState : TeamsManagerState
+    //{
+    //    public override void OnEnter(HashSet<uint> spectators, HashSet<uint> hiders, HashSet<uint> seekers){}
+    //    public override void OnExit(HashSet<uint> spectators, HashSet<uint> hiders, HashSet<uint> seekers){}
+    //    public override void OnPlayerConnected(HashSet<uint> spectators, HashSet<uint> hiders, HashSet<uint> seekers, uint playerID){}
+    //    public override void OnPlayerDied(HashSet<uint> spectators, HashSet<uint> hiders, HashSet<uint> seekers, uint playerID){}
+    //    public override void OnPlayerDisconnected(HashSet<uint> spectators, HashSet<uint> hiders, HashSet<uint> seekers, uint playerID){}
+    //}
 
     [SyncVar(hook = nameof(OnSyncSpectatorIDs))]
     private UintArrayContainer syncSpectatorIDs;
@@ -38,7 +44,7 @@ public class TeamsManager : NetworkBehaviour
     public HashSet<uint> hiders = new HashSet<uint>();
     [SerializeField]
     public HashSet<uint> seekers = new HashSet<uint>();
-
+    [SerializeField]
     private TeamsManagerState state;
 
     /// <summary>
@@ -105,7 +111,7 @@ public class TeamsManager : NetworkBehaviour
 
     private void OnEnable()
     {
-        state = gameObject.AddComponent<NullTeamsState>();
+        //state = gameObject.AddComponent<NullTeamsState>();
         EventBus<OnPlayerObjectSpawned>.Subscribe(PlayerObjectSpawned);
         EventBus<OnPlayerObjectDestroyed>.Subscribe(PlayerObjectDestroyed);
         EventBus<OnPlayerDied>.Subscribe(PlayerDied);
@@ -122,13 +128,15 @@ public class TeamsManager : NetworkBehaviour
     {
         if (!isServer) return;
         state.OnPlayerConnected(spectators,hiders,seekers,objectSpawned.netID);
+        SyncTeams();
         NotifyAll();
     }
 
     private void PlayerObjectDestroyed(object caller, OnPlayerObjectDestroyed objectDestroyed)
     {
         if (!isServer) return;
-        state.OnPlayerConnected(spectators, hiders, seekers, objectDestroyed.netID);
+        state.OnPlayerDisconnected(spectators, hiders, seekers, objectDestroyed.netID);
+        SyncTeams();
         NotifyAll();
     }
 
@@ -137,6 +145,7 @@ public class TeamsManager : NetworkBehaviour
     {
         if (!isServer) return;
         state.OnPlayerDied(spectators, hiders, seekers, playerDied.netID);
+        SyncTeams();
         NotifyAll();
     }
 
@@ -147,7 +156,16 @@ public class TeamsManager : NetworkBehaviour
         if (newState == state) return;
         state.OnExit(spectators, hiders, seekers);
         newState.OnEnter(spectators, hiders, seekers);
+        state = newState;
+        Debug.Log($"{this}. Switched state to state {state}");
+        SyncTeams();
         NotifyAll();
     }
 
+    private void SyncTeams()
+    {
+        syncSpectatorIDs = new UintArrayContainer(spectators.ToArray());
+        syncHiderIDs = new UintArrayContainer(hiders.ToArray());
+        syncSeekerIDs = new UintArrayContainer(seekers.ToArray());
+    }
 }

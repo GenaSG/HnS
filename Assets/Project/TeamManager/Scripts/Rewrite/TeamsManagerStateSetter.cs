@@ -9,7 +9,7 @@ public class TeamsManagerStateSetter : MonoBehaviour
     [SerializeField]
     TeamsManagerState state;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         manager.SetState(state);
     }

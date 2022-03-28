@@ -10,13 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2668366067692160802}
   - component: {fileID: 7294555909542023893}
+  - component: {fileID: 3594055448441282504}
   m_Layer: 0
   m_Name: ClearTeams
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2668366067692160802
 Transform:
   m_ObjectHideFlags: 0
@@ -44,7 +45,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 5835345706836838989}
-  state: {fileID: 0}
+  state: {fileID: 3594055448441282504}
+--- !u!114 &3594055448441282504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197156933630168297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da9742c9c1f154886b7d665f113dd2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1232095926028673333
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,13 +68,14 @@ GameObject:
   m_Component:
   - component: {fileID: 211926296242860157}
   - component: {fileID: 5970323187318710870}
+  - component: {fileID: 4572459766045190296}
   m_Layer: 0
   m_Name: Hide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &211926296242860157
 Transform:
   m_ObjectHideFlags: 0
@@ -89,7 +103,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 5835345706836838989}
-  state: {fileID: 0}
+  state: {fileID: 4572459766045190296}
+--- !u!114 &4572459766045190296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232095926028673333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996da4686051d4a9c9849037fe3f799d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3285660673830068982
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,13 +126,14 @@ GameObject:
   m_Component:
   - component: {fileID: 119167215591852258}
   - component: {fileID: 7579497253986409290}
+  - component: {fileID: 39710026496609524}
   m_Layer: 0
   m_Name: Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &119167215591852258
 Transform:
   m_ObjectHideFlags: 0
@@ -134,7 +161,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 5835345706836838989}
-  state: {fileID: 0}
+  state: {fileID: 39710026496609524}
+--- !u!114 &39710026496609524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3285660673830068982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c1cf571880f4ace853fd52b59a02ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4852416282795900519
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,13 +184,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4677067280885213991}
   - component: {fileID: 3168451739898894240}
+  - component: {fileID: 628753960563287018}
   m_Layer: 0
   m_Name: CreateTeams
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4677067280885213991
 Transform:
   m_ObjectHideFlags: 0
@@ -179,7 +219,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 5835345706836838989}
-  state: {fileID: 0}
+  state: {fileID: 628753960563287018}
+--- !u!114 &628753960563287018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4852416282795900519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebae8af88442e46a4ad7c0aedb2714a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5835345706836838991
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +245,7 @@ GameObject:
   - component: {fileID: 5835345706836838990}
   - component: {fileID: 5835345706836838989}
   - component: {fileID: 5759678975553868897}
+  - component: {fileID: 1648384379601177788}
   m_Layer: 0
   m_Name: TeamManager
   m_TagString: Untagged
@@ -265,6 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  state: {fileID: 1648384379601177788}
 --- !u!114 &5759678975553868897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,6 +348,18 @@ MonoBehaviour:
     value: {fileID: 7445255670904441240}
   - key: {fileID: 11400000, guid: 5bd67f93773384e3b881d0eaaeabdde9, type: 2}
     value: {fileID: 197156933630168297}
+--- !u!114 &1648384379601177788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5835345706836838991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4839f59f64f14405da1594c458026974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7222989648908503889
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,13 +370,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8587564178032960082}
   - component: {fileID: 1212330015406111517}
+  - component: {fileID: 6553965725489976909}
   m_Layer: 0
   m_Name: GenerateMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8587564178032960082
 Transform:
   m_ObjectHideFlags: 0
@@ -338,7 +405,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 5835345706836838989}
-  state: {fileID: 0}
+  state: {fileID: 6553965725489976909}
+--- !u!114 &6553965725489976909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7222989648908503889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4839f59f64f14405da1594c458026974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7434425968379309235
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,13 +428,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7760384455928006028}
   - component: {fileID: 5967222370419778696}
+  - component: {fileID: 683469064054291593}
   m_Layer: 0
   m_Name: WaitForNetworkTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7760384455928006028
 Transform:
   m_ObjectHideFlags: 0
@@ -383,7 +463,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 5835345706836838989}
-  state: {fileID: 0}
+  state: {fileID: 683469064054291593}
+--- !u!114 &683469064054291593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7434425968379309235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4839f59f64f14405da1594c458026974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7445255670904441240
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,13 +486,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4452727878441481642}
   - component: {fileID: 3709880120988080699}
+  - component: {fileID: 3834185825946874724}
   m_Layer: 0
   m_Name: PostPlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4452727878441481642
 Transform:
   m_ObjectHideFlags: 0
@@ -428,7 +521,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 5835345706836838989}
-  state: {fileID: 0}
+  state: {fileID: 3834185825946874724}
+--- !u!114 &3834185825946874724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7445255670904441240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4839f59f64f14405da1594c458026974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8070459937719356575
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,13 +544,14 @@ GameObject:
   m_Component:
   - component: {fileID: 9203991358579350647}
   - component: {fileID: 7068849569418639124}
+  - component: {fileID: 3577443416521399196}
   m_Layer: 0
   m_Name: WarmUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9203991358579350647
 Transform:
   m_ObjectHideFlags: 0
@@ -473,4 +579,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 5835345706836838989}
-  state: {fileID: 0}
+  state: {fileID: 3577443416521399196}
+--- !u!114 &3577443416521399196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070459937719356575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4839f59f64f14405da1594c458026974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
