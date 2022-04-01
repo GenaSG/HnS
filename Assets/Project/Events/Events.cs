@@ -62,6 +62,11 @@ public struct OnPlayerDied
     public bool isClient;
     public bool isServer;
 }
+
+public struct OnCameraProfileUpdated
+{
+    public CameraFollowProfile profile;
+}
 //
 //Teams
 public struct OnSpectatorsUpdated

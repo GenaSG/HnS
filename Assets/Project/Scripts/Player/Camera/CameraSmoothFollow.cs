@@ -1,13 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SimpleEventBus;
+using System;
 
 public class CameraSmoothFollow : MonoBehaviour
 {
     public Transform target;
     public CameraFollowProfile profile;
     private Vector3 lastPosition;
+    [SerializeField]
+    private GameObject profileEventChannel;
 
+
+    private void OnEnable()
+    {
+        EventBus<OnCameraProfileUpdated>.Subscribe(profileEventChannel, CameraProfileUpdated);
+    }
+
+    private void CameraProfileUpdated(object caller, OnCameraProfileUpdated profileUpdated)
+    {
+        this.profile = profileUpdated.profile;
+    }
+
+    private void OnDisable()
+    {
+        EventBus<OnCameraProfileUpdated>.Unsubscribe(profileEventChannel, CameraProfileUpdated);
+    }
 
     public void SetProfile(CameraFollowProfile profile)
     {
