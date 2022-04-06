@@ -84,3 +84,18 @@ public struct OnSeekersUpdated
     public HashSet<uint> seekers;
 }
 //
+//Physics
+[System.Serializable]
+public enum CollisionState { OnEnter, OnExit}
+public struct OnCollisionChanged
+{
+    public CollisionState state;
+    public Collision collision;
+}
+
+public struct OnTriggerChanged
+{
+    public CollisionState state;
+    public Collider collider;
+}
+//

@@ -5,36 +5,78 @@ using SimpleEventBus;
 
 public class MapInventory : MonoBehaviour
 {
-    private readonly static HashSet<GameObject> props;
-    private readonly static HashSet<GameObject> mapObjects;
+    private static GameObject[] props;
+    private static GameObject[] levelGeometry;
+    private readonly static Dictionary<GameObject, uint> propsInventory;
+    private readonly static Dictionary<GameObject, uint> levelGeometryInventory;
 
-    public HashSet<GameObject> Props => props;
-    public HashSet<GameObject> MapObjects => mapObjects;
 
     static MapInventory()
     {
         EventBus<OnMapGenerated>.Subscribe(MapGenerated);
         EventBus<OnMapCleared>.Subscribe(MapCleared);
-        props = new HashSet<GameObject>();
-        mapObjects = new HashSet<GameObject>();
+        propsInventory = new Dictionary<GameObject, uint>();
+        levelGeometryInventory = new Dictionary<GameObject, uint>();
     }
 
     private static void MapGenerated(object caller, OnMapGenerated map)
     {
-        foreach(GameObject go in map.props)
+        props = map.props;
+        levelGeometry = map.levelGeometry;
+        for(uint i = 0; i < props.Length; i++)
         {
-            if (!props.Contains(go)) props.Add(go);
+            if (propsInventory.ContainsKey(props[i])) continue;
+            propsInventory.Add(props[i], i);
         }
-        foreach (GameObject go in map.levelGeometry)
+        for (uint i = 0; i < levelGeometry.Length; i++)
         {
-            if (!mapObjects.Contains(go)) mapObjects.Add(go);
+            if (levelGeometryInventory.ContainsKey(levelGeometry[i])) continue;
+            levelGeometryInventory.Add(levelGeometry[i], i);
         }
     }
 
     private static void MapCleared(object caller, OnMapCleared empty)
     {
-        props.Clear();
-        mapObjects.Clear();
+        propsInventory.Clear();
+        levelGeometryInventory.Clear();
+        props = new GameObject[0];
+        levelGeometry = new GameObject[0];
     }
+
+
+    public bool LevelGeometryContainsIndex(uint index)
+    {
+        return index < levelGeometry.Length;
+    }
+
+    public GameObject GetLevelGeometryForIndex(uint index)
+    {
+        return levelGeometry[index];
+    }
+
+    public bool LevelGeometryContains(GameObject geometry) => levelGeometryInventory.ContainsKey(geometry);
+
+    public uint GetIndexForLevelGeometry(GameObject geometry)
+    {
+        return levelGeometryInventory[geometry];
+    }
+
+    public bool PropsContainsIndex(uint index)
+    {
+        return index < props.Length;
+    }
+
+    public GameObject GetPropForIndex(uint index)
+    {
+        return props[index];
+    }
+
+    public bool PropsContains(GameObject prop) => propsInventory.ContainsKey(prop);
+
+    public uint GetIndexForProp(GameObject prop)
+    {
+        return propsInventory[prop];
+    }
+
 
 }
