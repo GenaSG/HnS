@@ -16,7 +16,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.71
+    m_Value: 1
     min: 0
   intensity:
     m_OverrideState: 1
@@ -52,126 +52,6 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
     min: 0
---- !u!114 &-4641568070366956828
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90fbf49926625114084d7e0c0cffe8d1, type: 3}
-  m_Name: HBAO
-  m_EditorClassIdentifier: 
-  active: 0
-  m_AdvancedMode: 0
-  preset:
-    m_OverrideState: 1
-    m_Value: 1
-  mode:
-    m_OverrideState: 0
-    m_Value: 0
-  quality:
-    m_OverrideState: 1
-    m_Value: 1
-  deinterleaving:
-    m_OverrideState: 0
-    m_Value: 0
-  resolution:
-    m_OverrideState: 0
-    m_Value: 1
-  noiseType:
-    m_OverrideState: 0
-    m_Value: 0
-  debugMode:
-    m_OverrideState: 0
-    m_Value: 1
-  radius:
-    m_OverrideState: 1
-    m_Value: 2.06
-    min: 0.25
-    max: 5
-  maxRadiusPixels:
-    m_OverrideState: 1
-    m_Value: 256
-    min: 16
-    max: 256
-  bias:
-    m_OverrideState: 0
-    m_Value: 0.05
-    min: 0
-    max: 0.5
-  intensity:
-    m_OverrideState: 1
-    m_Value: 1
-    min: 0
-    max: 4
-  useMultiBounce:
-    m_OverrideState: 0
-    m_Value: 0
-  multiBounceInfluence:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 1
-  directLightingStrength:
-    m_OverrideState: 0
-    m_Value: 0.25
-    min: 0
-    max: 1
-  offscreenSamplesContribution:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-    max: 1
-  maxDistance:
-    m_OverrideState: 0
-    m_Value: 150
-  distanceFalloff:
-    m_OverrideState: 0
-    m_Value: 50
-  perPixelNormals:
-    m_OverrideState: 0
-    m_Value: 2
-  baseColor:
-    m_OverrideState: 0
-    m_Value: {r: 0, g: 0, b: 0, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  temporalFilterEnabled:
-    m_OverrideState: 0
-    m_Value: 0
-  varianceClipping:
-    m_OverrideState: 0
-    m_Value: 1
-  blurType:
-    m_OverrideState: 1
-    m_Value: 3
-  sharpness:
-    m_OverrideState: 0
-    m_Value: 8
-    min: 0
-    max: 16
-  colorBleedingEnabled:
-    m_OverrideState: 0
-    m_Value: 0
-  saturation:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 4
-  brightnessMask:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 1
-  brightnessMaskRange:
-    m_OverrideState: 0
-    m_Value: {x: 0, y: 0.5}
-    min: 0
-    max: 2
 --- !u!114 &-3200684024063877847
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -226,7 +106,6 @@ MonoBehaviour:
   - {fileID: -7430993696126971043}
   - {fileID: -3200684024063877847}
   - {fileID: 9156651560715753516}
-  - {fileID: -4641568070366956828}
 --- !u!114 &7261381387968853193
 MonoBehaviour:
   m_ObjectHideFlags: 3

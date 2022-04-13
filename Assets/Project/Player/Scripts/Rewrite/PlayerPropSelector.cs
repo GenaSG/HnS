@@ -2,13 +2,16 @@
 using System.Collections;
 using SimpleEventBus;
 using System;
+using Mirror;
 
-public class PlayerPropSelector : MonoBehaviour
+public class PlayerPropSelector : NetworkBehaviour
 {
     [SerializeField]
     private MapInventory inventory;
     [SerializeField]
     private GameObject currentProp;
+    [SyncVar(hook = nameof(SyncPropID))]
+    private uint syncPropID;
 
     private void OnEnable()
     {
@@ -35,5 +38,47 @@ public class PlayerPropSelector : MonoBehaviour
         }
     }
 
+    public void SelectCurrentProp()
+    {
+        if (currentProp == null) return;
+        if (!isLocalPlayer) return;
 
+        if (isServer)
+        {
+            syncPropID = inventory.GetIndexForProp(currentProp);
+        }
+        else
+        {
+            CmdSyncPropID(inventory.GetIndexForProp(currentProp));
+        }
+        Raise(currentProp);
+        
+    }
+    
+
+    private void Raise(GameObject prop)
+    {
+        EventBus<OnPropSelected>.Raise(transform.root.gameObject, this, new OnPropSelected { prop = currentProp });
+    }
+
+    [Command]//Called only on server
+    private void CmdSyncPropID(uint id)
+    {
+        if (!isServer) return;
+        if (isLocalPlayer) return;
+        if (!inventory.PropsContainsIndex(id)) return;
+        currentProp = inventory.GetPropForIndex(id);
+        syncPropID = id;
+        Raise(currentProp);
+    }
+
+    [ClientCallback]//Called only on non-owner client
+    private void SyncPropID(uint old, uint current)
+    {
+        if (isLocalPlayer) return;
+        currentProp = inventory.GetPropForIndex(current);
+        Raise(currentProp);
+    }
+
+    
 }

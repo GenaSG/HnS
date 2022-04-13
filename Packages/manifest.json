@@ -7,7 +7,7 @@
     "com.unity.ide.vscode": "1.2.4",
     "com.unity.probuilder": "5.0.3",
     "com.unity.progrids": "3.0.3-preview.6",
-    "com.unity.render-pipelines.universal": "file:/Users/gshvet/Documents/Unity3D/HnS/CustomPackages/com.unity.render-pipelines.universal@10.4.0",
+    "com.unity.render-pipelines.universal": "file:/Users/gshvet/Documents/Unity3D/CustomURPPackage/com.unity.render-pipelines-cel-shaded.universal@10.4.0",
     "com.unity.test-framework": "1.1.24",
     "com.unity.textmeshpro": "3.0.4",
     "com.unity.timeline": "1.4.7",

@@ -67,6 +67,11 @@ public struct OnCameraProfileUpdated
 {
     public CameraFollowProfile profile;
 }
+
+public struct OnPropSelected
+{
+    public GameObject prop;
+}
 //
 //Teams
 public struct OnSpectatorsUpdated
