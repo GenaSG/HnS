@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SimpleEventBus;
+using System;
 
 public class PlayerEventsDebugger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        
+        EventBus<OnPropSelected>.Subscribe(PropSelected);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void PropSelected(object caller, OnPropSelected propSelected, object target)
     {
-        
+        Debug.Log($"{this}. Player {target} selected prop {propSelected.prop}");
+    }
+
+    private void OnDisable()
+    {
+        EventBus<OnPropSelected>.UnSubscribe(PropSelected);
     }
 }
