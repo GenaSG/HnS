@@ -117,5 +117,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   networkManager: {fileID: 7668459704685705382}
-  game: {fileID: 11400000, guid: b5311a7784c1a4f6a8223af0739baf8b, type: 2}
-  TriggerOnState: {fileID: 11400000, guid: b61c898e7c1224598a3059999bb86bc3, type: 2}
+  triggerOnState: {fileID: 11400000, guid: a7ab224a016d74290ac5675a7460a606, type: 2}

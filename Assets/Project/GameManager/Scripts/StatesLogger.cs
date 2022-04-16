@@ -12,19 +12,19 @@ public class StatesLogger : MonoBehaviour
         EventBus<OnGameStateTimerUpdated>.Subscribe(GameStateTimeUpdated);
     }
 
-    private void GameStateChanged(object caller, OnGameStateChanged stateChanged)
+    private void GameStateChanged(object caller, OnGameStateChanged stateChanged, object target)
     {
         Debug.Log($"Game state changed on {stateChanged.newState} with index {stateChanged.gameStateIndex}. Event source is {caller}.");
     }
 
-    private void GameStateTimeUpdated(object caller, OnGameStateTimerUpdated timerUpdated)
+    private void GameStateTimeUpdated(object caller, OnGameStateTimerUpdated timerUpdated, object target)
     {
         //Debug.Log($"Game state time updated. State enter time is {timerUpdated.stateEnterTime}. Current state time is {timerUpdated.stateTime}. Expected state duration is {timerUpdated.stateDuration}. Event source is {caller}.");
     }
 
     private void OnDisable()
     {
-        EventBus<OnGameStateChanged>.Unsubscribe(GameStateChanged);
-        EventBus<OnGameStateTimerUpdated>.Unsubscribe(GameStateTimeUpdated);
+        EventBus<OnGameStateChanged>.UnSubscribe(GameStateChanged);
+        EventBus<OnGameStateTimerUpdated>.UnSubscribe(GameStateTimeUpdated);
     }
 }

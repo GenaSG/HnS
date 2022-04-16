@@ -25,7 +25,7 @@ public class TeamsGameObjectSwitcher : MonoBehaviour
         EventBus<OnSeekersUpdated>.Subscribe(SeekersUpdated);
     }
 
-    private void SeekersUpdated(object caller, OnSeekersUpdated seekersUpdated)
+    private void SeekersUpdated(object caller, OnSeekersUpdated seekersUpdated, object target)
     {
         bool enableObject = seekersUpdated.seekers.Contains(id.netId);
         foreach (GameObject o in seekerObjects)
@@ -34,7 +34,7 @@ public class TeamsGameObjectSwitcher : MonoBehaviour
         }
     }
 
-    private void HidersUpdates(object caller, OnHidersUpdated hidersUpdated)
+    private void HidersUpdates(object caller, OnHidersUpdated hidersUpdated, object target)
     {
         bool enableObject = hidersUpdated.hiders.Contains(id.netId);
         foreach (GameObject o in hiderObjects)
@@ -43,7 +43,7 @@ public class TeamsGameObjectSwitcher : MonoBehaviour
         }
     }
 
-    private void SpectatorsUpdated(object caller, OnSpectatorsUpdated spectatorsUpdated)
+    private void SpectatorsUpdated(object caller, OnSpectatorsUpdated spectatorsUpdated, object target)
     {
         bool enableObject = spectatorsUpdated.spectators.Contains(id.netId);
         foreach (GameObject o in spectatorObjects)
@@ -54,8 +54,8 @@ public class TeamsGameObjectSwitcher : MonoBehaviour
 
     private void OnDisable()
     {
-        EventBus<OnSpectatorsUpdated>.Unsubscribe(SpectatorsUpdated);
-        EventBus<OnHidersUpdated>.Unsubscribe(HidersUpdates);
-        EventBus<OnSeekersUpdated>.Unsubscribe(SeekersUpdated);
+        EventBus<OnSpectatorsUpdated>.UnSubscribe(SpectatorsUpdated);
+        EventBus<OnHidersUpdated>.UnSubscribe(HidersUpdates);
+        EventBus<OnSeekersUpdated>.UnSubscribe(SeekersUpdated);
     }
 }

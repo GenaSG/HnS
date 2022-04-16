@@ -1,5 +1,222 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4795536930256440354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8340228651376536649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceac684f1e674477b98922062d230e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraFollowProfile: {fileID: 0}
+--- !u!114 &-282074262749185437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8340228651376536649}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888380afc233049ce9e618f9f36c8ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 4a391e401bde5453588273d4823e1625, type: 2}
+  profileSync: 1
+  previewInEditor: 1
+  camerasLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  effectGroup: 0
+  effectGroupLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  effectNameFilter: 
+  combineMeshes: 0
+  alphaCutOff: 0
+  cullBackFaces: 1
+  ignoreObjectVisibility: 0
+  reflectionProbes: 0
+  GPUInstancing: 1
+  normalsOption: 0
+  ignore: 0
+  _highlighted: 1
+  fadeInDuration: 0
+  fadeOutDuration: 0
+  flipY: 0
+  constantWidth: 1
+  subMeshMask: -1
+  overlay: 0
+  overlayColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  overlayAnimationSpeed: 1
+  overlayMinIntensity: 0.5
+  overlayBlending: 1
+  overlayTexture: {fileID: 0}
+  overlayTextureScale: 1
+  outline: 1
+  outlineColor: {r: 0.6156863, g: 1, b: 0.3764706, a: 1}
+  outlineWidth: 0.62
+  outlineQuality: 0
+  outlineDownsampling: 2
+  outlineVisibility: 0
+  outlineBlitDebug: 0
+  outlineIndependent: 0
+  glow: 0
+  glowWidth: 0.14
+  glowQuality: 0
+  glowDownsampling: 2
+  glowHQColor: {r: 0.64, g: 1, b: 0, a: 1}
+  glowDithering: 1
+  glowMagicNumber1: 0.75
+  glowMagicNumber2: 0.5
+  glowAnimationSpeed: 1
+  glowVisibility: 0
+  glowBlitDebug: 0
+  glowBlendPasses: 1
+  glowPasses:
+  - offset: 4
+    alpha: 0.1
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  - offset: 3
+    alpha: 0.2
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  - offset: 2
+    alpha: 0.3
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  - offset: 1
+    alpha: 0.4
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  innerGlow: 0.43
+  innerGlowWidth: 2
+  innerGlowColor: {r: 0.6156863, g: 1, b: 0.3764706, a: 1}
+  innerGlowVisibility: 0
+  targetFX: 0
+  targetFXTexture: {fileID: 0}
+  targetFXColor: {r: 1, g: 1, b: 1, a: 1}
+  targetFXCenter: {fileID: 0}
+  targetFXRotationSpeed: 50
+  targetFXInitialScale: 4
+  targetFXEndScale: 1.5
+  targetFXScaleToRenderBounds: 0
+  targetFXTransitionDuration: 0.5
+  targetFXStayDuration: 1.5
+  targetFXVisibility: 1
+  seeThrough: 1
+  seeThroughOccluderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  seeThroughOccluderThreshold: 0.4
+  seeThroughOccluderMaskAccurate: 0
+  seeThroughOccluderCheckInterval: 1
+  seeThroughOccluderCheckIndividualObjects: 0
+  seeThroughDepthOffset: 0
+  seeThroughMaxDepth: 0
+  seeThroughIntensity: 1
+  seeThroughTintAlpha: 0.5
+  seeThroughTintColor: {r: 0.6156863, g: 1, b: 0.3764706, a: 1}
+  seeThroughNoise: 0
+  seeThroughBorder: 0
+  seeThroughBorderColor: {r: 0, g: 0, b: 0, a: 1}
+  seeThroughBorderWidth: 0.45
+  seeThroughOrdered: 0
+  rmsCount: 0
+  hitFxInitialIntensity: 1
+  hitFxMode: 0
+  hitFxFadeOutDuration: 0.25
+  hitFxColor: {r: 1, g: 1, b: 1, a: 1}
+  hitFxRadius: 0.5
+--- !u!114 &496072151771572782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8340228651376536649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcc98de5d0cf4cd2b3d0ef74c4f187f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActivateOnEnter: {fileID: -3499168998017322558, guid: a573adead8251f34a9e4b43dde088f46, type: 3}
+  ActivateOnExit: {fileID: 0}
+  DeactivateOnEnter: {fileID: 0}
+  DeactivateOnExit: {fileID: -3499168998017322558, guid: a573adead8251f34a9e4b43dde088f46, type: 3}
+--- !u!114 &881884859711148710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8340228651376536649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceac684f1e674477b98922062d230e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraFollowProfile: {fileID: 0}
+--- !u!114 &8027845682236611519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8340228651376536649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc7839ee9be74929be4e0ec8e7520eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetsToActivate: []
+  objectsToDeactivate: []
+--- !u!1 &8925149768613537784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3044666893109367307}
+  - component: {fileID: 8137204545247518953}
+  m_Layer: 7
+  m_Name: CameraProfile (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3044666893109367307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8925149768613537784}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8334151589376507619}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8137204545247518953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8925149768613537784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c06b216673b64d67900c532efba062c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 0}
+  raiseInHierarchy: 0
 --- !u!1001 &1697383225451851298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7,6 +224,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8334151589376507619}
     m_Modifications:
+    - target: {fileID: -7465328043376100894, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: cameraFollowProfile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -2134446249501050012, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: ActivateOnEnter
+      value: 
+      objectReference: {fileID: -3499168998017322558, guid: a573adead8251f34a9e4b43dde088f46, type: 3}
+    - target: {fileID: -2134446249501050012, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: DeactivateOnExit
+      value: 
+      objectReference: {fileID: -3499168998017322558, guid: a573adead8251f34a9e4b43dde088f46, type: 3}
     - target: {fileID: 1712709652979322, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: m_Name
       value: SM_Prop_WireFence_01
@@ -59,9 +288,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1067131742995643076, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: profile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067131742995643076, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: raiseInHierarchy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889605308748655202, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: objetsToActivate.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7395531665261337324, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
-    - {fileID: -8703201081550508917, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
 --- !u!1001 &1963372618740449771
 PrefabInstance:
@@ -70,6 +311,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8334151589376507619}
     m_Modifications:
+    - target: {fileID: -7465328043376100894, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: cameraFollowProfile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -2134446249501050012, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: ActivateOnEnter
+      value: 
+      objectReference: {fileID: -3499168998017322558, guid: a573adead8251f34a9e4b43dde088f46, type: 3}
+    - target: {fileID: -2134446249501050012, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: DeactivateOnExit
+      value: 
+      objectReference: {fileID: -3499168998017322558, guid: a573adead8251f34a9e4b43dde088f46, type: 3}
     - target: {fileID: 1712709652979322, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: m_Name
       value: SM_Prop_WireFence_01 (3)
@@ -122,9 +375,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1067131742995643076, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: profile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067131742995643076, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: raiseInHierarchy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889605308748655202, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: objetsToActivate.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7395531665261337324, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
-    - {fileID: -8703201081550508917, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
 --- !u!1001 &5214034534107012869
 PrefabInstance:
@@ -133,6 +398,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8334151589376507619}
     m_Modifications:
+    - target: {fileID: -7465328043376100894, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: cameraFollowProfile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -2134446249501050012, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: ActivateOnEnter
+      value: 
+      objectReference: {fileID: -3499168998017322558, guid: a573adead8251f34a9e4b43dde088f46, type: 3}
+    - target: {fileID: -2134446249501050012, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: DeactivateOnExit
+      value: 
+      objectReference: {fileID: -3499168998017322558, guid: a573adead8251f34a9e4b43dde088f46, type: 3}
     - target: {fileID: 1712709652979322, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: m_Name
       value: SM_Prop_WireFence_01 (1)
@@ -185,9 +462,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1067131742995643076, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: profile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067131742995643076, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: raiseInHierarchy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889605308748655202, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: objetsToActivate.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7395531665261337324, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
-    - {fileID: -8703201081550508917, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
 --- !u!1001 &8338525169466044979
 PrefabInstance:
@@ -196,6 +485,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7465328043376100894, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: cameraFollowProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
     - target: {fileID: 1712709652979322, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: m_Name
       value: SM_Prop_WireFence_01_Long
@@ -244,10 +537,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8376609671389277278, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7395531665261337324, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
-    - {fileID: -8703201081550508917, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+    - {fileID: 0}
+    - {fileID: 1396749222691490241, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+    - {fileID: -7465328043376100894, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+--- !u!1 &8340228651376536649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1712709652979322, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+  m_PrefabInstance: {fileID: 8338525169466044979}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8334151589376507619 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4713333779746000, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
@@ -260,6 +564,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8334151589376507619}
     m_Modifications:
+    - target: {fileID: -7465328043376100894, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: cameraFollowProfile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -2134446249501050012, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: ActivateOnEnter
+      value: 
+      objectReference: {fileID: -3499168998017322558, guid: a573adead8251f34a9e4b43dde088f46, type: 3}
+    - target: {fileID: -2134446249501050012, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: DeactivateOnExit
+      value: 
+      objectReference: {fileID: -3499168998017322558, guid: a573adead8251f34a9e4b43dde088f46, type: 3}
     - target: {fileID: 1712709652979322, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: m_Name
       value: SM_Prop_WireFence_01 (2)
@@ -312,7 +628,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1067131742995643076, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: profile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067131742995643076, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: raiseInHierarchy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889605308748655202, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: objetsToActivate.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7395531665261337324, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
-    - {fileID: -8703201081550508917, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}

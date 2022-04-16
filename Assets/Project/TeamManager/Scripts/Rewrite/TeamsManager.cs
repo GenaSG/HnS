@@ -119,12 +119,12 @@ public class TeamsManager : NetworkBehaviour
 
     private void OnDisable()
     {
-        EventBus<OnPlayerObjectSpawned>.Unsubscribe(PlayerObjectSpawned);
-        EventBus<OnPlayerObjectDestroyed>.Unsubscribe(PlayerObjectDestroyed);
-        EventBus<OnPlayerDied>.Unsubscribe(PlayerDied);
+        EventBus<OnPlayerObjectSpawned>.UnSubscribe(PlayerObjectSpawned);
+        EventBus<OnPlayerObjectDestroyed>.UnSubscribe(PlayerObjectDestroyed);
+        EventBus<OnPlayerDied>.UnSubscribe(PlayerDied);
     }
 
-    private void PlayerObjectSpawned(object caller, OnPlayerObjectSpawned objectSpawned)
+    private void PlayerObjectSpawned(object caller, OnPlayerObjectSpawned objectSpawned, object target)
     {
         if (!isServer) return;
         state.OnPlayerConnected(spectators,hiders,seekers,objectSpawned.netID);
@@ -132,7 +132,7 @@ public class TeamsManager : NetworkBehaviour
         NotifyAll();
     }
 
-    private void PlayerObjectDestroyed(object caller, OnPlayerObjectDestroyed objectDestroyed)
+    private void PlayerObjectDestroyed(object caller, OnPlayerObjectDestroyed objectDestroyed, object target)
     {
         if (!isServer) return;
         state.OnPlayerDisconnected(spectators, hiders, seekers, objectDestroyed.netID);
@@ -141,7 +141,7 @@ public class TeamsManager : NetworkBehaviour
     }
 
 
-    private void PlayerDied(object caller, OnPlayerDied playerDied)
+    private void PlayerDied(object caller, OnPlayerDied playerDied, object target)
     {
         if (!isServer) return;
         state.OnPlayerDied(spectators, hiders, seekers, playerDied.netID);

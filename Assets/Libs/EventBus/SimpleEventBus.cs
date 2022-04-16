@@ -1,13 +1,33 @@
 ﻿namespace SimpleEventBus{
 	using System;
 	using System.Collections.Generic;
-	
-	public static class EventBus<T>
+
+    public static class EventBus<T>
+    {
+        private static Action<object, T, object> listeners = delegate { };
+
+        public static void Raise(object caller, T payload, object target = null)
+        {
+            listeners(caller, payload, target);
+        }
+
+        public static void Subscribe(Action<object, T, object> listener)
+        {
+            listeners += listener;
+        }
+
+        public static void UnSubscribe(Action<object, T, object> listener)
+        {
+            listeners -= listener;
+        }
+    }
+
+	public static class HierarchicalEventBus<T>
 	{
 		private static readonly Dictionary<object,Action<object,T>> channels;
 		private static readonly object global = new object();
 		
-		static EventBus(){
+		static HierarchicalEventBus(){
 			channels = new Dictionary<object, Action<object, T>>();
 			channels.Add(global,delegate {});
 		}
@@ -18,8 +38,8 @@
 		}
 		
 		
-		public static void Unsubscribe(Action<object,T> listener){
-			Unsubscribe(global,listener);
+		public static void UnSubscribe(Action<object,T> listener){
+			UnSubscribe(global,listener);
 		}
 		
 		
@@ -29,7 +49,7 @@
 		}
 		
 		
-		public static void Unsubscribe(object channel, Action<object,T> listener){
+		public static void UnSubscribe(object channel, Action<object,T> listener){
 			if(!channels.ContainsKey(channel)) return;
 			channels[channel] -= listener;
 			if(((Delegate)channels[channel]).GetInvocationList().Length == 1) channels.Remove(channel);

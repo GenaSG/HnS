@@ -15,17 +15,18 @@ public class CameraSmoothFollow : MonoBehaviour
 
     private void OnEnable()
     {
-        EventBus<OnCameraProfileUpdated>.Subscribe(profileEventChannel, CameraProfileUpdated);
+        EventBus<OnCameraProfileUpdated>.Subscribe(CameraProfileUpdated);
     }
 
-    private void CameraProfileUpdated(object caller, OnCameraProfileUpdated profileUpdated)
+    private void CameraProfileUpdated(object caller, OnCameraProfileUpdated profileUpdated,object channel)
     {
+        if (channel != (object)profileEventChannel) return;
         this.profile = profileUpdated.profile;
     }
 
     private void OnDisable()
     {
-        EventBus<OnCameraProfileUpdated>.Unsubscribe(profileEventChannel, CameraProfileUpdated);
+        EventBus<OnCameraProfileUpdated>.UnSubscribe(CameraProfileUpdated);
     }
 
     public void SetProfile(CameraFollowProfile profile)

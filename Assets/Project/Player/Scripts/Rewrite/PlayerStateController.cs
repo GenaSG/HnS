@@ -39,7 +39,7 @@ public class PlayerStateController : MonoBehaviour
 
     }
 
-    private void SeekersUpdated(object caller, OnSeekersUpdated seekersUpdated)
+    private void SeekersUpdated(object caller, OnSeekersUpdated seekersUpdated, object target)
     {
         if (seekersUpdated.seekers.Contains(id.netId))
         {
@@ -48,7 +48,7 @@ public class PlayerStateController : MonoBehaviour
         } 
     }
 
-    private void HidersUpdated(object caller, OnHidersUpdated hidersUpdated)
+    private void HidersUpdated(object caller, OnHidersUpdated hidersUpdated, object target)
     {
         if (hidersUpdated.hiders.Contains(id.netId))
         {
@@ -57,7 +57,7 @@ public class PlayerStateController : MonoBehaviour
         }
     }
 
-    private void SpectatorsUpdated(object caller, OnSpectatorsUpdated spectatorsUpdated)
+    private void SpectatorsUpdated(object caller, OnSpectatorsUpdated spectatorsUpdated, object target)
     {
         if (spectatorsUpdated.spectators.Contains(id.netId))
         {
@@ -66,7 +66,7 @@ public class PlayerStateController : MonoBehaviour
         }
     }
 
-    private void GameStateChanged(object caller, OnGameStateChanged stateChanged)
+    private void GameStateChanged(object caller, OnGameStateChanged stateChanged, object target)
     {
         gameState = stateChanged.newState;
         CheckState();
@@ -88,9 +88,9 @@ public class PlayerStateController : MonoBehaviour
 
     private void OnDisable()
     {
-        EventBus<OnGameStateChanged>.Unsubscribe(GameStateChanged);
-        EventBus<OnSpectatorsUpdated>.Unsubscribe(SpectatorsUpdated);
-        EventBus<OnHidersUpdated>.Unsubscribe(HidersUpdated);
-        EventBus<OnSeekersUpdated>.Unsubscribe(SeekersUpdated);
+        EventBus<OnGameStateChanged>.UnSubscribe(GameStateChanged);
+        EventBus<OnSpectatorsUpdated>.UnSubscribe(SpectatorsUpdated);
+        EventBus<OnHidersUpdated>.UnSubscribe(HidersUpdated);
+        EventBus<OnSeekersUpdated>.UnSubscribe(SeekersUpdated);
     }
 }

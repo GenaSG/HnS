@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 7b4ebdb81d5004fcf933e08eaa2c9f27
+labels:
+- Prop
 PrefabImporter:
   externalObjects: {}
   userData: 

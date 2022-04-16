@@ -13,7 +13,7 @@ public class TeamManagerEventsDebugger : MonoBehaviour
         EventBus<OnSeekersUpdated>.Subscribe(SeekersUpdated);
     }
 
-    private void SeekersUpdated(object caller, OnSeekersUpdated seekersUpdated)
+    private void SeekersUpdated(object caller, OnSeekersUpdated seekersUpdated, object target)
     {
         var ids = "";
         foreach(uint id in seekersUpdated.seekers)
@@ -23,7 +23,7 @@ public class TeamManagerEventsDebugger : MonoBehaviour
         Debug.Log($"{this} seekers updated {ids}. Called by {caller}.");
     }
 
-    private void HidersUpdated(object caller, OnHidersUpdated hidersUpdated)
+    private void HidersUpdated(object caller, OnHidersUpdated hidersUpdated, object target)
     {
         var ids = "";
         foreach (uint id in hidersUpdated.hiders)
@@ -33,7 +33,7 @@ public class TeamManagerEventsDebugger : MonoBehaviour
         Debug.Log($"{this} hiders updated {ids}. Called by {caller}.");
     }
 
-    private void SpectatorsUpdated(object caller, OnSpectatorsUpdated spectatorsUpdated)
+    private void SpectatorsUpdated(object caller, OnSpectatorsUpdated spectatorsUpdated, object target)
     {
         var ids = "";
         foreach (uint id in spectatorsUpdated.spectators)
@@ -47,9 +47,9 @@ public class TeamManagerEventsDebugger : MonoBehaviour
 
     private void OnDisable()
     {
-        EventBus<OnSpectatorsUpdated>.Unsubscribe(SpectatorsUpdated);
-        EventBus<OnHidersUpdated>.Unsubscribe(HidersUpdated);
-        EventBus<OnSeekersUpdated>.Unsubscribe(SeekersUpdated);
+        EventBus<OnSpectatorsUpdated>.UnSubscribe(SpectatorsUpdated);
+        EventBus<OnHidersUpdated>.UnSubscribe(HidersUpdated);
+        EventBus<OnSeekersUpdated>.UnSubscribe(SeekersUpdated);
     }
 
 

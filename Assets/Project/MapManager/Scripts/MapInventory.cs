@@ -19,7 +19,7 @@ public class MapInventory : MonoBehaviour
         levelGeometryInventory = new Dictionary<GameObject, uint>();
     }
 
-    private static void MapGenerated(object caller, OnMapGenerated map)
+    private static void MapGenerated(object caller, OnMapGenerated map, object target)
     {
         props = map.props;
         levelGeometry = map.levelGeometry;
@@ -35,7 +35,7 @@ public class MapInventory : MonoBehaviour
         }
     }
 
-    private static void MapCleared(object caller, OnMapCleared empty)
+    private static void MapCleared(object caller, OnMapCleared empty, object target)
     {
         propsInventory.Clear();
         levelGeometryInventory.Clear();

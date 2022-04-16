@@ -17,7 +17,7 @@ public class NetworkedMapGeneration : NetworkBehaviour
         EventBus<OnGameStateChanged>.Subscribe(GameStateChanged);
     }
 
-    private void GameStateChanged(object caller, OnGameStateChanged stateChanged)
+    private void GameStateChanged(object caller, OnGameStateChanged stateChanged,object target)
     {
         if (!isServer) return;
         if (markerState == null || stateChanged.newState != markerState) return;
@@ -27,7 +27,7 @@ public class NetworkedMapGeneration : NetworkBehaviour
 
     private void OnDisable()
     {
-        EventBus<OnGameStateChanged>.Unsubscribe(GameStateChanged);
+        EventBus<OnGameStateChanged>.UnSubscribe(GameStateChanged);
     }
 
     [ClientCallback]

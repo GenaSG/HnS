@@ -15,16 +15,17 @@ public class PlayerPropSelector : NetworkBehaviour
 
     private void OnEnable()
     {
-        EventBus<OnTriggerChanged>.Subscribe(transform.root.gameObject, TriggerChanged);
+        EventBus<OnTriggerChanged>.Subscribe(TriggerChanged);
     }
 
     private void OnDisable()
     {
-        EventBus<OnTriggerChanged>.Unsubscribe(transform.root.gameObject, TriggerChanged);
+        EventBus<OnTriggerChanged>.UnSubscribe(TriggerChanged);
     }
 
-    private void TriggerChanged(object caller, OnTriggerChanged triggerChanged)
+    private void TriggerChanged(object caller, OnTriggerChanged triggerChanged, object target)
     {
+        if (target != (object)transform.root.gameObject) return;
         bool condition = inventory.PropsContains(triggerChanged.collider.gameObject) && triggerChanged.state == CollisionState.OnEnter;
         condition = condition && currentProp != triggerChanged.collider.gameObject;
 
@@ -58,7 +59,7 @@ public class PlayerPropSelector : NetworkBehaviour
 
     private void Raise(GameObject prop)
     {
-        EventBus<OnPropSelected>.Raise(transform.root.gameObject, this, new OnPropSelected { prop = currentProp });
+        EventBus<OnPropSelected>.Raise(transform.root.gameObject,new OnPropSelected { prop = currentProp }, transform.root.gameObject);
     }
 
     [Command]//Called only on server

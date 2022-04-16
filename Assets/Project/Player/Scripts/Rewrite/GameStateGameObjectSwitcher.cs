@@ -29,10 +29,10 @@ public class GameStateGameObjectSwitcher : MonoBehaviour
 
     private void OnDisable()
     {
-        EventBus<OnGameStateChanged>.Unsubscribe(GameStateChanged);
+        EventBus<OnGameStateChanged>.UnSubscribe(GameStateChanged);
     }
 
-    void GameStateChanged(object caller, OnGameStateChanged stateChanged)
+    void GameStateChanged(object caller, OnGameStateChanged stateChanged,object target)
     {
         if (!inventory.ContainsKey(stateChanged.newState)) return;
         foreach (KeyValue<Object, GameObject> kv in stateToGameObject)

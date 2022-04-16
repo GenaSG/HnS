@@ -93,9 +93,9 @@ GameObject:
   - component: {fileID: 33908297726995630}
   - component: {fileID: 23300089157137880}
   - component: {fileID: 64654267376515388}
-  - component: {fileID: 8796749805247698774}
   - component: {fileID: 1702147882544939344}
   - component: {fileID: 1781466030225644533}
+  - component: {fileID: 3509279874830818425}
   m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_01
   m_TagString: Prop
@@ -131,6 +131,7 @@ Transform:
   - {fileID: 4546115739481670}
   - {fileID: 4271284789227862}
   - {fileID: 4083561713350394}
+  - {fileID: 2656748445213753970}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -197,19 +198,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43597996998652480, guid: 597225d0aaceb7042979576af95795c3, type: 2}
---- !u!114 &8796749805247698774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051164940061506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a7511295ddc4be98044c83abe3559b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 0da963e99c18544a985ba167b89b402e, type: 2}
 --- !u!114 &1702147882544939344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +330,21 @@ MonoBehaviour:
   ActivateOnExit: {fileID: 0}
   DeactivateOnEnter: {fileID: 0}
   DeactivateOnExit: {fileID: 1702147882544939344}
+--- !u!114 &3509279874830818425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051164940061506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc7839ee9be74929be4e0ec8e7520eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetsToActivate:
+  - {fileID: 5165143328945997989}
+  objectsToDeactivate: []
 --- !u!1 &1077756482814580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,3 +1753,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5165143328945997989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2656748445213753970}
+  - component: {fileID: 3720432272085421185}
+  m_Layer: 7
+  m_Name: CameraProfile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2656748445213753970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5165143328945997989}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4932868762654154}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3720432272085421185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5165143328945997989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c06b216673b64d67900c532efba062c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
+  raiseInHierarchy: 1

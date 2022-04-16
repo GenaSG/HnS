@@ -13,61 +13,35 @@ public class OnCollisionEvent : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (trigger) return;
-        if (raiseInHierarchy)
-        {
-            EventBus<OnCollisionChanged>.Raise(transform.root.gameObject,this,
-                new OnCollisionChanged { state = CollisionState.OnEnter, collision = collision});
-        }
-        else
-        {
-            EventBus<OnCollisionChanged>.Raise(this,
-                new OnCollisionChanged { state = CollisionState.OnEnter, collision = collision });
-        }
+        EventBus<OnCollisionChanged>.Raise(transform.root.gameObject,
+                new OnCollisionChanged { state = CollisionState.OnEnter, collision = collision },
+                raiseInHierarchy? transform.root.gameObject : null);
         
     }
 
     private void OnCollisionExit(Collision collision)
     {
         if (trigger) return;
-        if (raiseInHierarchy)
-        {
-            EventBus<OnCollisionChanged>.Raise(transform.root.gameObject, this,
-                new OnCollisionChanged { state = CollisionState.OnExit, collision = collision });
-        }
-        else
-        {
-            EventBus<OnCollisionChanged>.Raise(this,
-                new OnCollisionChanged { state = CollisionState.OnExit, collision = collision });
-        }
+        EventBus<OnCollisionChanged>.Raise(this,
+                new OnCollisionChanged { state = CollisionState.OnExit, collision = collision },
+                raiseInHierarchy ? transform.root.gameObject : null);
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!trigger) return;
-        if (raiseInHierarchy)
-        {
-            EventBus<OnTriggerChanged>.Raise(transform.root.gameObject, this,
-                new OnTriggerChanged { state = CollisionState.OnEnter, collider = other });
-        }
-        else
-        {
-            EventBus<OnTriggerChanged>.Raise(this,
-                new OnTriggerChanged { state = CollisionState.OnEnter, collider = other });
-        }
+        EventBus<OnTriggerChanged>.Raise(this,
+                new OnTriggerChanged { state = CollisionState.OnEnter, collider = other },
+                raiseInHierarchy ? transform.root.gameObject : null);
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (!trigger) return;
-        if (raiseInHierarchy)
-        {
-            EventBus<OnTriggerChanged>.Raise(transform.root.gameObject, this,
-                new OnTriggerChanged { state = CollisionState.OnExit, collider = other });
-        }
-        else
-        {
-            EventBus<OnTriggerChanged>.Raise(this,
-                new OnTriggerChanged { state = CollisionState.OnExit, collider = other });
-        }
+        EventBus<OnTriggerChanged>.Raise(this,
+                new OnTriggerChanged { state = CollisionState.OnExit, collider = other },
+                raiseInHierarchy ? transform.root.gameObject : null);
+        
     }
 }

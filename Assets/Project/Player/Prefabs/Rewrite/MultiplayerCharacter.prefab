@@ -408,8 +408,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3441058674534220266}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1332102781464277861}
@@ -1204,7 +1204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5869892224680107424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8449743171839666385}
@@ -1315,6 +1315,7 @@ GameObject:
   - component: {fileID: 6753778993217715428}
   - component: {fileID: 2144508151792448855}
   - component: {fileID: 147941278818461186}
+  - component: {fileID: 2248689568051155358}
   m_Layer: 6
   m_Name: CharacterController
   m_TagString: Untagged
@@ -1371,6 +1372,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selector: {fileID: 5201811703351154477}
+--- !u!114 &2248689568051155358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6807931872568468160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1201355f94546e5ae57d6a626fdb66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultPlayerPresentation: {fileID: 3441058674534220266}
+  playerPresentationAnchor: {fileID: 5869892224680107424}
 --- !u!1 &7074537721103102946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,7 +1598,6 @@ GameObject:
   - component: {fileID: 7781701743330944676}
   - component: {fileID: 8494882467104522995}
   - component: {fileID: 5201811703351154477}
-  - component: {fileID: 1686117532870418200}
   m_Layer: 6
   m_Name: MultiplayerCharacter
   m_TagString: Untagged
@@ -1765,18 +1779,6 @@ MonoBehaviour:
   syncInterval: 0.1
   inventory: {fileID: 8494882467104522995}
   currentProp: {fileID: 0}
---- !u!114 &1686117532870418200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7463891443770580423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c1201355f94546e5ae57d6a626fdb66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8435130743420608391
 GameObject:
   m_ObjectHideFlags: 0

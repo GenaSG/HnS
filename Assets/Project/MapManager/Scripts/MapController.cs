@@ -64,7 +64,7 @@ public class MapController : DungeonEventListener
     #region Cleanup
     private void OnDisable()
     {
-        EventBus<OnMapSeedGenerated>.Unsubscribe(OnBuildMap);
+        EventBus<OnMapSeedGenerated>.UnSubscribe(OnBuildMap);
     }
 
     private void OnDestroy()
@@ -74,7 +74,7 @@ public class MapController : DungeonEventListener
     }
     #endregion
 
-    private void OnBuildMap(object caller, OnMapSeedGenerated seed)
+    private void OnBuildMap(object caller, OnMapSeedGenerated seed, object target)
     {
         Debug.Log("On build map");
         BuildMap(seed.seed);

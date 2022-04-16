@@ -94,10 +94,9 @@ GameObject:
   - component: {fileID: 33146590002243504}
   - component: {fileID: 23245331865970874}
   - component: {fileID: 64206081448529086}
-  - component: {fileID: -3747904917918077463}
-  - component: {fileID: -7226266758890439317}
   - component: {fileID: 8193828486586861959}
   - component: {fileID: 2204100211996419698}
+  - component: {fileID: 2476095525382329808}
   m_Layer: 7
   m_Name: SM_Veh_Bike_01
   m_TagString: Prop
@@ -118,6 +117,7 @@ Transform:
   m_Children:
   - {fileID: 4515214056746180}
   - {fileID: 4305097353401572}
+  - {fileID: 724640310585910928}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -184,31 +184,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43051879581442040, guid: b1e8af422a945d7498546406c4511e7b, type: 2}
---- !u!114 &-3747904917918077463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148358842170010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 236363046424e4601a2dbea00dccde25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-7226266758890439317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148358842170010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a7511295ddc4be98044c83abe3559b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
 --- !u!114 &8193828486586861959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,6 +304,21 @@ MonoBehaviour:
   ActivateOnExit: {fileID: 0}
   DeactivateOnEnter: {fileID: 0}
   DeactivateOnExit: {fileID: 8193828486586861959}
+--- !u!114 &2476095525382329808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148358842170010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc7839ee9be74929be4e0ec8e7520eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetsToActivate:
+  - {fileID: 6715463479398328722}
+  objectsToDeactivate: []
 --- !u!1 &1233304220568792
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,3 +645,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6715463479398328722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 724640310585910928}
+  - component: {fileID: 2551997920249352336}
+  m_Layer: 7
+  m_Name: CameraProfile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &724640310585910928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6715463479398328722}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4613464985558070}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2551997920249352336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6715463479398328722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c06b216673b64d67900c532efba062c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
+  raiseInHierarchy: 1

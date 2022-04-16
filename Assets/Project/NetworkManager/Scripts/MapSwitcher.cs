@@ -2,31 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using GameFlow;
+using SimpleEventBus;
+using System;
 
 public class MapSwitcher : MonoBehaviour
 {
     [SerializeField]
     private NetworkManager networkManager;
+    //[SerializeField]
+    //private Game game;
+    //[SerializeField]
+    //private BaseGameState TriggerOnState;
     [SerializeField]
-    private Game game;
-    [SerializeField]
-    private BaseGameState TriggerOnState;
+    private GameState triggerOnState;
 
     private void OnEnable()
     {
-        game.OnStateChanged += Game_OnStateChanged;   
+        //game.OnStateChanged += Game_OnStateChanged;
+        EventBus<OnGameStateChanged>.Subscribe(GameStateChanged);
     }
 
-    private void Game_OnStateChanged()
+    private void GameStateChanged(object caller, OnGameStateChanged stateChanged, object target)
     {
-        if(game.CurrentState == TriggerOnState)
+        if (stateChanged.newState == triggerOnState)
         {
             if (NetworkServer.active) networkManager.ServerChangeScene(networkManager.onlineScene);
         }
     }
 
+    private void Game_OnStateChanged()
+    {
+        //if(game.CurrentState == TriggerOnState)
+        //{
+            //if (NetworkServer.active) networkManager.ServerChangeScene(networkManager.onlineScene);
+        //}
+    }
+
     private void OnDisable()
     {
-        game.OnStateChanged -= Game_OnStateChanged;
+        //game.OnStateChanged -= Game_OnStateChanged;
+        EventBus<OnGameStateChanged>.UnSubscribe(GameStateChanged);
     }
 }

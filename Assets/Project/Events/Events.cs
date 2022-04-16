@@ -72,6 +72,11 @@ public struct OnPropSelected
 {
     public GameObject prop;
 }
+
+public struct OnSelectedBy
+{
+    public GameObject user;
+}
 //
 //Teams
 public struct OnSpectatorsUpdated
