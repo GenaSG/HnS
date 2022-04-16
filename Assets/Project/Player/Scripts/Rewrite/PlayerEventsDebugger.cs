@@ -7,7 +7,7 @@ using System;
 public class PlayerEventsDebugger : MonoBehaviour
 {
     private void OnEnable()
-    {
+    {   
         EventBus<OnPropSelected>.Subscribe(PropSelected);
     }
 

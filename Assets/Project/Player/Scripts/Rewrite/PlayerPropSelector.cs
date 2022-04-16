@@ -59,7 +59,7 @@ public class PlayerPropSelector : NetworkBehaviour
 
     private void Raise(GameObject prop)
     {
-        EventBus<OnPropSelected>.Raise(transform.root.gameObject,new OnPropSelected { prop = currentProp }, transform.root.gameObject);
+        EventBus<OnPropSelected>.Raise(transform.root.gameObject,new OnPropSelected { prop = prop }, transform.root.gameObject);
     }
 
     [Command]//Called only on server

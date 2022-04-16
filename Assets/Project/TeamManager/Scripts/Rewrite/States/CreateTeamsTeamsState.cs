@@ -11,7 +11,7 @@ public class CreateTeamsTeamsState : TeamsManagerState
         if (spectators.Count == 0) return;
         
         var rand = new System.Random(System.DateTime.Now.Millisecond);
-        uint selectedSeekerID = spectators.ToArray()[rand.Next(0,spectators.Count-1)];
+        uint selectedSeekerID = spectators.ToArray()[rand.Next(0,spectators.Count)];
         seekers.Add(selectedSeekerID);
         spectators.Remove(selectedSeekerID);
         hiders.Clear();

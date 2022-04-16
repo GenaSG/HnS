@@ -23,6 +23,7 @@ public class PlayerPropSwitcher : MonoBehaviour
     private void PropSelected(object caller, OnPropSelected selected, object target)
     {
         if (target != (object)transform.root.gameObject) return;
+        Debug.Log("handling prop selection");
         bool switched = SetCurrentPresentation(selected.prop);
         bool currentIsDefault = currentPresentation == defaultPlayerPresentation;
         bool switchedToNew = !currentIsDefault && switched;
