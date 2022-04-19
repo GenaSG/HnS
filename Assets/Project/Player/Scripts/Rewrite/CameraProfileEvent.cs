@@ -15,7 +15,6 @@ public class CameraProfileEvent : MonoBehaviour
         EventBus<OnCameraProfileUpdated>.Raise(transform.root.gameObject,
             new OnCameraProfileUpdated { profile = this.profile },
             raiseInHierarchy ? transform.root.gameObject : null);
-        
     }
 
 }
