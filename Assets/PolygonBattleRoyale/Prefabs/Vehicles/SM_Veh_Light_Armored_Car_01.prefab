@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4008393218697760729}
   - component: {fileID: -362307617997360233}
   - component: {fileID: -8541741808071118003}
+  - component: {fileID: -2822748398250285260}
   m_Layer: 7
   m_Name: SM_Veh_Light_Armored_Car_01
   m_TagString: Prop
@@ -253,6 +254,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 1053542737766490993}
   objectsToDeactivate: []
+--- !u!114 &-2822748398250285260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293849716984982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1293849716984982}
+  highlightEffect: {fileID: 4008393218697760729}
 --- !u!1 &1437563887357140
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,4 +798,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

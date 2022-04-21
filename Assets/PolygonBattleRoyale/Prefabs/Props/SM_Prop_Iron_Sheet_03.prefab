@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 764130649917898082}
   - component: {fileID: -868609156700235959}
   - component: {fileID: -6180594021844660277}
+  - component: {fileID: 7462281747697578255}
   m_Layer: 7
   m_Name: SM_Prop_Iron_Sheet_03
   m_TagString: Prop
@@ -247,6 +248,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 951557968063396337}
   objectsToDeactivate: []
+--- !u!114 &7462281747697578255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263535757989876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1263535757989876}
+  highlightEffect: {fileID: 764130649917898082}
 --- !u!1 &951557968063396337
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,4 +306,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

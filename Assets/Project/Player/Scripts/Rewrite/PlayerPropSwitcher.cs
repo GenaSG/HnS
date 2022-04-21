@@ -12,6 +12,8 @@ public class PlayerPropSwitcher : MonoBehaviour
     [SerializeField]
     private GameObject playerPresentationAnchor;
     private GameObject currentPresentation;
+    [SerializeField]
+    private GameObject eventChannel;
 
 
     private void OnEnable()
@@ -22,7 +24,7 @@ public class PlayerPropSwitcher : MonoBehaviour
 
     private void PropSelected(object caller, OnPropSelected selected, object target)
     {
-        if (target != (object)transform.root.gameObject) return;
+        if (target != (object)eventChannel) return;
         Debug.Log("handling prop selection");
         bool switched = SetCurrentPresentation(selected.prop);
         bool currentIsDefault = currentPresentation == defaultPlayerPresentation;
@@ -40,7 +42,7 @@ public class PlayerPropSwitcher : MonoBehaviour
         if(switched)
             EventBus<OnSelectedBy>.Raise(this, new OnSelectedBy
             {
-                user = transform.root.gameObject
+                user = eventChannel
             }, currentPresentation);
     }
 

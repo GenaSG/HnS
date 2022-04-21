@@ -12,26 +12,29 @@ public class PlayerPropSelector : NetworkBehaviour
     private GameObject currentProp;
     [SyncVar(hook = nameof(SyncPropID))]
     private uint syncPropID;
+    [SerializeField]
+    private GameObject eventChannel;
 
     private void OnEnable()
     {
-        EventBus<OnTriggerChanged>.Subscribe(TriggerChanged);
+        EventBus<OnLookingAt>.Subscribe(TriggerChanged);
     }
 
     private void OnDisable()
     {
-        EventBus<OnTriggerChanged>.UnSubscribe(TriggerChanged);
+        EventBus<OnLookingAt>.UnSubscribe(TriggerChanged);
     }
 
-    private void TriggerChanged(object caller, OnTriggerChanged triggerChanged, object target)
+    private void TriggerChanged(object caller, OnLookingAt triggerChanged, object target)
     {
-        if (target != (object)transform.root.gameObject) return;
-        bool condition = inventory.PropsContains(triggerChanged.collider.gameObject) && triggerChanged.state == CollisionState.OnEnter;
-        condition = condition && currentProp != triggerChanged.collider.gameObject;
+        if (target != (object)eventChannel) return;
+//        bool condition = inventory.PropsContains(triggerChanged.subject) && triggerChanged.state == CollisionState.OnEnter;
+//        condition = condition && currentProp != triggerChanged.subject;
+        bool condition = triggerChanged.subject != null && inventory.PropsContains(triggerChanged.subject);
 
         if (condition)
         {
-            currentProp = triggerChanged.collider.gameObject;
+            currentProp = triggerChanged.subject;
         }
         else
         {
@@ -59,7 +62,7 @@ public class PlayerPropSelector : NetworkBehaviour
 
     private void Raise(GameObject prop)
     {
-        EventBus<OnPropSelected>.Raise(transform.root.gameObject,new OnPropSelected { prop = prop }, transform.root.gameObject);
+        EventBus<OnPropSelected>.Raise(this,new OnPropSelected { prop = prop }, eventChannel);
     }
 
     [Command]//Called only on server

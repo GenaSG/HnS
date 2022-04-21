@@ -501,6 +501,7 @@ GameObject:
   - component: {fileID: -7267639459298940579}
   - component: {fileID: -3208195570482687479}
   - component: {fileID: 6019758398781714917}
+  - component: {fileID: 8908010691223165253}
   m_Layer: 7
   m_Name: SM_Veh_Car_Clean_01
   m_TagString: Prop
@@ -739,6 +740,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 2335776015150077180}
   objectsToDeactivate: []
+--- !u!114 &8908010691223165253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978907248868392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1978907248868392}
+  highlightEffect: {fileID: -7267639459298940579}
 --- !u!1 &2335776015150077180
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,4 +798,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

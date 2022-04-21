@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 396865593388486429}
   - component: {fileID: -3060371911695127279}
   - component: {fileID: 3871850306832479453}
+  - component: {fileID: 4160724183616341093}
   m_Layer: 7
   m_Name: SM_Prop_Crate_Medical_01
   m_TagString: Prop
@@ -247,6 +248,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 3994433759220802612}
   objectsToDeactivate: []
+--- !u!114 &4160724183616341093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588381071799560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1588381071799560}
+  highlightEffect: {fileID: 396865593388486429}
 --- !u!1 &3994433759220802612
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,4 +306,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

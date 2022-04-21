@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9015440205490600122}
   - component: {fileID: -7263553413597601826}
   - component: {fileID: 2387024090030869854}
+  - component: {fileID: 1568765006026102185}
   m_Layer: 7
   m_Name: SM_Prop_WoodPlank_01
   m_TagString: Prop
@@ -247,6 +248,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 830806394095320641}
   objectsToDeactivate: []
+--- !u!114 &1568765006026102185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118550264440206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1118550264440206}
+  highlightEffect: {fileID: 9015440205490600122}
 --- !u!1 &830806394095320641
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,4 +306,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

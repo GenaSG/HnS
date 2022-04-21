@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8111314941319759011}
   - component: {fileID: 7275347516289063224}
   - component: {fileID: -7206683107845937850}
+  - component: {fileID: 7055987822240267953}
   m_Layer: 7
   m_Name: SM_Prop_RadioTower_01
   m_TagString: Prop
@@ -265,6 +266,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 6562987937176365862}
   objectsToDeactivate: []
+--- !u!114 &7055987822240267953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231430948143974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1231430948143974}
+  highlightEffect: {fileID: 8111314941319759011}
 --- !u!1 &6562987937176365862
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,4 +324,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

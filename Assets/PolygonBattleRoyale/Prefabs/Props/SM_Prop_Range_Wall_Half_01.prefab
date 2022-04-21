@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 233531692784283690}
   - component: {fileID: -9179095029809486369}
   - component: {fileID: 3294631851255655465}
+  - component: {fileID: 2507272323355121109}
   m_Layer: 7
   m_Name: SM_Prop_Range_Wall_Half_01
   m_TagString: Prop
@@ -277,6 +278,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 1323347293088900987}
   objectsToDeactivate: []
+--- !u!114 &2507272323355121109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900386216812710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1900386216812710}
+  highlightEffect: {fileID: 233531692784283690}
 --- !u!1 &1323347293088900987
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,4 +336,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

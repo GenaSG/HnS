@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: -5641080793807495847}
   - component: {fileID: 8066317875354004885}
   - component: {fileID: 1191085474620236373}
+  - component: {fileID: 8105549631748992549}
   m_Layer: 7
   m_Name: SM_Prop_Container_01
   m_TagString: Prop
@@ -581,6 +582,20 @@ MonoBehaviour:
   hitFxFadeOutDuration: 0.25
   hitFxColor: {r: 1, g: 1, b: 1, a: 1}
   hitFxRadius: 0.5
+--- !u!114 &8105549631748992549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287357858214794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1287357858214794}
+  highlightEffect: {fileID: 1191085474620236373}
 --- !u!1 &1509980957368368
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,4 +735,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

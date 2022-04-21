@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: -5781991955408423828}
   - component: {fileID: -2134446249501050012}
   - component: {fileID: 3889605308748655202}
+  - component: {fileID: -6409663055898211604}
   m_Layer: 7
   m_Name: SM_Prop_WireFence_01
   m_TagString: Prop
@@ -329,6 +330,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 5468796450780993010}
   objectsToDeactivate: []
+--- !u!114 &-6409663055898211604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712709652979322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1712709652979322}
+  highlightEffect: {fileID: -5781991955408423828}
 --- !u!1 &5468796450780993010
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,4 +388,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

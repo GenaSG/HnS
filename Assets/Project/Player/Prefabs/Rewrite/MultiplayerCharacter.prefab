@@ -511,6 +511,7 @@ GameObject:
   - component: {fileID: 7473734837605007169}
   - component: {fileID: 7286901726126722186}
   - component: {fileID: 1921505972591694101}
+  - component: {fileID: 2784768165669039137}
   m_Layer: 6
   m_Name: Camera
   m_TagString: Untagged
@@ -623,7 +624,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3850689923478261313}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af40c1d65156a45fe80ccbc83559f13a, type: 3}
   m_Name: 
@@ -635,6 +636,24 @@ MonoBehaviour:
   startPoint: {fileID: 1238203028509045368}
   hitPointTransform: {fileID: 1127664888143452687}
   lookingAt: {fileID: 0}
+--- !u!114 &2784768165669039137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3850689923478261313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb551871724c430ca53afdc56d0c972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  checkDistance: 5
+  eventChannel: {fileID: 7463891443770580423}
+  observer: {fileID: 7463891443770580423}
 --- !u!1 &4260363440783799339
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,7 +814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 7463891443770580423}
 --- !u!1 &5009836338290268952
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,8 +890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e47be9b8a0f65432ea84a55586551e63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raiseInHierarchy: 1
   trigger: 1
+  eventChannel: {fileID: 7463891443770580423}
 --- !u!1 &5326885935851961793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,6 +1307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultPlayerPresentation: {fileID: 3441058674534220266}
   playerPresentationAnchor: {fileID: 5869892224680107424}
+  eventChannel: {fileID: 7463891443770580423}
 --- !u!1 &6315697506448862182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,6 +1830,7 @@ MonoBehaviour:
   syncInterval: 0.1
   inventory: {fileID: 8494882467104522995}
   currentProp: {fileID: 0}
+  eventChannel: {fileID: 7463891443770580423}
 --- !u!1 &8435130743420608391
 GameObject:
   m_ObjectHideFlags: 0

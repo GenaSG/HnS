@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8331638929134921322}
   - component: {fileID: 3499473065551421584}
   - component: {fileID: 8577821345270093015}
+  - component: {fileID: 7587023650093483533}
   m_Layer: 7
   m_Name: SM_Prop_Cinderblock_01
   m_TagString: Prop
@@ -248,6 +249,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 6841290230037502918}
   objectsToDeactivate: []
+--- !u!114 &7587023650093483533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941009084921878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1941009084921878}
+  highlightEffect: {fileID: 8331638929134921322}
 --- !u!1 &3538238115682711928
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,4 +454,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

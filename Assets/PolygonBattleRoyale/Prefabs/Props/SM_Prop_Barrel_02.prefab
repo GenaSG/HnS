@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1388873668687982508}
   - component: {fileID: -8833981151099659193}
   - component: {fileID: -3003734475508759210}
+  - component: {fileID: -6761038123821528703}
   m_Layer: 7
   m_Name: SM_Prop_Barrel_02
   m_TagString: Prop
@@ -248,6 +249,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 8669537860915261739}
   objectsToDeactivate: []
+--- !u!114 &-6761038123821528703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727726501743960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1727726501743960}
+  highlightEffect: {fileID: 1388873668687982508}
 --- !u!1 &1362164958945693364
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,4 +454,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

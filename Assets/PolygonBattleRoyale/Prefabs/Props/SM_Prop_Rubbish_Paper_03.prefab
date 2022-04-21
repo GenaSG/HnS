@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -965349154392661481}
   - component: {fileID: 4246018135515270038}
   - component: {fileID: 3875135149581216620}
+  - component: {fileID: 7310680363574606859}
   m_Layer: 7
   m_Name: SM_Prop_Rubbish_Paper_03
   m_TagString: Prop
@@ -232,6 +233,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 9201098663594746038}
   objectsToDeactivate: []
+--- !u!114 &7310680363574606859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143089213465246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1143089213465246}
+  highlightEffect: {fileID: -965349154392661481}
 --- !u!1 &9201098663594746038
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,4 +291,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

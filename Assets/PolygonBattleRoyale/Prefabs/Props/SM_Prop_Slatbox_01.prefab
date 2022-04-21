@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8287075847826740738}
   - component: {fileID: -4785825358134873860}
   - component: {fileID: -8651379613984536336}
+  - component: {fileID: -498159389559394650}
   m_Layer: 7
   m_Name: SM_Prop_Slatbox_01
   m_TagString: Prop
@@ -247,6 +248,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 7782401502169931287}
   objectsToDeactivate: []
+--- !u!114 &-498159389559394650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327590931756138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1327590931756138}
+  highlightEffect: {fileID: 8287075847826740738}
 --- !u!1 &7782401502169931287
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,4 +306,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

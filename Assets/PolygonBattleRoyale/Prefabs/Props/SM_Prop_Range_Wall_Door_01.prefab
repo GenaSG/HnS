@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -353692447972316091}
   - component: {fileID: -7641723654004457000}
   - component: {fileID: -1419744059815523669}
+  - component: {fileID: -5369436016859287723}
   m_Layer: 7
   m_Name: SM_Prop_Range_Wall_Door_01
   m_TagString: Prop
@@ -292,6 +293,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 3103344362465576291}
   objectsToDeactivate: []
+--- !u!114 &-5369436016859287723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577156973864970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1577156973864970}
+  highlightEffect: {fileID: -353692447972316091}
 --- !u!1 &3103344362465576291
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,4 +351,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

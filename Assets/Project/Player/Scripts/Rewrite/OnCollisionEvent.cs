@@ -6,16 +6,16 @@ using SimpleEventBus;
 public class OnCollisionEvent : MonoBehaviour
 {
     [SerializeField]
-    private bool raiseInHierarchy;
-    [SerializeField]
     private bool trigger;
+    [SerializeField]
+    private GameObject eventChannel;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (trigger) return;
-        EventBus<OnCollisionChanged>.Raise(transform.root.gameObject,
+        EventBus<OnCollisionChanged>.Raise(this,
                 new OnCollisionChanged { state = CollisionState.OnEnter, collision = collision },
-                raiseInHierarchy? transform.root.gameObject : null);
+                eventChannel);
         
     }
 
@@ -24,7 +24,7 @@ public class OnCollisionEvent : MonoBehaviour
         if (trigger) return;
         EventBus<OnCollisionChanged>.Raise(this,
                 new OnCollisionChanged { state = CollisionState.OnExit, collision = collision },
-                raiseInHierarchy ? transform.root.gameObject : null);
+                eventChannel);
         
     }
 
@@ -33,7 +33,7 @@ public class OnCollisionEvent : MonoBehaviour
         if (!trigger) return;
         EventBus<OnTriggerChanged>.Raise(this,
                 new OnTriggerChanged { state = CollisionState.OnEnter, collider = other },
-                raiseInHierarchy ? transform.root.gameObject : null);
+                eventChannel);
     }
 
     private void OnTriggerExit(Collider other)
@@ -41,7 +41,7 @@ public class OnCollisionEvent : MonoBehaviour
         if (!trigger) return;
         EventBus<OnTriggerChanged>.Raise(this,
                 new OnTriggerChanged { state = CollisionState.OnExit, collider = other },
-                raiseInHierarchy ? transform.root.gameObject : null);
+                eventChannel);
         
     }
 }

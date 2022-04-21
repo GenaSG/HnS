@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -3276757026095060076}
   - component: {fileID: 5913416435016524845}
   - component: {fileID: -5926546437086055229}
+  - component: {fileID: -6018842641477815318}
   m_Layer: 7
   m_Name: SM_Veh_Car_Destroyed_01
   m_TagString: Prop
@@ -247,6 +248,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 8322933609519284016}
   objectsToDeactivate: []
+--- !u!114 &-6018842641477815318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316948766749552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1316948766749552}
+  highlightEffect: {fileID: -3276757026095060076}
 --- !u!1 &8322933609519284016
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,4 +306,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

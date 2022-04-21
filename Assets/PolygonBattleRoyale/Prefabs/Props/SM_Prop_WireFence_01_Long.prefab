@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 0}
-  raiseInHierarchy: 0
+  eventChannel: {fileID: 0}
 --- !u!1001 &1697383225451851298
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1685590076708943042}
   - component: {fileID: -618671812278705163}
   - component: {fileID: -4756763147576862525}
+  - component: {fileID: 5103379428654421788}
   m_Layer: 7
   m_Name: SM_Prop_Range_Trable_01
   m_TagString: Prop
@@ -262,6 +263,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 9160633145276893721}
   objectsToDeactivate: []
+--- !u!114 &5103379428654421788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896340912813114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1896340912813114}
+  highlightEffect: {fileID: 1685590076708943042}
 --- !u!1 &9160633145276893721
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,4 +321,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

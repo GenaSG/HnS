@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -4579482665402235477}
   - component: {fileID: 2581702715764098018}
   - component: {fileID: 4163384109388405203}
+  - component: {fileID: 2785088724591115578}
   m_Layer: 7
   m_Name: SM_Prop_Needle_01
   m_TagString: Prop
@@ -247,6 +248,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 5415318733146870344}
   objectsToDeactivate: []
+--- !u!114 &2785088724591115578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154916126594898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1154916126594898}
+  highlightEffect: {fileID: -4579482665402235477}
 --- !u!1 &5415318733146870344
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,4 +306,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

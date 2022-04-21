@@ -7,14 +7,13 @@ public class CameraProfileEvent : MonoBehaviour
 {
     [SerializeField]
     public CameraFollowProfile profile;
+
     [SerializeField]
-    public bool raiseInHierarchy;
+    private GameObject eventChannel;
     // Start is called before the first frame update
     void Start()
     {
-        EventBus<OnCameraProfileUpdated>.Raise(transform.root.gameObject,
-            new OnCameraProfileUpdated { profile = this.profile },
-            raiseInHierarchy ? transform.root.gameObject : null);
+        EventBus<OnCameraProfileUpdated>.Raise(this, new OnCameraProfileUpdated { profile = this.profile },eventChannel);
     }
 
 }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7466773806942359014}
   - component: {fileID: -7417212861672575399}
   - component: {fileID: -7211778086683705866}
+  - component: {fileID: -487728874843410988}
   m_Layer: 7
   m_Name: SM_Prop_EmergencyDrop_Crate_01
   m_TagString: Prop
@@ -247,6 +248,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 2133513025285803582}
   objectsToDeactivate: []
+--- !u!114 &-487728874843410988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029301884381818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1029301884381818}
+  highlightEffect: {fileID: 7466773806942359014}
 --- !u!1 &2133513025285803582
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,4 +306,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

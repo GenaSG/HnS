@@ -28,10 +28,10 @@ public class PrefabPlayground : MonoBehaviour
         {
             DestroyImmediate(eventBus,true);
         }
-        if(prof != null)
-        {
-            prof.GetComponent<CameraProfileEvent>().raiseInHierarchy = true;
-            prof.GetComponent<CameraProfileEvent>().profile = cameraFollowProfile;
-        }
+//        if(prof != null)
+//        {
+//            prof.GetComponent<CameraProfileEvent>().raiseInHierarchy = true;
+//            prof.GetComponent<CameraProfileEvent>().profile = cameraFollowProfile;
+//        }
     }
 }

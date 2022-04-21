@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1393680910490584396}
   - component: {fileID: -7036851691024814446}
   - component: {fileID: 6347226763443908362}
+  - component: {fileID: 4928810004954925134}
   m_Layer: 7
   m_Name: SM_Prop_BaseWall_Broken_01
   m_TagString: Prop
@@ -248,6 +249,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 6744333314692059512}
   objectsToDeactivate: []
+--- !u!114 &4928810004954925134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279273032208474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1279273032208474}
+  highlightEffect: {fileID: 1393680910490584396}
 --- !u!1 &5983775643827254941
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,4 +454,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -4016947586511070172}
   - component: {fileID: -7813843031059499868}
   - component: {fileID: -8024234106382398833}
+  - component: {fileID: -8011895367788212689}
   m_Layer: 7
   m_Name: SM_Veh_Tank_USA_Destroyed_01
   m_TagString: Prop
@@ -278,6 +279,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 3704257444214789978}
   objectsToDeactivate: []
+--- !u!114 &-8011895367788212689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053460715930104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1053460715930104}
+  highlightEffect: {fileID: -4016947586511070172}
 --- !u!1 &1514905908761052
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,4 +418,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

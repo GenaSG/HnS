@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -9152355403360378285}
   - component: {fileID: 921590129320606244}
   - component: {fileID: -5801707896723864710}
+  - component: {fileID: -834047646225066596}
   m_Layer: 7
   m_Name: SM_Prop_Pallet_01
   m_TagString: Prop
@@ -247,6 +248,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 3617317838066447121}
   objectsToDeactivate: []
+--- !u!114 &-834047646225066596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061708749408488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1061708749408488}
+  highlightEffect: {fileID: -9152355403360378285}
 --- !u!1 &3617317838066447121
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,4 +306,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

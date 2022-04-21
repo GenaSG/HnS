@@ -108,4 +108,14 @@ public struct OnTriggerChanged
     public CollisionState state;
     public Collider collider;
 }
+
+public struct OnLookingAt
+{
+    public GameObject subject;
+}
+
+public struct OnBeingLookedAt
+{
+    public  GameObject observer;
+}
 //

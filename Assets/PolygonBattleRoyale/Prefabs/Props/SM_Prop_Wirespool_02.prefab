@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -3150935328305761167}
   - component: {fileID: 2326607159264995794}
   - component: {fileID: 4616842609049345932}
+  - component: {fileID: -4250239122800903747}
   m_Layer: 7
   m_Name: SM_Prop_Wirespool_02
   m_TagString: Prop
@@ -247,6 +248,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 1224416858431294665}
   objectsToDeactivate: []
+--- !u!114 &-4250239122800903747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185052435009796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1185052435009796}
+  highlightEffect: {fileID: -3150935328305761167}
 --- !u!1 &1224416858431294665
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,4 +306,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

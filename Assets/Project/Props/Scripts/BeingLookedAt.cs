@@ -1,41 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
+using HighlightPlus;
+using SimpleEventBus;
 using UnityEngine;
 
 public class BeingLookedAt : MonoBehaviour
 {
-    public Renderer rend;
+    [SerializeField] private GameObject eventChannel;
+    [SerializeField] private HighlightEffect highlightEffect;
 
-    void Start()
+    void OnValidate()
     {
-        rend = GetComponent<Renderer>();
+        eventChannel = gameObject;
+        if(highlightEffect == null) highlightEffect = GetComponent<HighlightEffect>();
     }
 
-    // The mesh goes red when the mouse is over it...
-    //void OnMouseEnter()
-    //{
-    //    rend.material.color = Color.red;
-    //}
-
-    //// ...the red fades out to cyan as the mouse is held over...
-    //void OnMouseOver()
-    //{
-    //    rend.material.color -= new Color(0.1F, 0, 0) * Time.deltaTime;
-    //}
-
-    //// ...and the mesh finally turns white when the mouse moves away.
-    //void OnMouseExit()
-    //{
-    //    rend.material.color = Color.white;
-    //}
-
-    private void OnTriggerEnter(Collider other)
+    void OnEnable()
     {
-        rend.material.color = Color.red;
+        EventBus<OnBeingLookedAt>.Subscribe(LookedAt);
     }
 
-    private void OnTriggerExit(Collider other)
+    void OnDisable()
     {
-        rend.material.color = Color.white;
+        EventBus<OnBeingLookedAt>.UnSubscribe(LookedAt);
+    }
+
+    private void LookedAt(object caller, OnBeingLookedAt lookingAt, object target)
+    {
+        bool enabledCondition = target == (object)eventChannel && lookingAt.observer != null && !highlightEffect.enabled;
+        bool disableCondition = target == (object)eventChannel && lookingAt.observer == null && highlightEffect.enabled;
+
+        if(enabledCondition)
+        {
+            highlightEffect.enabled = true;
+            Debug.Log($"{gameObject} being looked at by {lookingAt.observer}. Enable highlight");
+        }
+        else if (disableCondition)
+        {
+            highlightEffect.enabled = false;
+            Debug.Log($"{gameObject} being looked at by {lookingAt.observer}. Disabling highlight");
+        }
     }
 }

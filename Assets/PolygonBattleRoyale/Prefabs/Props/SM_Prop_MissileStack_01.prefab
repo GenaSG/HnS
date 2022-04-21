@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6482298687881744952}
   - component: {fileID: -4184633661844487038}
   - component: {fileID: 4234510480441383246}
+  - component: {fileID: -7932524594381713198}
   m_Layer: 7
   m_Name: SM_Prop_MissileStack_01
   m_TagString: Prop
@@ -247,6 +248,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 3828450078804382876}
   objectsToDeactivate: []
+--- !u!114 &-7932524594381713198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405612168663392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1405612168663392}
+  highlightEffect: {fileID: 6482298687881744952}
 --- !u!1 &3828450078804382876
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,4 +306,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}

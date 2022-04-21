@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 8193828486586861959}
   - component: {fileID: 2204100211996419698}
   - component: {fileID: 2476095525382329808}
+  - component: {fileID: 1558948728728541508}
   m_Layer: 7
   m_Name: SM_Veh_Bike_01
   m_TagString: Prop
@@ -319,6 +320,20 @@ MonoBehaviour:
   objetsToActivate:
   - {fileID: 6715463479398328722}
   objectsToDeactivate: []
+--- !u!114 &1558948728728541508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148358842170010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba608d63e6854358beeddc983c4198c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 1148358842170010}
+  highlightEffect: {fileID: 8193828486586861959}
 --- !u!1 &1233304220568792
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,4 +704,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
-  raiseInHierarchy: 1
+  eventChannel: {fileID: 0}
