@@ -228,6 +228,18 @@ PrefabInstance:
       propertyPath: cameraFollowProfile
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: -6409663055898211604, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: onLookedAtLayerMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5781991955408423828, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5781991955408423828, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: _highlighted
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -2134446249501050012, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: ActivateOnEnter
       value: 
@@ -314,6 +326,18 @@ PrefabInstance:
     - target: {fileID: -7465328043376100894, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: cameraFollowProfile
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -6409663055898211604, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: onLookedAtLayerMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5781991955408423828, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5781991955408423828, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: _highlighted
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2134446249501050012, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: ActivateOnEnter
@@ -402,6 +426,18 @@ PrefabInstance:
       propertyPath: cameraFollowProfile
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: -6409663055898211604, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: onLookedAtLayerMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5781991955408423828, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5781991955408423828, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: _highlighted
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -2134446249501050012, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: ActivateOnEnter
       value: 
@@ -489,6 +525,18 @@ PrefabInstance:
       propertyPath: cameraFollowProfile
       value: 
       objectReference: {fileID: 11400000, guid: 0525d385a772e4358a2f2a0ae702e0a1, type: 2}
+    - target: {fileID: -6409663055898211604, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: onLookedAtLayerMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: -5781991955408423828, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5781991955408423828, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: _highlighted
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1712709652979322, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: m_Name
       value: SM_Prop_WireFence_01_Long
@@ -567,6 +615,18 @@ PrefabInstance:
     - target: {fileID: -7465328043376100894, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: cameraFollowProfile
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -6409663055898211604, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: onLookedAtLayerMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5781991955408423828, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5781991955408423828, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: _highlighted
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2134446249501050012, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: ActivateOnEnter

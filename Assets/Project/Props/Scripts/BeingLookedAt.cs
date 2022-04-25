@@ -1,11 +1,12 @@
-using HighlightPlus;
+﻿using HighlightPlus;
 using SimpleEventBus;
 using UnityEngine;
 
 public class BeingLookedAt : MonoBehaviour
 {
     [SerializeField] private GameObject eventChannel;
-    [SerializeField] private HighlightEffect highlightEffect;
+	[SerializeField] private HighlightEffect highlightEffect;
+	[SerializeField] private bool canBeHighlighted = true;
 
     void OnValidate()
     {
@@ -15,28 +16,51 @@ public class BeingLookedAt : MonoBehaviour
 
     void OnEnable()
     {
-        EventBus<OnBeingLookedAt>.Subscribe(LookedAt);
+	    EventBus<OnBeingLookedAt>.Subscribe(LookedAt);
+	    EventBus<OnSelectedBy>.Subscribe(SelectedBy);
     }
 
     void OnDisable()
     {
-        EventBus<OnBeingLookedAt>.UnSubscribe(LookedAt);
+	    EventBus<OnBeingLookedAt>.UnSubscribe(LookedAt);
+	    EventBus<OnSelectedBy>.UnSubscribe(SelectedBy);
     }
 
-    private void LookedAt(object caller, OnBeingLookedAt lookingAt, object target)
-    {
-        bool enabledCondition = target == (object)eventChannel && lookingAt.observer != null && !highlightEffect.enabled;
-        bool disableCondition = target == (object)eventChannel && lookingAt.observer == null && highlightEffect.enabled;
+	private void SelectedBy(object caller, OnSelectedBy player, object target)
+	{
+		if(target != (object)eventChannel) return;
+		
+		bool selected = highlightEffect.enabled && player.user != null;
+		bool unselected = !highlightEffect.enabled && player.user == null;
+		
+		if(selected){
+			highlightEffect.enabled = false;
+			canBeHighlighted = false;
+		}
+		else if(unselected)
+		{
+			highlightEffect.enabled = true;
+			canBeHighlighted = true;
+		}
+		//if(!(highlightEffect.enabled && player.user != null)) return;
 
+	}
+
+    private void LookedAt(object caller, OnBeingLookedAt lookingAt, object target)
+	{
+		if(target != (object)eventChannel) return;
+		bool enabledCondition = lookingAt.observer != null && !highlightEffect.enabled && canBeHighlighted;
+		bool disableCondition = lookingAt.observer == null && highlightEffect.enabled && canBeHighlighted;
+
+
+		//highlightEffect.enabled = enabledCondition;
         if(enabledCondition)
         {
-            highlightEffect.enabled = true;
-            Debug.Log($"{gameObject} being looked at by {lookingAt.observer}. Enable highlight");
+	        highlightEffect.enabled = true;
         }
         else if (disableCondition)
         {
-            highlightEffect.enabled = false;
-            Debug.Log($"{gameObject} being looked at by {lookingAt.observer}. Disabling highlight");
+	        highlightEffect.enabled = false;
         }
     }
 }
