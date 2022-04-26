@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -631569127326108178}
   - component: {fileID: -166874490385857871}
   - component: {fileID: -391639006361732329}
+  - component: {fileID: 6924342874052840400}
   m_Layer: 7
   m_Name: SM_Veh_Armored_Car_Destroyed_01
   m_TagString: Prop
@@ -262,6 +263,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1947779817853410}
   highlightEffect: {fileID: 9047032527928486997}
+  canBeHighlighted: 1
+--- !u!114 &6924342874052840400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947779817853410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1947779817853410}
 --- !u!1 &7150412642729093655
 GameObject:
   m_ObjectHideFlags: 0

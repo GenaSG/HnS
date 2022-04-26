@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 9018997768432571181}
   - component: {fileID: -2247196495772341996}
   - component: {fileID: 9133674428343942160}
+  - component: {fileID: 2106654898033019993}
   m_Layer: 7
   m_Name: SM_Prop_Spotlight_01
   m_TagString: Prop
@@ -262,6 +263,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1438767388765440}
   highlightEffect: {fileID: -1081316734358849290}
+  canBeHighlighted: 1
+--- !u!114 &2106654898033019993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438767388765440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1438767388765440}
 --- !u!1 &6468610725628597291
 GameObject:
   m_ObjectHideFlags: 0

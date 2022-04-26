@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -362307617997360233}
   - component: {fileID: -8541741808071118003}
   - component: {fileID: -2822748398250285260}
+  - component: {fileID: 7148346473922585865}
   m_Layer: 7
   m_Name: SM_Veh_Light_Armored_Car_01
   m_TagString: Prop
@@ -268,6 +269,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1293849716984982}
   highlightEffect: {fileID: 4008393218697760729}
+  canBeHighlighted: 1
+--- !u!114 &7148346473922585865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293849716984982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1293849716984982}
 --- !u!1 &1437563887357140
 GameObject:
   m_ObjectHideFlags: 0

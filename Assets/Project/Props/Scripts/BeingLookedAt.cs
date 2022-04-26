@@ -42,7 +42,6 @@ public class BeingLookedAt : MonoBehaviour
 			highlightEffect.enabled = true;
 			canBeHighlighted = true;
 		}
-		//if(!(highlightEffect.enabled && player.user != null)) return;
 
 	}
 
@@ -53,7 +52,6 @@ public class BeingLookedAt : MonoBehaviour
 		bool disableCondition = lookingAt.observer == null && highlightEffect.enabled && canBeHighlighted;
 
 
-		//highlightEffect.enabled = enabledCondition;
         if(enabledCondition)
         {
 	        highlightEffect.enabled = true;

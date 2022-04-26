@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -4785825358134873860}
   - component: {fileID: -8651379613984536336}
   - component: {fileID: -498159389559394650}
+  - component: {fileID: -3174146010625809454}
   m_Layer: 7
   m_Name: SM_Prop_Slatbox_01
   m_TagString: Prop
@@ -262,6 +263,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1327590931756138}
   highlightEffect: {fileID: 8287075847826740738}
+  canBeHighlighted: 1
+--- !u!114 &-3174146010625809454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327590931756138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1327590931756138}
 --- !u!1 &7782401502169931287
 GameObject:
   m_ObjectHideFlags: 0

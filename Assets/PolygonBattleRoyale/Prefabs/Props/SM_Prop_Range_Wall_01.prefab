@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -308613580824395388}
   - component: {fileID: -4221139787209257276}
   - component: {fileID: -5988469066151170665}
+  - component: {fileID: -4777246826937962716}
   m_Layer: 7
   m_Name: SM_Prop_Range_Wall_01
   m_TagString: Prop
@@ -262,6 +263,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1469453410559330}
   highlightEffect: {fileID: -6741748826000789824}
+  canBeHighlighted: 1
+--- !u!114 &-4777246826937962716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469453410559330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1469453410559330}
 --- !u!1 &7181880344777671288
 GameObject:
   m_ObjectHideFlags: 0

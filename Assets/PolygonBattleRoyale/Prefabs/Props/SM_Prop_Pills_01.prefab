@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -6679672885946370808}
   - component: {fileID: 2466665942216757581}
   - component: {fileID: -2568702089949503388}
+  - component: {fileID: -6950605137871525306}
   m_Layer: 7
   m_Name: SM_Prop_Pills_01
   m_TagString: Prop
@@ -262,6 +263,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1322612561568876}
   highlightEffect: {fileID: 1122817653210286604}
+  canBeHighlighted: 1
+--- !u!114 &-6950605137871525306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322612561568876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1322612561568876}
 --- !u!1 &1977474594251126014
 GameObject:
   m_ObjectHideFlags: 0

@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 7273539316101846362}
   - component: {fileID: -4160841245041590947}
   - component: {fileID: -8319671508983028236}
+  - component: {fileID: 5182224632278093440}
   m_Layer: 7
   m_Name: SM_Veh_Tank_Russia_Destroyed_01
   m_TagString: Prop
@@ -344,6 +345,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1961958707278906}
   highlightEffect: {fileID: -7489040001791312520}
+  canBeHighlighted: 1
+--- !u!114 &5182224632278093440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961958707278906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1961958707278906}
 --- !u!1 &4788123822487508482
 GameObject:
   m_ObjectHideFlags: 0

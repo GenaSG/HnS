@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7712279303955317195}
   - component: {fileID: 1959992677428960653}
   - component: {fileID: -6251385011089178035}
+  - component: {fileID: 2439997207842377145}
   m_Layer: 7
   m_Name: SM_Prop_Parachute_01
   m_TagString: Prop
@@ -262,6 +263,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1232202967340700}
   highlightEffect: {fileID: -7663884144386355704}
+  canBeHighlighted: 1
+--- !u!114 &2439997207842377145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232202967340700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1232202967340700}
 --- !u!1 &9143854638162819471
 GameObject:
   m_ObjectHideFlags: 0

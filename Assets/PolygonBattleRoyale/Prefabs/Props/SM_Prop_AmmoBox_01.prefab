@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5804476045679478221}
   - component: {fileID: -3629683312412375238}
   - component: {fileID: 1923426224462219911}
+  - component: {fileID: 8358866143467033303}
   m_Layer: 7
   m_Name: SM_Prop_AmmoBox_01
   m_TagString: Prop
@@ -264,6 +265,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1649997278618206}
   highlightEffect: {fileID: -2177499955749678610}
+  canBeHighlighted: 1
+--- !u!114 &8358866143467033303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649997278618206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1649997278618206}
 --- !u!1 &1956419318292130
 GameObject:
   m_ObjectHideFlags: 0

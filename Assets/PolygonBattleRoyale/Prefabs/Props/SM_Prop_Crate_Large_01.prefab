@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -3361522885604612479}
   - component: {fileID: 1825049430415159327}
   - component: {fileID: -6974419830932050422}
+  - component: {fileID: -1476676201966177995}
   m_Layer: 7
   m_Name: SM_Prop_Crate_Large_01
   m_TagString: Prop
@@ -262,6 +263,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1475137749187476}
   highlightEffect: {fileID: 9163176377441575174}
+  canBeHighlighted: 1
+--- !u!114 &-1476676201966177995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475137749187476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1475137749187476}
 --- !u!1 &1844475536387981769
 GameObject:
   m_ObjectHideFlags: 0

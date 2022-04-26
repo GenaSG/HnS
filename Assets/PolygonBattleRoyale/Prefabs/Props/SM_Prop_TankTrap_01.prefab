@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2028678950794301601}
   - component: {fileID: -3092138031399926541}
   - component: {fileID: 8233594210574661642}
+  - component: {fileID: -8927017959275863123}
   m_Layer: 7
   m_Name: SM_Prop_TankTrap_01
   m_TagString: Prop
@@ -262,6 +263,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1547188293137430}
   highlightEffect: {fileID: -4523447757810777867}
+  canBeHighlighted: 1
+--- !u!114 &-8927017959275863123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547188293137430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1547188293137430}
 --- !u!1 &5576957503784333561
 GameObject:
   m_ObjectHideFlags: 0

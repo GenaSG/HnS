@@ -158,6 +158,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraFollowProfile: {fileID: 0}
+--- !u!114 &7998195947673145811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8340228651376536649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 0}
+  eventChannel: {fileID: 8340228651376536649}
 --- !u!114 &8027845682236611519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +326,10 @@ PrefabInstance:
       propertyPath: objetsToActivate.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7494345181124139550, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: camProfile
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7395531665261337324, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
     - {fileID: 0}
@@ -410,6 +428,10 @@ PrefabInstance:
     - target: {fileID: 3889605308748655202, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: objetsToActivate.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7494345181124139550, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: camProfile
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7395531665261337324, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
@@ -510,6 +532,10 @@ PrefabInstance:
       propertyPath: objetsToActivate.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7494345181124139550, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: camProfile
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7395531665261337324, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
     - {fileID: 0}
@@ -585,6 +611,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7494345181124139550, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: camProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
     - target: {fileID: 8376609671389277278, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -699,6 +729,10 @@ PrefabInstance:
     - target: {fileID: 3889605308748655202, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
       propertyPath: objetsToActivate.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7494345181124139550, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}
+      propertyPath: camProfile
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7395531665261337324, guid: 0d64cf1bb9d6db5458fc4331eed07b15, type: 3}

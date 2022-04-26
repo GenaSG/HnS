@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1338666706122644965}
   - component: {fileID: 9169082607472198195}
   - component: {fileID: 1570243509467283816}
+  - component: {fileID: -7454579547375148058}
   m_Layer: 7
   m_Name: SM_Veh_Buggy_Destroyed_01
   m_TagString: Prop
@@ -262,6 +263,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1581678587613512}
   highlightEffect: {fileID: -4864052105099011779}
+  canBeHighlighted: 1
+--- !u!114 &-7454579547375148058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581678587613512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1581678587613512}
 --- !u!1 &689573659770747708
 GameObject:
   m_ObjectHideFlags: 0

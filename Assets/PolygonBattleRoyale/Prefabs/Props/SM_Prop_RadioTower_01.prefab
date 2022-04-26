@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7275347516289063224}
   - component: {fileID: -7206683107845937850}
   - component: {fileID: 7055987822240267953}
+  - component: {fileID: 5520638551460029623}
   m_Layer: 7
   m_Name: SM_Prop_RadioTower_01
   m_TagString: Prop
@@ -280,6 +281,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1231430948143974}
   highlightEffect: {fileID: 8111314941319759011}
+  canBeHighlighted: 1
+--- !u!114 &5520638551460029623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231430948143974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1231430948143974}
 --- !u!1 &6562987937176365862
 GameObject:
   m_ObjectHideFlags: 0

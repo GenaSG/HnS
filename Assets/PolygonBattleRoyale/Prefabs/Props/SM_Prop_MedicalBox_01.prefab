@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4710925322705912121}
   - component: {fileID: -209887897447663164}
   - component: {fileID: 6295889472097988191}
+  - component: {fileID: -7703068003928547741}
   m_Layer: 7
   m_Name: SM_Prop_MedicalBox_01
   m_TagString: Prop
@@ -262,6 +263,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1435410842068634}
   highlightEffect: {fileID: 8940679204967493661}
+  canBeHighlighted: 1
+--- !u!114 &-7703068003928547741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435410842068634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1435410842068634}
 --- !u!1 &7495013709426110484
 GameObject:
   m_ObjectHideFlags: 0

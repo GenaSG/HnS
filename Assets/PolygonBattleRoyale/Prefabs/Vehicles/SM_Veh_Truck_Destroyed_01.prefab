@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -5959187101688149835}
   - component: {fileID: -5572050512471827386}
   - component: {fileID: -8686612330019901195}
+  - component: {fileID: -4880705336012626012}
   m_Layer: 7
   m_Name: SM_Veh_Truck_Destroyed_01
   m_TagString: Prop
@@ -292,6 +293,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1343484773080560}
   highlightEffect: {fileID: 3689363369393319889}
+  canBeHighlighted: 1
+--- !u!114 &-4880705336012626012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343484773080560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1343484773080560}
 --- !u!1 &5636850875286874429
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/BR/Scene_BRCity.unity
     guid: fb327cb5c53994b65866a46c9f4fca0e
+  - enabled: 1
+    path: Assets/Project/Scenes/AllProps/AllProps.unity
+    guid: 3c02ebcda6c0b41cfa4c27de72313f2c
   m_configObjects: {}

@@ -502,6 +502,7 @@ GameObject:
   - component: {fileID: -3208195570482687479}
   - component: {fileID: 6019758398781714917}
   - component: {fileID: 8908010691223165253}
+  - component: {fileID: -3335131949096245070}
   m_Layer: 7
   m_Name: SM_Veh_Car_Clean_01
   m_TagString: Prop
@@ -754,6 +755,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1978907248868392}
   highlightEffect: {fileID: -7267639459298940579}
+  canBeHighlighted: 1
+--- !u!114 &-3335131949096245070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978907248868392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1978907248868392}
 --- !u!1 &2335776015150077180
 GameObject:
   m_ObjectHideFlags: 0

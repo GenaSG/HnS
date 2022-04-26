@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -7476761633759688085}
   - component: {fileID: 1974445565955502893}
   - component: {fileID: -7428384621789813087}
+  - component: {fileID: -6900260281051312632}
   m_Layer: 7
   m_Name: SM_Prop_Cinderblock_Wall_01
   m_TagString: Prop
@@ -263,6 +264,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 1431215749144654}
   highlightEffect: {fileID: -7452060530418295853}
+  canBeHighlighted: 1
+--- !u!114 &-6900260281051312632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431215749144654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e826f458cb794ef68ecf1ead687bea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camProfile: {fileID: 11400000, guid: af943a466d9a64a4f851ff027737d7fe, type: 2}
+  eventChannel: {fileID: 1431215749144654}
 --- !u!1 &2700812233973235817
 GameObject:
   m_ObjectHideFlags: 0
